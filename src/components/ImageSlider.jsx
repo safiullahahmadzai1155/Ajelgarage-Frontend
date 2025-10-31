@@ -79,10 +79,10 @@ const ImageSlider = () => {
       {/* Main container with proper spacing for navbar */}
       <div className="relative w-full h-full pt-16"> {/* pt-16 adds space for navbar */}
         
-        {/* Theme Toggle */}
+        {/* Theme Toggle - Hidden on mobile, visible on medium screens and up */}
         <button
           onClick={() => setIsDarkTheme(!isDarkTheme)}
-          className="absolute top-6 right-6 z-50 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 border border-white/20"
+          className="absolute top-6 right-6 z-50 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 border border-white/20 hidden md:block"
           aria-label="Toggle theme"
         >
           {isDarkTheme ? '🌙' : '🌞'}
@@ -257,10 +257,10 @@ const ImageSlider = () => {
           })}
         </div>
 
-        {/* Navigation Buttons */}
+        {/* Navigation Buttons - Hidden on mobile, visible on medium screens and up */}
         <button
           onClick={prevSlide}
-          className={`absolute left-4 md:left-6 top-1/2 -translate-y-1/2 z-30 group bg-gradient-to-br ${currentSlide.color} backdrop-blur-md text-white p-4 rounded-full transition-all duration-300 hover:scale-110 shadow-2xl border-2 border-white/40`}
+          className={`absolute left-4 md:left-6 top-1/2 -translate-y-1/2 z-30 group bg-gradient-to-br ${currentSlide.color} backdrop-blur-md text-white p-4 rounded-full transition-all duration-300 hover:scale-110 shadow-2xl border-2 border-white/40 hidden md:flex items-center justify-center`}
           aria-label="Previous slide"
         >
           <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
@@ -268,22 +268,22 @@ const ImageSlider = () => {
 
         <button
           onClick={nextSlide}
-          className={`absolute right-4 md:right-6 top-1/2 -translate-y-1/2 z-30 group bg-gradient-to-br ${currentSlide.color} backdrop-blur-md text-white p-4 rounded-full transition-all duration-300 hover:scale-110 shadow-2xl border-2 border-white/40`}
+          className={`absolute right-4 md:right-6 top-1/2 -translate-y-1/2 z-30 group bg-gradient-to-br ${currentSlide.color} backdrop-blur-md text-white p-4 rounded-full transition-all duration-300 hover:scale-110 shadow-2xl border-2 border-white/40 hidden md:flex items-center justify-center`}
           aria-label="Next slide"
         >
           <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
         </button>
 
-        {/* Pagination Dots */}
-        <div className={`absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex items-center gap-3 backdrop-blur-md px-6 py-3 rounded-full border ${isDarkTheme ? 'bg-black/40 border-white/20' : 'bg-black/30 border-white/20'}`}>
+        {/* Pagination Dots - Always visible but smaller on mobile */}
+        <div className={`absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex items-center gap-2 md:gap-3 backdrop-blur-md px-4 md:px-6 py-2 md:py-3 rounded-full border ${isDarkTheme ? 'bg-black/40 border-white/20' : 'bg-black/30 border-white/20'}`}>
           {slides.map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
               className={`relative transition-all duration-500 rounded-full focus:outline-none ${
                 index === currentIndex
-                  ? 'w-12 h-3'
-                  : 'w-3 h-3 hover:scale-125'
+                  ? 'w-8 md:w-12 h-2 md:h-3'
+                  : 'w-2 h-2 md:w-3 md:h-3 hover:scale-125'
               }`}
               aria-label={`Go to slide ${index + 1}`}
             >
@@ -296,8 +296,8 @@ const ImageSlider = () => {
           ))}
         </div>
 
-        {/* Slide Counter */}
-        <div className={`absolute bottom-8 right-4 md:right-8 z-30 bg-gradient-to-br ${currentSlide.color} backdrop-blur-md px-4 py-2 rounded-full border-2 border-white/40 shadow-2xl`}>
+        {/* Slide Counter - Hidden on mobile, visible on medium screens and up */}
+        <div className={`absolute bottom-8 right-4 md:right-8 z-30 bg-gradient-to-br ${currentSlide.color} backdrop-blur-md px-4 py-2 rounded-full border-2 border-white/40 shadow-2xl hidden md:block`}>
           <span className="text-white font-bold text-sm flex items-center gap-2">
             <span className="text-lg">{currentIndex + 1}</span>
             <span className="text-yellow-400">/</span>
