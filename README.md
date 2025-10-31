@@ -1,2 +1,0 @@
-# Ajelgarage-Frontend
-Ajelgarage-Frontend
