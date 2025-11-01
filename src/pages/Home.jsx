@@ -960,7 +960,7 @@ const Home = () => {
           </motion.div> */}
         </div>
       </section>
-
+{/* jjjjjj */}
       {/* Values Section */}
       <section id="values" className="py-20 bg-gradient-to-b from-black via-amber-900/10 to-black relative overflow-hidden">
         {/* Background Effects */}
