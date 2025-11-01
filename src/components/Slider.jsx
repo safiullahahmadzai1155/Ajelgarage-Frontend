@@ -29,7 +29,7 @@ import {
   Heart
 } from 'lucide-react';
 
-const ImageSlider = () => {
+const Slider = () => {
   const slides = [
     {
       image: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1920&q=80',
@@ -887,4 +887,4 @@ const ImageSlider = () => {
   );
 };
 
-export default ImageSlider;
+export default Slider;
