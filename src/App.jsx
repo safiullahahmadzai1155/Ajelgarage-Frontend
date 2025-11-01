@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import WhatsApp from './components/Whatsapp';
 import Footer from './components/Footer';
+import Service from './pages/Service';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/service" element={<Service />} />
           </Routes>
         </main>
         <WhatsApp />

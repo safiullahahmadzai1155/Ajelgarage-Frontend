@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { 
   Menu, 
   X, 
@@ -21,17 +22,18 @@ import {
   Sparkles
 } from 'lucide-react';
 
-const PremiumNavbar = () => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const navigate = useNavigate();
 
   const navLinks = [
     { path: '/', label: 'Home' },
     {
       label: 'Premium Services',
-      path: '/services',
+      path: '/service',
       submenu: [
         { 
           path: '/engine-repair', 
@@ -87,13 +89,12 @@ const PremiumNavbar = () => {
       ]
     },
     { path: '/gallery', label: 'Gallery' },
-    { path: '/contact', label: 'Concierge' },
+    { path: '/contact', label: 'Contact' },
   ];
-
-  const isActive = (path) => window.location.pathname === path;
 
   const handleNavigation = (path) => {
     if (path) {
+      navigate(path);
       setIsOpen(false);
       setOpenDropdown(null);
     }
@@ -119,64 +120,81 @@ const PremiumNavbar = () => {
     >
       {/* Premium Top Border Animation */}
       <div className="absolute top-0 left-0 right-0 h-[1px] md:h-[2px] overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-400 to-transparent animate-premium-shimmer" 
-             style={{ 
-               backgroundSize: '200% 100%',
-               filter: 'blur(0.5px) md:blur(1px)'
-             }} />
+        <div 
+          className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-400 to-transparent" 
+          style={{ 
+            animation: 'premium-shimmer 3s linear infinite',
+            backgroundSize: '200% 100%',
+            filter: 'blur(0.5px)'
+          }} 
+        />
       </div>
       
       {/* Animated Corner Accents */}
       <div className="absolute top-0 left-0 w-12 h-12 md:w-20 md:h-20 overflow-hidden opacity-60">
-        <div className="absolute top-0 left-0 w-12 h-12 md:w-20 md:h-20 border-t-2 border-l-2 border-amber-400/50 animate-corner-glow" />
+        <div 
+          className="absolute top-0 left-0 w-12 h-12 md:w-20 md:h-20 border-t-2 border-l-2 border-amber-400/50"
+          style={{ animation: 'corner-glow 3s ease-in-out infinite' }}
+        />
       </div>
       <div className="absolute top-0 right-0 w-12 h-12 md:w-20 md:h-20 overflow-hidden opacity-60">
-        <div className="absolute top-0 right-0 w-12 h-12 md:w-20 md:h-20 border-t-2 border-r-2 border-amber-400/50 animate-corner-glow" style={{animationDelay: '1s'}} />
+        <div 
+          className="absolute top-0 right-0 w-12 h-12 md:w-20 md:h-20 border-t-2 border-r-2 border-amber-400/50"
+          style={{ animation: 'corner-glow 3s ease-in-out infinite 1s' }} 
+        />
       </div>
 
-      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20 lg:h-24">
           {/* Premium Logo */}
-          <div className="flex items-center space-x-2 md:space-x-4 group cursor-pointer relative">
+          <div 
+            className="flex items-center space-x-2 md:space-x-4 group cursor-pointer relative"
+            onClick={() => handleNavigation('/')}
+          >
             {/* Logo Container */}
             <div className="relative p-2 md:p-3 bg-gradient-to-br from-amber-500/20 to-orange-500/10 rounded-xl md:rounded-2xl border-2 border-amber-500/30 group-hover:border-amber-400/50 transition-all duration-500">
               <Crown className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 text-amber-400 group-hover:scale-110 transition-transform duration-500" />
-              <Sparkles className="absolute -top-1 -right-1 w-2 h-2 md:w-3 md:h-3 text-amber-300 animate-sparkle" />
+              <Sparkles 
+                className="absolute -top-1 -right-1 w-2 h-2 md:w-3 md:h-3 text-amber-300"
+                style={{ animation: 'sparkle 2s ease-in-out infinite' }}
+              />
             </div>
             
             {/* Logo Text */}
-           <div className="flex flex-col">
-            <span className="hidden sm:block text-lg md:text-xl lg:text-2xl font-black bg-gradient-to-r from-amber-300 to-orange-300 bg-clip-text text-transparent tracking-tight">
-              Ajel Garage
-            </span>
-            <span className="hidden sm:block text-[10px] md:text-xs text-amber-500/80 font-medium tracking-widest uppercase">
-             Any Time Anywhere
-            </span>
-          </div>
+            <div className="flex flex-col">
+              <span className="hidden sm:block text-lg md:text-xl lg:text-2xl font-black bg-gradient-to-r from-amber-300 to-orange-300 bg-clip-text text-transparent tracking-tight">
+                Ajel Garage
+              </span>
+              <span className="hidden sm:block text-[10px] md:text-xs text-amber-500/80 font-medium tracking-widest uppercase">
+                Premium Auto Care
+              </span>
+            </div>
           </div>
 
           {/* Desktop Navigation - Premium */}
-      <div className="hidden lg:flex items-center space-x-1 xl:space-x-2 mr-[6%]">
+          <div className="hidden lg:flex items-center space-x-1 xl:space-x-2">
             {navLinks.map((link, index) => (
               <div key={link.label} className="relative group">
                 {link.submenu ? (
                   <div className="relative">
                     <button
-                      onClick={() => link.path && handleNavigation(link.path)}
+                      onClick={() => handleNavigation(link.path)}
                       className="relative px-3 md:px-4 lg:px-6 py-2 md:py-3 lg:py-4 font-semibold text-amber-100/90 hover:text-amber-50 flex items-center space-x-1 md:space-x-2 rounded-xl lg:rounded-2xl transition-all duration-500 overflow-hidden group/nav"
                     >
                       {/* Animated Background */}
                       <div className="absolute inset-0 border-2 border-amber-500/20 rounded-xl lg:rounded-2xl group-hover/nav:border-amber-400/40 transition-all duration-500" />
-                      <div className="absolute inset-0 bg-gradient-to-r from-amber-500/0 via-amber-500/10 to-amber-500/0 opacity-0 group-hover/nav:opacity-100 transition-all duration-700 animate-premium-shimmer" 
-                           style={{ backgroundSize: '200% 100%' }} />
+                      <div 
+                        className="absolute inset-0 bg-gradient-to-r from-amber-500/0 via-amber-500/10 to-amber-500/0 opacity-0 group-hover/nav:opacity-100 transition-all duration-700"
+                        style={{ animation: 'premium-shimmer 4s linear infinite', backgroundSize: '200% 100%' }}
+                      />
                       
                       <span className="relative z-10 tracking-wide text-sm lg:text-base">{link.label}</span>
                       <ChevronDown className="relative z-10 h-3 w-3 md:h-4 md:w-4 group-hover/nav:rotate-180 transition-transform duration-500" />
                     </button>
 
                     {/* Premium Dropdown */}
-                    <div className="absolute left-0 mt-2 w-72 lg:w-80 xl:w-96 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 rounded-2xl lg:rounded-3xl overflow-hidden transform origin-top">
-                      <div className="relative bg-black/95 backdrop-blur-2xl p-3 lg:p-4 border-2 border-amber-500/20">
+                    <div className="absolute left-0 mt-2 w-72 lg:w-80 xl:w-96 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 transform origin-top">
+                      <div className="relative bg-black/95 backdrop-blur-2xl p-3 lg:p-4 border-2 border-amber-500/20 rounded-2xl lg:rounded-3xl overflow-hidden">
                         {/* Dropdown Glow */}
                         <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-orange-500/5 rounded-2xl lg:rounded-3xl" />
                         
@@ -226,14 +244,15 @@ const PremiumNavbar = () => {
                     className="relative px-3 md:px-4 lg:px-6 py-2 md:py-3 lg:py-4 font-semibold text-amber-100/90 hover:text-amber-50 rounded-xl lg:rounded-2xl transition-all duration-500 overflow-hidden group/nav"
                   >
                     <div className="absolute inset-0 border-2 border-amber-500/20 rounded-xl lg:rounded-2xl group-hover/nav:border-amber-400/40 transition-all duration-500" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-amber-500/0 via-amber-500/10 to-amber-500/0 opacity-0 group-hover/nav:opacity-100 transition-all duration-700 animate-premium-shimmer" 
-                         style={{ backgroundSize: '200% 100%' }} />
+                    <div 
+                      className="absolute inset-0 bg-gradient-to-r from-amber-500/0 via-amber-500/10 to-amber-500/0 opacity-0 group-hover/nav:opacity-100 transition-all duration-700"
+                      style={{ animation: 'premium-shimmer 4s linear infinite', backgroundSize: '200% 100%' }}
+                    />
                     <span className="relative z-10 tracking-wide text-sm lg:text-base">{link.label}</span>
                   </button>
                 )}
               </div>
             ))}
-        
           </div>
 
           {/* Mobile Menu Button - Premium */}
@@ -241,7 +260,10 @@ const PremiumNavbar = () => {
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden relative p-2 md:p-3 rounded-xl lg:rounded-2xl transition-all duration-500 overflow-hidden group"
           >
-            <div className="absolute inset-0 border-2 border-amber-500/30 rounded-xl lg:rounded-2xl group-hover:border-amber-400/50 transition-all duration-500 animate-premium-border" />
+            <div 
+              className="absolute inset-0 border-2 border-amber-500/30 rounded-xl lg:rounded-2xl group-hover:border-amber-400/50 transition-all duration-500"
+              style={{ animation: 'premium-border 3s ease-in-out infinite' }}
+            />
             <div className="absolute inset-0 bg-amber-500/10 opacity-0 group-hover:opacity-100 transition-all duration-500" />
             <div className="relative z-10 text-amber-100">
               {isOpen ? <X className="h-5 w-5 md:h-6 md:w-6" /> : <Menu className="h-5 w-5 md:h-6 md:w-6" />}
@@ -293,7 +315,7 @@ const PremiumNavbar = () => {
                             onClick={() => handleNavigation(item.path)}
                             className="relative flex items-center gap-2 sm:gap-3 w-full text-left px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl text-amber-100/80 hover:text-amber-50 transition-all duration-500 overflow-hidden group"
                             style={{
-                              animation: openDropdown === link.label ? `premiumSlideIn 0.4s ease-out ${subIndex * 0.05 + 0.3}s both` : 'none'
+                              animationDelay: openDropdown === link.label ? `${subIndex * 0.05 + 0.3}s` : '0s'
                             }}
                           >
                             <div className="absolute inset-0 border border-amber-500/10 rounded-lg sm:rounded-xl group-hover:border-amber-400/30 transition-all duration-500" />
@@ -337,8 +359,14 @@ const PremiumNavbar = () => {
           
           {/* Mobile CTA Buttons */}
           <div className="grid grid-cols-2 gap-2 sm:gap-3 mt-4 sm:mt-6">
-            <button className="relative px-4 sm:px-6 py-3 sm:py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold rounded-xl sm:rounded-2xl overflow-hidden group text-sm">
-              <div className="absolute inset-0 border-2 border-amber-300/50 rounded-xl sm:rounded-2xl animate-premium-border" />
+            <button 
+              onClick={() => handleNavigation('/contact')}
+              className="relative px-4 sm:px-6 py-3 sm:py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold rounded-xl sm:rounded-2xl overflow-hidden group text-sm"
+            >
+              <div 
+                className="absolute inset-0 border-2 border-amber-300/50 rounded-xl sm:rounded-2xl"
+                style={{ animation: 'premium-border 3s ease-in-out infinite' }}
+              />
               <span className="relative z-10 flex items-center justify-center gap-1 sm:gap-2">
                 <MessageCircle className="w-3 h-3 sm:w-4 sm:h-4" />
                 Concierge
@@ -356,7 +384,7 @@ const PremiumNavbar = () => {
         </div>
       </div>
 
-      <style>{`
+      <style jsx>{`
         @keyframes premium-shimmer {
           0% { background-position: -200% 0; }
           100% { background-position: 200% 0; }
@@ -373,17 +401,6 @@ const PremiumNavbar = () => {
           }
         }
 
-        @keyframes premium-gradient {
-          0% { background-position: 0% center; }
-          50% { background-position: 200% center; }
-          100% { background-position: 0% center; }
-        }
-
-        @keyframes pulse-gentle {
-          0%, 100% { opacity: 0.3; transform: scale(1); }
-          50% { opacity: 0.6; transform: scale(1.1); }
-        }
-
         @keyframes corner-glow {
           0%, 100% { opacity: 0.3; }
           50% { opacity: 0.8; }
@@ -394,7 +411,7 @@ const PremiumNavbar = () => {
           50% { opacity: 1; transform: scale(1) rotate(180deg); }
         }
 
-        @keyframes premium-slide-in {
+        @keyframes premiumSlideIn {
           from {
             opacity: 0;
             transform: translateX(-30px) scale(0.95);
@@ -403,45 +420,6 @@ const PremiumNavbar = () => {
             opacity: 1;
             transform: translateX(0) scale(1);
           }
-        }
-
-        @keyframes ring {
-          0% { transform: rotate(0deg); }
-          25% { transform: rotate(-15deg); }
-          75% { transform: rotate(15deg); }
-          100% { transform: rotate(0deg); }
-        }
-
-        .animate-premium-shimmer {
-          animation: premium-shimmer 4s linear infinite;
-        }
-
-        .animate-premium-border {
-          animation: premium-border 3s ease-in-out infinite;
-        }
-
-        .animate-premium-gradient {
-          animation: premium-gradient 4s ease infinite;
-        }
-
-        .animate-pulse-gentle {
-          animation: pulse-gentle 4s ease-in-out infinite;
-        }
-
-        .animate-corner-glow {
-          animation: corner-glow 3s ease-in-out infinite;
-        }
-
-        .animate-sparkle {
-          animation: sparkle 2s ease-in-out infinite;
-        }
-
-        .animate-ring {
-          animation: ring 2s ease-in-out infinite;
-        }
-
-        .premium-slide-in {
-          animation: premium-slide-in 0.5s ease-out both;
         }
 
         .line-clamp-2 {
@@ -455,4 +433,4 @@ const PremiumNavbar = () => {
   );
 };
 
-export default PremiumNavbar;
+export default Navbar;
