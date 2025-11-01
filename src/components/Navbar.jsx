@@ -150,7 +150,7 @@ const PremiumNavbar = () => {
               Ajel Garage
             </span>
             <span className="hidden sm:block text-[10px] md:text-xs text-amber-500/80 font-medium tracking-widest uppercase">
-              Premium Care
+             Any Time Anywhere
             </span>
           </div>
           </div>
