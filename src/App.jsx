@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import WhatsApp from './components/Whatsapp';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
           </Routes>
         </main>
         <WhatsApp />
+        <div>
+          <Footer />
+        </div>
       </div>
     </Router>
   );
