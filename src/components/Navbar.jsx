@@ -118,127 +118,98 @@ const PremiumNavbar = () => {
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Premium Top Border Animation */}
-      <div className="absolute top-0 left-0 right-0 h-[2px] overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-[1px] md:h-[2px] overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-400 to-transparent animate-premium-shimmer" 
              style={{ 
                backgroundSize: '200% 100%',
-               filter: 'blur(1px)'
+               filter: 'blur(0.5px) md:blur(1px)'
              }} />
       </div>
       
       {/* Animated Corner Accents */}
-      <div className="absolute top-0 left-0 w-20 h-20 overflow-hidden opacity-60">
-        <div className="absolute top-0 left-0 w-20 h-20 border-t-2 border-l-2 border-amber-400/50 animate-corner-glow" />
+      <div className="absolute top-0 left-0 w-12 h-12 md:w-20 md:h-20 overflow-hidden opacity-60">
+        <div className="absolute top-0 left-0 w-12 h-12 md:w-20 md:h-20 border-t-2 border-l-2 border-amber-400/50 animate-corner-glow" />
       </div>
-      <div className="absolute top-0 right-0 w-20 h-20 overflow-hidden opacity-60">
-        <div className="absolute top-0 right-0 w-20 h-20 border-t-2 border-r-2 border-amber-400/50 animate-corner-glow" style={{animationDelay: '1s'}} />
+      <div className="absolute top-0 right-0 w-12 h-12 md:w-20 md:h-20 overflow-hidden opacity-60">
+        <div className="absolute top-0 right-0 w-12 h-12 md:w-20 md:h-20 border-t-2 border-r-2 border-amber-400/50 animate-corner-glow" style={{animationDelay: '1s'}} />
       </div>
 
-      <div className="max-w-8xl mx-auto px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16 md:h-20 lg:h-24">
           {/* Premium Logo */}
-          <div className="flex items-center space-x-4 group cursor-pointer relative">
-            <div className="relative">
-              {/* Animated Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-500/40 to-orange-500/30 blur-2xl rounded-full group-hover:scale-150 transition-all duration-1000 animate-pulse-gentle" />
-              
-              {/* Premium Logo Container */}
-              <div className={`relative p-4 rounded-2xl transition-all duration-700 ${
-                isScrolled 
-                  ? 'bg-gradient-to-br from-amber-500/15 to-orange-500/10 backdrop-blur-xl' 
-                  : 'bg-gradient-to-br from-amber-500/20 to-orange-500/15 backdrop-blur-lg'
-              } border-2 border-amber-500/30 group-hover:border-amber-400/50`}>
-                {/* Animated Border */}
-                <div className="absolute inset-0 rounded-2xl border-2 border-amber-400/20 animate-premium-border" />
-                
-                {/* Logo Icon */}
-                <div className="relative">
-                  <Wrench className="w-8 h-8 text-amber-400 group-hover:rotate-180 transition-transform duration-1000" />
-                  <Sparkles className="absolute -top-1 -right-1 w-4 h-4 text-amber-300 animate-sparkle" />
-                </div>
-              </div>
+          <div className="flex items-center space-x-2 md:space-x-4 group cursor-pointer relative">
+            {/* Logo Container */}
+            <div className="relative p-2 md:p-3 bg-gradient-to-br from-amber-500/20 to-orange-500/10 rounded-xl md:rounded-2xl border-2 border-amber-500/30 group-hover:border-amber-400/50 transition-all duration-500">
+              <Crown className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 text-amber-400 group-hover:scale-110 transition-transform duration-500" />
+              <Sparkles className="absolute -top-1 -right-1 w-2 h-2 md:w-3 md:h-3 text-amber-300 animate-sparkle" />
             </div>
             
-            {/* Brand Name with Premium Styling */}
-            <div className="relative">
-              <div className="flex flex-col">
-                <span className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-orange-400 animate-premium-gradient"
-                      style={{ 
-                        backgroundSize: '300% auto',
-                        textShadow: '0 0 40px rgba(245, 158, 11, 0.6)',
-                        letterSpacing: '0.05em'
-                      }}>
-                  AJAL AUTOMOTIVE
-                </span>
-                <span className="text-xs text-amber-400/80 font-light tracking-widest mt-1">
-                  ELITE AUTOMOTIVE SOLUTIONS
-                </span>
-              </div>
-              
-              {/* Animated Underline */}
-              <div className="absolute -bottom-2 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-amber-400 to-transparent animate-premium-shimmer" 
-                   style={{ 
-                     backgroundSize: '200% 100%',
-                     filter: 'blur(0.5px)'
-                   }} />
-            </div>
+            {/* Logo Text */}
+           <div className="flex flex-col">
+            <span className="hidden sm:block text-lg md:text-xl lg:text-2xl font-black bg-gradient-to-r from-amber-300 to-orange-300 bg-clip-text text-transparent tracking-tight">
+              Ajel Garage
+            </span>
+            <span className="hidden sm:block text-[10px] md:text-xs text-amber-500/80 font-medium tracking-widest uppercase">
+              Premium Care
+            </span>
+          </div>
           </div>
 
           {/* Desktop Navigation - Premium */}
-          <div className="hidden xl:flex items-center space-x-1" style={{marginRight:"6%"}}>
+      <div className="hidden lg:flex items-center space-x-1 xl:space-x-2 mr-[6%]">
             {navLinks.map((link, index) => (
               <div key={link.label} className="relative group">
                 {link.submenu ? (
                   <div className="relative">
                     <button
                       onClick={() => link.path && handleNavigation(link.path)}
-                      className="relative px-6 py-4 font-semibold text-amber-100/90 hover:text-amber-50 flex items-center space-x-2 rounded-2xl transition-all duration-500 overflow-hidden group/nav"
+                      className="relative px-3 md:px-4 lg:px-6 py-2 md:py-3 lg:py-4 font-semibold text-amber-100/90 hover:text-amber-50 flex items-center space-x-1 md:space-x-2 rounded-xl lg:rounded-2xl transition-all duration-500 overflow-hidden group/nav"
                     >
                       {/* Animated Background */}
-                      <div className="absolute inset-0 border-2 border-amber-500/20 rounded-2xl group-hover/nav:border-amber-400/40 transition-all duration-500" />
+                      <div className="absolute inset-0 border-2 border-amber-500/20 rounded-xl lg:rounded-2xl group-hover/nav:border-amber-400/40 transition-all duration-500" />
                       <div className="absolute inset-0 bg-gradient-to-r from-amber-500/0 via-amber-500/10 to-amber-500/0 opacity-0 group-hover/nav:opacity-100 transition-all duration-700 animate-premium-shimmer" 
                            style={{ backgroundSize: '200% 100%' }} />
                       
-                      <span className="relative z-10 tracking-wide">{link.label}</span>
-                      <ChevronDown className="relative z-10 h-4 w-4 group-hover/nav:rotate-180 transition-transform duration-500" />
+                      <span className="relative z-10 tracking-wide text-sm lg:text-base">{link.label}</span>
+                      <ChevronDown className="relative z-10 h-3 w-3 md:h-4 md:w-4 group-hover/nav:rotate-180 transition-transform duration-500" />
                     </button>
 
                     {/* Premium Dropdown */}
-                    <div className="absolute left-0 mt-3 w-96 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 rounded-3xl overflow-hidden transform origin-top">
-                      <div className="relative bg-black/95 backdrop-blur-2xl p-4 border-2 border-amber-500/20">
+                    <div className="absolute left-0 mt-2 w-72 lg:w-80 xl:w-96 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 rounded-2xl lg:rounded-3xl overflow-hidden transform origin-top">
+                      <div className="relative bg-black/95 backdrop-blur-2xl p-3 lg:p-4 border-2 border-amber-500/20">
                         {/* Dropdown Glow */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-orange-500/5 rounded-3xl" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-orange-500/5 rounded-2xl lg:rounded-3xl" />
                         
                         {/* Services Grid */}
-                        <div className="grid grid-cols-1 gap-2 relative z-10">
+                        <div className="grid grid-cols-1 gap-1 lg:gap-2 relative z-10">
                           {link.submenu.map((service, i) => {
                             const Icon = service.icon;
                             return (
                               <button
                                 key={service.label}
                                 onClick={() => handleNavigation(service.path)}
-                                className="relative flex items-start gap-4 w-full text-left p-4 rounded-xl text-amber-100/80 hover:text-amber-50 transition-all duration-500 group/item overflow-hidden"
+                                className="relative flex items-start gap-2 lg:gap-3 xl:gap-4 w-full text-left p-2 lg:p-3 xl:p-4 rounded-lg lg:rounded-xl text-amber-100/80 hover:text-amber-50 transition-all duration-500 group/item overflow-hidden"
                               >
                                 {/* Hover Background */}
-                                <div className="absolute inset-0 border border-amber-500/10 rounded-xl group-hover/item:border-amber-400/30 transition-all duration-500" />
+                                <div className="absolute inset-0 border border-amber-500/10 rounded-lg lg:rounded-xl group-hover/item:border-amber-400/30 transition-all duration-500" />
                                 <div className="absolute inset-0 bg-gradient-to-r from-amber-500/0 via-amber-500/5 to-amber-500/0 opacity-0 group-hover/item:opacity-100 transition-all duration-500" />
                                 
                                 {/* Icon Container */}
-                                <div className="relative z-10 p-3 rounded-lg bg-gradient-to-br from-amber-500/20 to-orange-500/10 group-hover/item:from-amber-500/30 group-hover/item:to-orange-500/20 transition-all duration-500">
-                                  <Icon className="h-5 w-5 text-amber-400" />
+                                <div className="relative z-10 p-1.5 lg:p-2 xl:p-3 rounded-md lg:rounded-lg bg-gradient-to-br from-amber-500/20 to-orange-500/10 group-hover/item:from-amber-500/30 group-hover/item:to-orange-500/20 transition-all duration-500">
+                                  <Icon className="h-3 w-3 lg:h-4 lg:w-4 xl:h-5 xl:w-5 text-amber-400" />
                                 </div>
                                 
                                 {/* Content */}
-                                <div className="relative z-10 flex-1">
-                                  <div className="flex items-center gap-2 mb-1">
-                                    <span className="font-semibold text-sm">{service.label}</span>
+                                <div className="relative z-10 flex-1 min-w-0">
+                                  <div className="flex items-center gap-1 lg:gap-2 mb-0.5 lg:mb-1">
+                                    <span className="font-semibold text-xs lg:text-sm truncate">{service.label}</span>
                                     {service.badge && (
-                                      <span className="px-2 py-1 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs rounded-full font-bold">
+                                      <span className="px-1.5 py-0.5 lg:px-2 lg:py-1 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-[10px] lg:text-xs rounded-full font-bold flex-shrink-0">
                                         {service.badge}
                                       </span>
                                     )}
                                   </div>
-                                  <p className="text-amber-200/60 text-xs leading-tight">
+                                  <p className="text-amber-200/60 text-[10px] lg:text-xs leading-tight line-clamp-2">
                                     {service.description}
                                   </p>
                                 </div>
@@ -252,43 +223,41 @@ const PremiumNavbar = () => {
                 ) : (
                   <button
                     onClick={() => handleNavigation(link.path)}
-                    className="relative px-6 py-4 font-semibold text-amber-100/90 hover:text-amber-50 rounded-2xl transition-all duration-500 overflow-hidden group/nav"
+                    className="relative px-3 md:px-4 lg:px-6 py-2 md:py-3 lg:py-4 font-semibold text-amber-100/90 hover:text-amber-50 rounded-xl lg:rounded-2xl transition-all duration-500 overflow-hidden group/nav"
                   >
-                    <div className="absolute inset-0 border-2 border-amber-500/20 rounded-2xl group-hover/nav:border-amber-400/40 transition-all duration-500" />
+                    <div className="absolute inset-0 border-2 border-amber-500/20 rounded-xl lg:rounded-2xl group-hover/nav:border-amber-400/40 transition-all duration-500" />
                     <div className="absolute inset-0 bg-gradient-to-r from-amber-500/0 via-amber-500/10 to-amber-500/0 opacity-0 group-hover/nav:opacity-100 transition-all duration-700 animate-premium-shimmer" 
                          style={{ backgroundSize: '200% 100%' }} />
-                    <span className="relative z-10 tracking-wide">{link.label}</span>
+                    <span className="relative z-10 tracking-wide text-sm lg:text-base">{link.label}</span>
                   </button>
                 )}
               </div>
             ))}
-            
-            {/* Premium CTA Buttons */}
-           
+        
           </div>
 
           {/* Mobile Menu Button - Premium */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="xl:hidden relative p-4 rounded-2xl transition-all duration-500 overflow-hidden group"
+            className="lg:hidden relative p-2 md:p-3 rounded-xl lg:rounded-2xl transition-all duration-500 overflow-hidden group"
           >
-            <div className="absolute inset-0 border-2 border-amber-500/30 rounded-2xl group-hover:border-amber-400/50 transition-all duration-500 animate-premium-border" />
+            <div className="absolute inset-0 border-2 border-amber-500/30 rounded-xl lg:rounded-2xl group-hover:border-amber-400/50 transition-all duration-500 animate-premium-border" />
             <div className="absolute inset-0 bg-amber-500/10 opacity-0 group-hover:opacity-100 transition-all duration-500" />
             <div className="relative z-10 text-amber-100">
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="h-5 w-5 md:h-6 md:w-6" /> : <Menu className="h-5 w-5 md:h-6 md:w-6" />}
             </div>
           </button>
         </div>
       </div>
 
       {/* Premium Mobile Menu */}
-      <div className={`xl:hidden overflow-hidden transition-all duration-700 ${
+      <div className={`lg:hidden overflow-hidden transition-all duration-700 ${
         isOpen ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'
       } bg-black/98 backdrop-blur-2xl relative border-t-2 border-amber-500/20`}>
         {/* Mobile Menu Glow */}
         <div className="absolute inset-0 bg-gradient-to-b from-amber-500/5 to-transparent" />
         
-        <div className="px-6 py-6 space-y-3 overflow-y-auto max-h-[70vh] relative z-10">
+        <div className="px-4 sm:px-6 py-4 sm:py-6 space-y-2 sm:space-y-3 overflow-y-auto max-h-[70vh] relative z-10">
           {navLinks.map((link, index) => (
             <div 
               key={link.label}
@@ -300,49 +269,49 @@ const PremiumNavbar = () => {
                 <>
                   <button
                     onClick={() => setOpenDropdown(openDropdown === link.label ? null : link.label)}
-                    className="relative w-full text-left px-6 py-5 font-semibold text-amber-100/90 flex items-center justify-between rounded-2xl transition-all duration-500 overflow-hidden group"
+                    className="relative w-full text-left px-4 sm:px-6 py-3 sm:py-4 font-semibold text-amber-100/90 flex items-center justify-between rounded-xl sm:rounded-2xl transition-all duration-500 overflow-hidden group"
                   >
-                    <div className="absolute inset-0 border-2 border-amber-500/20 rounded-2xl group-hover:border-amber-400/40 transition-all duration-500" />
+                    <div className="absolute inset-0 border-2 border-amber-500/20 rounded-xl sm:rounded-2xl group-hover:border-amber-400/40 transition-all duration-500" />
                     <div className="absolute inset-0 bg-gradient-to-r from-amber-500/0 via-amber-500/10 to-amber-500/0 opacity-0 group-hover:opacity-100 transition-all duration-500" />
-                    <span className="relative z-10 tracking-wide">{link.label}</span>
+                    <span className="relative z-10 tracking-wide text-sm sm:text-base">{link.label}</span>
                     <ChevronDown
-                      className={`relative z-10 h-5 w-5 transition-transform duration-500 ${
+                      className={`relative z-10 h-4 w-4 sm:h-5 sm:w-5 transition-transform duration-500 ${
                         openDropdown === link.label ? 'rotate-180 text-amber-400' : ''
                       }`}
                     />
                   </button>
                   
                   <div className={`overflow-hidden transition-all duration-700 ${
-                    openDropdown === link.label ? 'max-h-[1000px] opacity-100 mt-3' : 'max-h-0 opacity-0'
+                    openDropdown === link.label ? 'max-h-[1000px] opacity-100 mt-2 sm:mt-3' : 'max-h-0 opacity-0'
                   }`}>
-                    <div className="pl-4 space-y-3 border-l-2 border-amber-500/20 ml-4">
+                    <div className="pl-3 sm:pl-4 space-y-2 sm:space-y-3 border-l-2 border-amber-500/20 ml-3 sm:ml-4">
                       {link.submenu.map((item, subIndex) => {
                         const Icon = item.icon;
                         return (
                           <button
                             key={item.path}
                             onClick={() => handleNavigation(item.path)}
-                            className="relative flex items-center gap-4 w-full text-left px-5 py-4 rounded-xl text-amber-100/80 hover:text-amber-50 transition-all duration-500 overflow-hidden group"
+                            className="relative flex items-center gap-2 sm:gap-3 w-full text-left px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl text-amber-100/80 hover:text-amber-50 transition-all duration-500 overflow-hidden group"
                             style={{
                               animation: openDropdown === link.label ? `premiumSlideIn 0.4s ease-out ${subIndex * 0.05 + 0.3}s both` : 'none'
                             }}
                           >
-                            <div className="absolute inset-0 border border-amber-500/10 rounded-xl group-hover:border-amber-400/30 transition-all duration-500" />
+                            <div className="absolute inset-0 border border-amber-500/10 rounded-lg sm:rounded-xl group-hover:border-amber-400/30 transition-all duration-500" />
                             <div className="absolute inset-0 bg-gradient-to-r from-amber-500/0 via-amber-500/5 to-amber-500/0 opacity-0 group-hover:opacity-100 transition-all duration-500" />
-                            <div className="relative z-10 p-3 rounded-lg bg-amber-500/20 group-hover:bg-amber-500/30 transition-all duration-500">
-                              <Icon className="h-5 w-5 text-amber-400" />
+                            <div className="relative z-10 p-1.5 sm:p-2 rounded-md sm:rounded-lg bg-amber-500/20 group-hover:bg-amber-500/30 transition-all duration-500">
+                              <Icon className="h-3 w-3 sm:h-4 sm:w-4 text-amber-400" />
                             </div>
-                            <div className="relative z-10 flex-1">
-                              <div className="flex items-center gap-2">
-                                <span className="font-semibold text-sm">{item.label}</span>
+                            <div className="relative z-10 flex-1 min-w-0">
+                              <div className="flex items-center gap-1 sm:gap-2">
+                                <span className="font-semibold text-xs sm:text-sm truncate">{item.label}</span>
                                 {item.badge && (
-                                  <span className="px-2 py-1 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs rounded-full font-bold">
+                                  <span className="px-1.5 py-0.5 sm:px-2 sm:py-1 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-[10px] sm:text-xs rounded-full font-bold flex-shrink-0">
                                     {item.badge}
                                   </span>
                                 )}
                               </div>
                               {item.description && (
-                                <p className="text-amber-200/60 text-xs mt-1 leading-tight">
+                                <p className="text-amber-200/60 text-[10px] sm:text-xs mt-0.5 sm:mt-1 leading-tight line-clamp-2">
                                   {item.description}
                                 </p>
                               )}
@@ -356,30 +325,30 @@ const PremiumNavbar = () => {
               ) : (
                 <button
                   onClick={() => handleNavigation(link.path)}
-                  className="relative block w-full text-left px-6 py-5 rounded-2xl font-semibold text-amber-100/90 transition-all duration-500 overflow-hidden group"
+                  className="relative block w-full text-left px-4 sm:px-6 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-semibold text-amber-100/90 transition-all duration-500 overflow-hidden group"
                 >
-                  <div className="absolute inset-0 border-2 border-amber-500/20 rounded-2xl group-hover:border-amber-400/40 transition-all duration-500" />
+                  <div className="absolute inset-0 border-2 border-amber-500/20 rounded-xl sm:rounded-2xl group-hover:border-amber-400/40 transition-all duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-r from-amber-500/0 via-amber-500/10 to-amber-500/0 opacity-0 group-hover:opacity-100 transition-all duration-500" />
-                  <span className="relative z-10 tracking-wide">{link.label}</span>
+                  <span className="relative z-10 tracking-wide text-sm sm:text-base">{link.label}</span>
                 </button>
               )}
             </div>
           ))}
           
           {/* Mobile CTA Buttons */}
-          <div className="grid grid-cols-2 gap-3 mt-6">
-            <button className="relative px-6 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold rounded-2xl overflow-hidden group">
-              <div className="absolute inset-0 border-2 border-amber-300/50 rounded-2xl animate-premium-border" />
-              <span className="relative z-10 flex items-center justify-center gap-2 text-sm">
-                <MessageCircle className="w-4 h-4" />
+          <div className="grid grid-cols-2 gap-2 sm:gap-3 mt-4 sm:mt-6">
+            <button className="relative px-4 sm:px-6 py-3 sm:py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold rounded-xl sm:rounded-2xl overflow-hidden group text-sm">
+              <div className="absolute inset-0 border-2 border-amber-300/50 rounded-xl sm:rounded-2xl animate-premium-border" />
+              <span className="relative z-10 flex items-center justify-center gap-1 sm:gap-2">
+                <MessageCircle className="w-3 h-3 sm:w-4 sm:h-4" />
                 Concierge
               </span>
             </button>
 
-            <button className="relative px-6 py-4 bg-gradient-to-br from-red-500/20 to-red-600/10 backdrop-blur-xl border-2 border-red-400/30 text-red-100 rounded-2xl overflow-hidden group">
+            <button className="relative px-4 sm:px-6 py-3 sm:py-4 bg-gradient-to-br from-red-500/20 to-red-600/10 backdrop-blur-xl border-2 border-red-400/30 text-red-100 rounded-xl sm:rounded-2xl overflow-hidden group text-sm">
               <div className="absolute inset-0 bg-gradient-to-r from-red-500/0 via-red-500/10 to-red-500/0 opacity-0 group-hover:opacity-100 transition-all duration-500" />
-              <span className="relative z-10 flex items-center justify-center gap-2 text-sm">
-                <Phone className="w-4 h-4" />
+              <span className="relative z-10 flex items-center justify-center gap-1 sm:gap-2">
+                <Phone className="w-3 h-3 sm:w-4 sm:h-4" />
                 Emergency
               </span>
             </button>
@@ -473,6 +442,13 @@ const PremiumNavbar = () => {
 
         .premium-slide-in {
           animation: premium-slide-in 0.5s ease-out both;
+        }
+
+        .line-clamp-2 {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
         }
       `}</style>
     </nav>
