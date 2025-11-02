@@ -71,7 +71,7 @@ const Navbar = () => {
           badge: 'Tech'
         },
         { 
-          path: '/maintenance', 
+          path: '/Services/Maintenance', 
           label: 'Concierge Maintenance', 
           icon: Clock,
           description: 'Scheduled luxury maintenance',

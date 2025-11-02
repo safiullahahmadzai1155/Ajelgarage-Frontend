@@ -13,6 +13,7 @@ import PerformanceTuning from './Services/PerformanceTuning';
 import BrakeService from './Services/BrakeService';
 import OilChange from './Services/OilChange';
 import Diagnostics from './Services/Diagnostics';
+import Maintenance from './Services/Maintenance';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="/Services/BrakeService" element={<BrakeService />} />
             <Route path="/Services/OilChange" element={<OilChange />} />
             <Route path="/Services/Diagnostics" element={<Diagnostics />} />
+            <Route path="/Services/Maintenance" element={<Maintenance />} />
             <Route path="/about" element={<About />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
