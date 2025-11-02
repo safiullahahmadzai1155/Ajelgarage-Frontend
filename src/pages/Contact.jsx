@@ -156,10 +156,6 @@ const Contact = () => {
             ...prev,
             Location: googleMapsShareUrl,
             isGettingLocation: false,
-            status: { 
-              type: 'success', 
-              message: 'Location detected! Google Maps link added.' 
-            }
           }));
         }
       },
