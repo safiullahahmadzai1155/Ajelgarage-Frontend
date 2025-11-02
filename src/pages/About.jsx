@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Target, Eye, Award, Users, Lightbulb, Heart, Rocket, Wrench, Car, Cog } from 'lucide-react';
 import Banner from '../components/Banner';
 
-const About = () => {
+const Legacy = () => {
   const [isVisible, setIsVisible] = useState({});
   
  const team = [
@@ -287,4 +287,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Legacy;

@@ -80,7 +80,7 @@ const Navbar = () => {
       ],
     },
     { 
-      path: '/about', 
+      path: '/Legacy', 
       label: 'Our Legacy',
       submenu: [
         { path: '/heritage', label: '25 Years Excellence', icon: Award },

@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import WhatsApp from './components/Whatsapp';
 import Footer from './components/Footer';
 import Service from './pages/Service';
-import About from './pages/About';
+import Legacy from './pages/About';
 import Contact from './pages/Contact';
 import Gallery from './pages/Gallery';
 import EngineRepair from './Services/EngineRepair';
@@ -30,7 +30,7 @@ function App() {
             <Route path="/Services/OilChange" element={<OilChange />} />
             <Route path="/Services/Diagnostics" element={<Diagnostics />} />
             <Route path="/Services/Maintenance" element={<Maintenance />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/Legacy" element={<Legacy />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
