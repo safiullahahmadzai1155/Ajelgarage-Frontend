@@ -14,6 +14,10 @@ import BrakeService from './Services/BrakeService';
 import OilChange from './Services/OilChange';
 import Diagnostics from './Services/Diagnostics';
 import Maintenance from './Services/Maintenance';
+import Heritage from './Legacy/Heritage';
+import MasterTechnicians from './Legacy/MasterTechnicians';
+import Certifications from './Legacy/Certifications';
+
 
 function App() {
   return (
@@ -31,6 +35,9 @@ function App() {
             <Route path="/Services/Diagnostics" element={<Diagnostics />} />
             <Route path="/Services/Maintenance" element={<Maintenance />} />
             <Route path="/Legacy" element={<Legacy />} />
+            <Route path="/Legacy/Heritage" element={<Heritage />} />
+            <Route path="/Legacy/MasterTechnicians" element={<MasterTechnicians />} />
+            <Route path="/Legacy/Certifications" element={<Certifications />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

@@ -83,9 +83,9 @@ const Navbar = () => {
       path: '/Legacy', 
       label: 'Our Legacy',
       submenu: [
-        { path: '/heritage', label: '25 Years Excellence', icon: Award },
-        { path: '/team', label: 'Master Technicians', icon: Users },
-        { path: '/certifications', label: 'Certifications', icon: Shield },
+        { path: '/Legacy/Heritage', label: '25 Years Excellence', icon: Award },
+        { path: '/Legacy/MasterTechnicians', label: 'Master Technicians', icon: Users },
+        { path: '/Legacy/Certifications', label: 'Certifications', icon: Shield },
       ]
     },
     { path: '/gallery', label: 'Gallery' },
