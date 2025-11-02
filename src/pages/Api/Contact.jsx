@@ -1,10 +1,5 @@
-// Either configure axios instance with base URL
-import axios from 'axios';
 
-const api = axios.create({
-  baseURL: 'https://ajelgarage-backend.onrender.com'
-});
-
+import axios from "../../Authentication/headers"
 export function CreateDeatils(payload){
-  return api.post(`/api/send-message`, payload)
+  return axios.post(`/api/send-message`, payload)
 }
