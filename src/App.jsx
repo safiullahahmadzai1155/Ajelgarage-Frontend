@@ -5,6 +5,9 @@ import Navbar from './components/Navbar';
 import WhatsApp from './components/Whatsapp';
 import Footer from './components/Footer';
 import Service from './pages/Service';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Gallery from './pages/Gallery';
 
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/service" element={<Service />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
         <WhatsApp />
