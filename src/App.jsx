@@ -10,6 +10,8 @@ import Contact from './pages/Contact';
 import Gallery from './pages/Gallery';
 import EngineRepair from './Services/EngineRepair';
 import PerformanceTuning from './Services/PerformanceTuning';
+import BrakeService from './Services/BrakeService';
+import OilChange from './Services/OilChange';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
             <Route path="/service" element={<Service />} />
             <Route path="/Services/EngineRepair" element={<EngineRepair />} />
             <Route path="/Services/PerformanceTuning" element={<PerformanceTuning />} />
+            <Route path="/Services/BrakeService" element={<BrakeService />} />
+            <Route path="/Services/OilChange" element={<OilChange />} />
             <Route path="/about" element={<About />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />

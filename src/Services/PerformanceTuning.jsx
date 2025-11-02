@@ -1,4 +1,4 @@
-import { Car, Wrench, Settings, Zap, Shield, Clock, Users, Award, Sparkles, Cog, Gauge, Fuel, Cpu, Heart } from 'lucide-react';
+import { Car, Wrench, Settings, Zap, Shield, Clock, Users, Award, Sparkles, Cog, Gauge, Fuel, Cpu, Heart, RotateCcw, AlertTriangle } from 'lucide-react';
 import Banner from '../components/Banner';
 import { motion } from 'framer-motion';
 
@@ -94,110 +94,133 @@ const AnimatedSection = ({ children, className = "" }) => {
     );
 };
 
-const PerformanceTuning = () => {
-    const tuningServices = [
+const BrakeService = () => {
+    const brakeServices = [
         {
-            icon: Gauge,
-            title: 'ECU Remapping',
-            description: 'Optimize your engine control unit for maximum performance, better throttle response, and improved power delivery.',
-            features: ['Power Increase up to 30%', 'Improved Throttle Response', 'Better Fuel Efficiency', 'Custom Tuning Maps']
+            icon: Settings,
+            title: 'Brake Pad Replacement',
+            description: 'Professional brake pad replacement using premium quality pads for optimal stopping power and longevity.',
+            features: ['Premium Brake Pads', 'Rotor Inspection', 'Caliper Service', 'Noise Elimination']
         },
         {
-            icon: Cpu,
-            title: 'Chip Tuning',
-            description: 'Advanced chip modification services to unlock your vehicle hidden performance potential safely.',
-            features: ['Safe Power Gains', 'Preserved Reliability', 'Customizable Settings', 'Real-time Monitoring']
+            icon: RotateCcw,
+            title: 'Brake Disc Resurfacing',
+            description: 'Precision machining of brake rotors to eliminate warping, vibration and ensure smooth braking.',
+            features: ['Rotor Machining', 'Surface Smoothing', 'Vibration Control', 'Extended Rotor Life']
         },
         {
             icon: Zap,
-            title: 'Performance Upgrades',
-            description: 'Comprehensive performance enhancements including turbo upgrades, exhaust systems, and intake modifications.',
-            features: ['Turbo/Supercharger Tuning', 'Exhaust System Optimization', 'Cold Air Intake Setup', 'Boost Control']
+            title: 'ABS System Repair',
+            description: 'Expert diagnosis and repair of Anti-lock Braking System issues for maximum safety.',
+            features: ['ABS Sensor Replacement', 'Module Diagnostics', 'Wheel Speed Sensors', 'System Calibration']
         },
         {
-            icon: Fuel,
-            title: 'Fuel System Tuning',
-            description: 'Precision fuel mapping and injector calibration for optimal combustion and power output.',
-            features: ['Injector Calibration', 'Fuel Pressure Optimization', 'Air-Fuel Ratio Tuning', 'Dyno Testing']
+            icon: Wrench,
+            title: 'Complete Brake Overhaul',
+            description: 'Comprehensive brake system service including all components for complete peace of mind.',
+            features: ['Full System Flush', 'Caliper Rebuild', 'Hardware Replacement', 'Performance Testing']
         }
     ];
 
     const benefits = [
         {
-            icon: Zap,
-            title: 'Power Boost',
-            description: 'Significant horsepower and torque gains while maintaining engine reliability.'
-        },
-        {
-            icon: Fuel,
-            title: 'Fuel Efficiency',
-            description: 'Optimized fuel mapping can improve mileage by 10-15% in daily driving conditions.'
-        },
-        {
-            icon: Gauge,
-            title: 'Enhanced Response',
-            description: 'Eliminate turbo lag and improve throttle response for better driving experience.'
-        },
-        {
             icon: Shield,
-            title: 'Safe Tuning',
-            description: 'All modifications are within safe operating limits with comprehensive testing.'
+            title: 'Enhanced Safety',
+            description: 'Restore factory-level braking performance for maximum safety on the road.'
+        },
+        {
+            icon: Clock,
+            title: 'Quick Service',
+            description: 'Most brake services completed within 2-3 hours with minimal downtime.'
+        },
+        {
+            icon: Award,
+            title: 'Quality Parts',
+            description: 'We use only OEM or premium aftermarket parts for lasting performance.'
+        },
+        {
+            icon: Users,
+            title: 'Expert Technicians',
+            description: 'Certified brake specialists with years of experience in brake system repair.'
         }
     ];
 
-    const performanceStats = [
-        { number: '40%', label: 'Max Power Gain' },
-        { number: '15%', label: 'Fuel Efficiency' },
-        { number: '500+', label: 'Vehicles Tuned' },
-        { number: '100%', label: 'Satisfaction Rate' }
+    const brakeStats = [
+        { number: '50%', label: 'Shorter Stopping Distance' },
+        { number: '12K+', label: 'Brake Jobs Completed' },
+        { number: '100%', label: 'Safety Certified' },
+        { number: '24H', label: 'Emergency Service' }
     ];
 
-    const tuningProcess = [
+    const brakeProcess = [
         {
             step: '01',
-            title: 'Diagnostic Scan',
-            description: 'Comprehensive vehicle health check and performance baseline establishment'
+            title: 'Brake Inspection',
+            description: 'Comprehensive assessment of all brake components including pads, rotors, and fluid'
         },
         {
             step: '02',
-            title: 'Custom Mapping',
-            description: 'Tailored ECU programming based on your vehicle specifications and driving needs'
+            title: 'Diagnostic Testing',
+            description: 'Advanced testing of brake performance, ABS system, and electronic components'
         },
         {
             step: '03',
-            title: 'Dyno Testing',
-            description: 'Performance validation on our dynamometer to ensure optimal results'
+            title: 'Precision Repair',
+            description: 'Expert replacement and servicing using specialized tools and equipment'
         },
         {
             step: '04',
             title: 'Road Testing',
-            description: 'Real-world testing and fine-tuning for perfect driveability'
+            description: 'Thorough testing under various conditions to ensure optimal braking performance'
+        }
+    ];
+
+    const warningSigns = [
+        {
+            icon: AlertTriangle,
+            title: 'Squeaking or Grinding',
+            description: 'High-pitched noises indicate worn brake pads needing immediate attention'
+        },
+        {
+            icon: Car,
+            title: 'Vibration in Pedal',
+            description: 'Pulsation or vibration when braking often means warped rotors'
+        },
+        {
+            icon: Zap,
+            title: 'ABS Light On',
+            description: 'Dashboard warning lights signal potential issues with anti-lock braking system'
+        },
+        {
+            icon: Gauge,
+            title: 'Longer Stopping Distance',
+            description: 'Vehicle takes longer to stop, indicating reduced braking efficiency'
         }
     ];
 
     return (
         <div className="min-h-screen bg-black text-white">
-            {/* Performance-focused Banner */}
+            {/* Brake Service Focused Banner */}
             <Banner
-                title="Professional Performance Tuning"
-                subtitle="Unlock your vehicle's true potential with our expert ECU remapping and performance optimization services in Oman."
-                iconOne={Gauge}
-                iconTwo={Zap}
+                title="Professional Brake Services"
+                subtitle="Ensure your safety with our expert brake inspection, repair, and replacement services in Oman. Trust our certified technicians for reliable stopping power."
+                iconOne={Settings}
+                iconTwo={Shield}
             />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                {/* Performance Tuning Services */}
+                {/* Brake Services Grid */}
                 <AnimatedSection className="mb-20">
                     <motion.div variants={fadeInUp} className="text-center mb-16">
                         <div className="inline-flex items-center gap-3 mb-4">
                             <div className="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></div>
                             <h2 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-amber-300 to-orange-300 bg-clip-text text-transparent">
-                                Performance Tuning Services
+                                Brake Services
                             </h2>
                             <div className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
                         </div>
                         <p className="text-amber-100/80 text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
-                            Transform your driving experience with our cutting-edge performance tuning solutions. From daily drivers to track monsters, we deliver measurable results.
+                            Your safety is our priority. We provide comprehensive brake system services using premium parts and advanced diagnostic equipment to ensure optimal stopping performance.
                         </p>
                     </motion.div>
 
@@ -205,7 +228,7 @@ const PerformanceTuning = () => {
                         variants={staggerContainer}
                         className="grid md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8"
                     >
-                        {tuningServices.map((service, index) => {
+                        {brakeServices.map((service, index) => {
                             const Icon = service.icon;
                             return (
                                 <motion.div
@@ -279,7 +302,7 @@ const PerformanceTuning = () => {
                                             {/* Hover Action Indicator */}
                                             <div className="pt-3 mt-auto">
                                                 <div className="inline-flex items-center gap-1 text-amber-400/60 group-hover:text-amber-300 transition-colors duration-300">
-                                                    <span className="text-xs font-semibold tracking-widest uppercase">Boost Performance</span>
+                                                    <span className="text-xs font-semibold tracking-widest uppercase">Learn More</span>
                                                     <motion.div
                                                         animate={{ x: [0, 3, 0] }}
                                                         transition={{ duration: 1.5, repeat: Infinity }}
@@ -300,12 +323,49 @@ const PerformanceTuning = () => {
                     </motion.div>
                 </AnimatedSection>
 
-                {/* Performance Benefits */}
+                {/* Warning Signs Section */}
                 <AnimatedSection className="mb-20">
                     <motion.div variants={fadeInUp} className="text-center mb-12">
-                        <h2 className="text-4xl font-bold text-amber-100 mb-4">Why Performance Tuning?</h2>
+                        <h2 className="text-4xl font-bold text-amber-100 mb-4">Brake Warning Signs</h2>
                         <p className="text-amber-200/70 text-lg max-w-3xl mx-auto">
-                            Experience transformative improvements in your vehicle's performance without compromising reliability.
+                            Don't ignore these critical signs that your brakes need immediate attention.
+                        </p>
+                    </motion.div>
+
+                    <motion.div
+                        variants={staggerContainer}
+                        className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+                    >
+                        {warningSigns.map((sign, index) => {
+                            const Icon = sign.icon;
+                            return (
+                                <motion.div
+                                    key={index}
+                                    variants={cardVariants}
+                                    whileHover="hover"
+                                    className="bg-gradient-to-br from-amber-900/20 to-orange-900/20 backdrop-blur-sm border border-amber-500/20 p-6 rounded-xl text-center hover:shadow-2xl hover:shadow-amber-500/20 hover:border-amber-500/40 transition-all duration-300 group"
+                                >
+                                    <motion.div
+                                        className="bg-gradient-to-br from-amber-500 to-orange-500 w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-amber-500/50 group-hover:scale-110 transition-transform duration-300"
+                                        whileHover={{ rotate: 360 }}
+                                        transition={{ duration: 0.5 }}
+                                    >
+                                        <Icon className="h-6 w-6 text-white" />
+                                    </motion.div>
+                                    <h3 className="text-lg font-bold text-amber-100 mb-2">{sign.title}</h3>
+                                    <p className="text-amber-200/70 text-sm">{sign.description}</p>
+                                </motion.div>
+                            );
+                        })}
+                    </motion.div>
+                </AnimatedSection>
+
+                {/* Benefits Section */}
+                <AnimatedSection className="mb-20">
+                    <motion.div variants={fadeInUp} className="text-center mb-12">
+                        <h2 className="text-4xl font-bold text-amber-100 mb-4">Why Choose Our Brake Services?</h2>
+                        <p className="text-amber-200/70 text-lg max-w-3xl mx-auto">
+                            Experience the difference with our commitment to safety, quality, and customer satisfaction.
                         </p>
                     </motion.div>
 
@@ -337,16 +397,16 @@ const PerformanceTuning = () => {
                     </motion.div>
                 </AnimatedSection>
 
-                {/* Performance Stats */}
+                {/* Brake Stats */}
                 <AnimatedSection className="mb-20">
                     <motion.div
                         variants={fadeInUp}
                         className="bg-gradient-to-br from-amber-900/20 to-orange-900/20 backdrop-blur-sm border border-amber-500/20 rounded-xl shadow-xl p-12"
                     >
                         <motion.div variants={fadeInUp} className="text-center mb-12">
-                            <h2 className="text-4xl font-bold text-amber-100 mb-4">Proven Results</h2>
+                            <h2 className="text-4xl font-bold text-amber-100 mb-4">Trusted Brake Services</h2>
                             <p className="text-amber-200/70 text-lg max-w-2xl mx-auto">
-                                Measurable performance gains backed by dyno testing and customer satisfaction.
+                                Proven track record of safety and reliability in brake system services across Oman.
                             </p>
                         </motion.div>
 
@@ -354,7 +414,7 @@ const PerformanceTuning = () => {
                             variants={staggerContainer}
                             className="grid grid-cols-2 md:grid-cols-4 gap-8"
                         >
-                            {performanceStats.map((stat, index) => (
+                            {brakeStats.map((stat, index) => (
                                 <motion.div
                                     key={index}
                                     variants={statsVariants}
@@ -381,12 +441,12 @@ const PerformanceTuning = () => {
                     </motion.div>
                 </AnimatedSection>
 
-                {/* Tuning Process */}
+                {/* Brake Service Process */}
                 <AnimatedSection className="mb-20">
                     <motion.div variants={fadeInUp} className="text-center mb-12">
-                        <h2 className="text-4xl font-bold text-amber-100 mb-4">Our Tuning Process</h2>
+                        <h2 className="text-4xl font-bold text-amber-100 mb-4">Our Brake Service Process</h2>
                         <p className="text-amber-200/70 text-lg max-w-3xl mx-auto">
-                            A systematic approach to ensure optimal performance gains and complete reliability.
+                            A systematic approach to ensure your brakes are in perfect condition for maximum safety.
                         </p>
                     </motion.div>
 
@@ -394,7 +454,7 @@ const PerformanceTuning = () => {
                         variants={staggerContainer}
                         className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
                     >
-                        {tuningProcess.map((step, index) => (
+                        {brakeProcess.map((step, index) => (
                             <motion.div
                                 key={index}
                                 variants={cardVariants}
@@ -410,7 +470,7 @@ const PerformanceTuning = () => {
                                 <p className="text-amber-200/70 text-sm">{step.description}</p>
                                 
                                 {/* Progress Line */}
-                                {index < tuningProcess.length - 1 && (
+                                {index < brakeProcess.length - 1 && (
                                     <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-0.5 bg-amber-500/30 group-hover:bg-amber-400 transition-colors duration-300"></div>
                                 )}
                             </motion.div>
@@ -418,75 +478,7 @@ const PerformanceTuning = () => {
                     </motion.div>
                 </AnimatedSection>
 
-                {/* Vehicle Compatibility */}
-                <AnimatedSection className="mb-20">
-                    <motion.div
-                        variants={staggerContainer}
-                        className="grid md:grid-cols-2 gap-12"
-                    >
-                        <motion.div
-                            variants={itemVariants}
-                            whileHover={{ scale: 1.02 }}
-                            className="bg-gradient-to-br from-amber-900/20 to-orange-900/20 backdrop-blur-sm border border-amber-500/20 p-8 rounded-xl shadow-xl hover:shadow-2xl hover:shadow-amber-500/20 transition-all duration-300 group"
-                        >
-                            <div className="flex items-center space-x-3 mb-4">
-                                <motion.div
-                                    className="bg-gradient-to-br from-amber-500 to-orange-500 p-3 rounded-xl shadow-lg shadow-amber-500/50 group-hover:scale-110 transition-transform duration-300"
-                                    whileHover={{ rotate: 180 }}
-                                    transition={{ duration: 0.5 }}
-                                >
-                                    <Cog className="h-8 w-8 text-white" />
-                                </motion.div>
-                                <h2 className="text-3xl font-bold text-amber-100">Vehicle Compatibility</h2>
-                            </div>
-                            <p className="text-amber-200/80 leading-relaxed text-lg mb-4">
-                                We specialize in performance tuning for a wide range of vehicles:
-                            </p>
-                            <ul className="text-amber-200/70 space-y-2">
-                                <li className="flex items-center gap-2">
-                                    <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
-                                    Turbocharged & Supercharged Vehicles
-                                </li>
-                                <li className="flex items-center gap-2">
-                                    <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
-                                    European Performance Cars (BMW, Mercedes, Audi)
-                                </li>
-                                <li className="flex items-center gap-2">
-                                    <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
-                                    Japanese Sports Cars (Toyota, Honda, Nissan)
-                                </li>
-                                <li className="flex items-center gap-2">
-                                    <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
-                                    American Muscle & Performance Vehicles
-                                </li>
-                            </ul>
-                        </motion.div>
-
-                        <motion.div
-                            variants={itemVariants}
-                            whileHover={{ scale: 1.02 }}
-                            className="bg-gradient-to-br from-amber-900/20 to-orange-900/20 backdrop-blur-sm border border-amber-500/20 p-8 rounded-xl shadow-xl hover:shadow-2xl hover:shadow-amber-500/20 transition-all duration-300 group"
-                        >
-                            <div className="flex items-center space-x-3 mb-4">
-                                <motion.div
-                                    className="bg-gradient-to-br from-amber-500 to-orange-500 p-3 rounded-xl shadow-lg shadow-amber-500/50 group-hover:scale-110 transition-transform duration-300"
-                                    whileHover={{ rotate: 180 }}
-                                    transition={{ duration: 0.5 }}
-                                >
-                                    <Shield className="h-8 w-8 text-white" />
-                                </motion.div>
-                                <h2 className="text-3xl font-bold text-amber-100">Quality Assurance</h2>
-                            </div>
-                            <p className="text-amber-200/80 leading-relaxed text-lg">
-                                Every tuning project includes comprehensive testing and validation. We use state-of-the-art 
-                                diagnostic equipment and dyno testing to ensure your vehicle performs optimally while 
-                                maintaining factory reliability standards. All work comes with our performance guarantee.
-                            </p>
-                        </motion.div>
-                    </motion.div>
-                </AnimatedSection>
-
-                {/* CTA Section - Performance Theme */}
+                {/* CTA Section - Brake Service Theme */}
                 <section className="py-20 relative overflow-hidden">
                     <div className="absolute inset-0">
                         <div className="absolute inset-0" />
@@ -508,7 +500,7 @@ const PerformanceTuning = () => {
                                 viewport={{ once: true }}
                             >
                                 <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-                                    Unleash Your Potential
+                                    Your Safety First
                                 </span>
                             </motion.h2>
                             <motion.p
@@ -518,14 +510,14 @@ const PerformanceTuning = () => {
                                 transition={{ delay: 0.4 }}
                                 viewport={{ once: true }}
                             >
-                                Ready to transform your driving experience? Contact us for a free performance consultation.
+                                Don't compromise on safety. Schedule your brake inspection today and drive with confidence.
                             </motion.p>
                             <motion.button
                                 className="px-10 py-5 font-black rounded-full text-xl transition-all hover:scale-110 relative overflow-hidden group bg-gradient-to-r from-amber-400 to-orange-500 text-black"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                <span className="relative z-10">Get Performance Quote</span>
+                                <span className="relative z-10">Schedule Brake Inspection</span>
                                 <div className="absolute inset-0 bg-white/30 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
                             </motion.button>
                         </motion.div>
@@ -536,4 +528,4 @@ const PerformanceTuning = () => {
     );
 };
 
-export default PerformanceTuning;
+export default BrakeService;

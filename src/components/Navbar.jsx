@@ -50,14 +50,14 @@ const Navbar = () => {
           badge: 'Elite'
         },
         { 
-          path: '/brake-service', 
+          path: '/Services/BrakeService',
           label: 'Ceramic Brake Service', 
           icon: Car,
           description: 'High-performance braking systems',
           badge: 'Luxury'
         },
         { 
-          path: '/oil-change', 
+          path: '/Services/OilChange', 
           label: 'Synthetic Oil Change', 
           icon: Wrench,
           description: 'Premium synthetic fluids only',
