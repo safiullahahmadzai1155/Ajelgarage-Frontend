@@ -60,7 +60,7 @@ const Legacy = () => {
     <div className="min-h-screen bg-black text-white">
       {/* Hero Banner */}
       <Banner 
-        title="About Ajal Garage"
+        title="Legacy Ajal Garage"
         subtitle="25+ years of automotive excellence in Oman. Your trusted partner for premium vehicle care and maintenance."
         iconOne={Wrench}
         iconTwo={Car}

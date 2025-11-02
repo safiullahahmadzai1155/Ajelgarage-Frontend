@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import WhatsApp from './components/Whatsapp';
 import Footer from './components/Footer';
 import Service from './pages/Service';
-import Legacy from './pages/About';
+import Legacy from './pages/Legacy';
 import Contact from './pages/Contact';
 import Gallery from './pages/Gallery';
 import EngineRepair from './Services/EngineRepair';
@@ -17,6 +17,10 @@ import Maintenance from './Services/Maintenance';
 import Heritage from './Legacy/Heritage';
 import MasterTechnicians from './Legacy/MasterTechnicians';
 import Certifications from './Legacy/Certifications';
+import Testimonials from './components/Testimonials';
+import Privacy from './Rule/Privacy';
+import Terms from './Rule/Terms';
+import Cookies from './Rule/cookies';
 
 
 function App() {
@@ -40,6 +44,10 @@ function App() {
             <Route path="/Legacy/Certifications" element={<Certifications />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/testimonials" element={<Testimonials />} />
+            <Route path="/Rule/Privacy" element={<Privacy />} />
+            <Route path="/Rule/Terms" element={<Terms />} />
+            <Route path="/Rule/Cookies" element={<Cookies />} />
           </Routes>
         </main>
         <WhatsApp />

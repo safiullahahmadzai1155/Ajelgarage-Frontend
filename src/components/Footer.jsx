@@ -1,23 +1,24 @@
 import { useState } from 'react';
 import { Code2, Mail, MapPin, Facebook, Twitter, Linkedin, Github, ArrowRight, Shield, FileText, Cookie } from 'lucide-react';
-
+import { useNavigate } from 'react-router-dom';
 const Footer = () => {
+  const navigate = useNavigate();
   const currentYear = new Date().getFullYear();
   const [activeSection, setActiveSection] = useState('home');
 
   const services = [
-    { label: "Engine Diagnostics", route: "diagnostics" },
-    { label: "Brake Repair", route: "brake-repair" },
-    { label: "Transmission Service", route: "transmission" },
-    { label: "Oil Change", route: "oil-change" },
-    { label: "AC Service", route: "ac-service" }
+    { label: "Engine Diagnostics", route: "/Services/Diagnostics" },
+    { label: "Brake Repair", route: "/Services/BrakeService" },
+    { label: "Vehicle Maintenance", route: "/Services/Maintenance" },
+    { label: "Oil Change", route: "/Services/OilChange" },
+    { label: "Performance Tuning", route: "/Services/PerformanceTuning" }
   ];
 
   const companyLinks = [
-    { label: "Careers", route: "careers" },
-    { label: "Testimonials", route: "testimonials" },
-    { label: "Services", route: "services" },
-    { label: "About Us", route: "about" }
+    { label: "AI Diagnostics Tech", route: "/Services/Diagnostics" },
+    { label: "Testimonials", route: "/testimonials" },
+    { label: "Services", route: "/service" },
+    { label: "Legacy", route: "Legacy" }
   ];
 
   const legalLinks = [
@@ -156,7 +157,7 @@ const Footer = () => {
               {services.map((service, index) => (
                 <li key={index}>
                   <button 
-                    onClick={() => handleNavigation(service.route)}
+                    onClick={() => navigate(service.route)}
                     className={getButtonStyles(service.route)}
                   >
                     <span className={getDotStyles(service.route)}></span>
@@ -182,7 +183,7 @@ const Footer = () => {
               {companyLinks.map((link, index) => (
                 <li key={index}>
                   <button 
-                    onClick={() => handleNavigation(link.route)}
+                    onClick={() => navigate(link.route)}
                     className={getButtonStyles(link.route)}
                   >
                     <span className={getDotStyles(link.route)}></span>
@@ -278,7 +279,7 @@ const Footer = () => {
             
             <div className="flex flex-wrap justify-center gap-6">
               <button 
-                onClick={() => handleNavigation('privacy')}
+                onClick={() => navigate('/Rule/Privacy')}
                 className="text-amber-100/80 hover:text-orange-400 transition-colors text-sm flex items-center group"
               >
                 <Shield className="h-3.5 w-3.5 mr-2 group-hover:scale-110 transition-transform" />
@@ -286,7 +287,7 @@ const Footer = () => {
               </button>
               
               <button 
-                onClick={() => handleNavigation('conditions')}
+                onClick={() => navigate('/Rule/Terms')}
                 className="text-amber-100/80 hover:text-orange-400 transition-colors text-sm flex items-center group"
               >
                 <FileText className="h-3.5 w-3.5 mr-2 group-hover:scale-110 transition-transform" />
@@ -294,15 +295,14 @@ const Footer = () => {
               </button>
               
               <button 
-                onClick={() => handleNavigation('cookies')}
+                onClick={() => navigate('Rule/Cookies')}
                 className="text-amber-100/80 hover:text-orange-400 transition-colors text-sm flex items-center group"
               >
                 <Cookie className="h-3.5 w-3.5 mr-2 group-hover:scale-110 transition-transform" />
                 Cookie Policy
               </button>
-              
               <button 
-                onClick={() => handleNavigation('sitemap')}
+               
                 className="text-amber-100/80 hover:text-orange-400 transition-colors text-sm"
               >
                 Sitemap
