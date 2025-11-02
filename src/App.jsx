@@ -8,6 +8,8 @@ import Service from './pages/Service';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Gallery from './pages/Gallery';
+import EngineRepair from './Services/EngineRepair';
+import PerformanceTuning from './Services/PerformanceTuning';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/service" element={<Service />} />
+            <Route path="/Services/EngineRepair" element={<EngineRepair />} />
+            <Route path="/Services/PerformanceTuning" element={<PerformanceTuning />} />
             <Route path="/about" element={<About />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />

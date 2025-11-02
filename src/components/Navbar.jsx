@@ -36,14 +36,14 @@ const Navbar = () => {
       path: '/service',
       submenu: [
         { 
-          path: '/engine-repair', 
+          path: '/Services/EngineRepair', 
           label: 'Elite Engine Repair', 
           icon: Settings,
           description: 'Advanced diagnostics & precision repair',
           badge: 'Premium'
         },
         { 
-          path: '/performance-tuning', 
+          path: '/Services/PerformanceTuning', 
           label: 'Performance Tuning', 
           icon: Zap,
           description: 'Maximize your vehicle potential',
