@@ -64,7 +64,7 @@ const Navbar = () => {
           badge: 'Premium'
         },
         { 
-          path: '/diagnostics', 
+          path: '/Services/Diagnostics', 
           label: 'AI Diagnostics', 
           icon: TrendingUp,
           description: 'Artificial intelligence analysis',
