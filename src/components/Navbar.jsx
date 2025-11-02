@@ -166,7 +166,7 @@ const Navbar = () => {
                 Ajel Garage
               </span>
               <span className="hidden sm:block text-[10px] md:text-xs text-amber-500/80 font-medium tracking-widest uppercase">
-                Premium Auto Care
+                Anytime anywhere
               </span>
             </div>
           </div>
