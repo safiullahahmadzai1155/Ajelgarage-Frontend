@@ -2,8 +2,10 @@ import { Mail, Phone, MapPin, Send, Clock, CheckCircle, XCircle, Loader, Car, Wr
 import { useState, useEffect, useRef } from 'react';
 import { CreateDeatils } from './Api/Contact';
 import Banner from '../components/Banner';
+import { useNavigate } from 'react-router-dom';
 
 const Contact = () => {
+  const navigate = useNavigate();
   const [state, setState] = useState({
     fullName: "",
     email: "",
@@ -656,12 +658,14 @@ const Contact = () => {
               Join thousands of satisfied customers who trust Ajal Garage for their vehicle maintenance and repair needs
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="tel:+358415777317">
               <button className="inline-block px-10 py-5 font-black rounded-xl text-xl shadow-2xl transition-all hover:scale-110 relative overflow-hidden group bg-gradient-to-r from-amber-500 to-orange-500 text-white">
                 <span className="relative z-10">Call Now for Service</span>
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform"></div>
               </button>
+              </a>
               <button className="px-10 py-5 font-black rounded-xl text-xl shadow-2xl transition-all hover:scale-110 relative overflow-hidden group backdrop-blur-xl bg-amber-900/20 border-2 border-amber-400/50">
-                <span className="relative z-10 text-amber-100">View Our Services</span>
+                <span className="relative z-10 text-amber-100" onClick={()=>navigate("/service")}>View Our Services</span>
                 <div className="absolute inset-0 bg-amber-400/20 translate-y-full group-hover:translate-y-0 transition-transform"></div>
               </button>
             </div>
