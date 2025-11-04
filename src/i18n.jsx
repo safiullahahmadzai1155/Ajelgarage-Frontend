@@ -96,7 +96,6 @@ i18n
                     testimonial3: "The team at Ajal Garage transformed my classic car. Their craftsmanship and dedication to quality are unmatched. Highly recommended for any automotive needs!",
                     testimonial4: "I've tried many garages, but Ajal Garage stands out with their technical expertise and customer service. They truly understand what car owners need.",
 
-
                     // Home Page - Team Section
                     ourExpertTeam: "Our Expert Team",
                     meetOurExperts: "Meet Our Experts",
@@ -156,7 +155,84 @@ i18n
                     modernWorkshop: "Modern Workshop",
                     stateOfTheArtFacility: "State-of-the-art facility",
                     expertTechniciansTitle: "Expert Technicians",
-                    certifiedProfessionals: "Certified professionals"
+                    certifiedProfessionals: "Certified professionals",
+
+                    // Additional Elite Services
+                    eliteAutomotiveExcellence: "Elite Automotive Excellence",
+                    precisionMeetsPerfection: "Where precision meets perfection",
+                    eliteAutomotiveDescription: "Experience the pinnacle of automotive care with our exclusive concierge service, available 24/7 for our most discerning clients. Every detail matters.",
+                    certifiedElitePartner: "Certified Elite Partner",
+
+                    aiPoweredDiagnostics: "AI-Powered Diagnostics",
+                    intelligentSolutions: "Intelligent solutions for modern vehicles",
+                    aiDiagnosticsDescription: "Our state-of-the-art diagnostic systems use artificial intelligence to provide unparalleled accuracy and predictive maintenance capabilities.",
+
+                    premiumPartsCollection: "Premium Parts Collection",
+                    authenticExcellence: "Authentic excellence in every component",
+                    premiumPartsDescription: "We source exclusively from premium manufacturers, ensuring optimal performance, reliability, and longevity for your luxury vehicle.",
+
+                    expressEliteService: "Express Elite Service",
+                    timeIsPriority: "Your time is our priority",
+                    expressServiceDescription: "Experience our fast-track VIP service lane with complimentary luxury amenities and personal attention from our expert team.",
+
+                    conciergeService: "24/7 Concierge Service",
+                    lifetimeWarranty: "Lifetime Warranty",
+                    premiumPartsOnly: "Premium Parts Only",
+                    masterTechnicians: "Master Technicians",
+                    aiPoweredAnalysis: "AI-Powered Analysis",
+                    realTimeMonitoring: "Real-time Monitoring",
+                    predictiveMaintenance: "Predictive Maintenance",
+                    remoteDiagnostics: "Remote Diagnostics",
+                    oemCertified: "OEM Certified",
+                    performanceUpgrades: "Performance Upgrades",
+                    fiveYearWarranty: "5-Year Warranty",
+                    directImport: "Direct Import",
+                    luxuryLoanerCars: "Luxury Loaner Cars",
+                    vipLounge: "VIP Lounge",
+                    pickupDelivery: "Pickup & Delivery",
+                    expressLane: "Express Lane",
+
+                    comprehensiveProtection: "Comprehensive Protection",
+                    diagnosticGuarantee: "Diagnostic Guarantee",
+                    partsExcellence: "Parts Excellence",
+                    serviceExcellence: "Service Excellence",
+
+                    allPartsCovered: "All Parts Covered",
+                    laborIncluded: "Labor Included",
+                    nationwideSupport: "Nationwide Support",
+                    claims24: "24/7 Claims",
+                    accuracyAssurance: "Accuracy Assurance",
+                    freeRescans: "Free Rescans",
+                    softwareUpdates: "Software Updates",
+                    expertSupport: "Expert Support",
+                    genuineParts: "Genuine Parts",
+                    directReplacement: "Direct Replacement",
+                    performanceGuarantee: "Performance Guarantee",
+                    quickProcessing: "Quick Processing",
+                    qualityAssurance: "Quality Assurance",
+                    satisfactionGuaranteed: "Satisfaction Guaranteed",
+                    followUpService: "Follow-up Service",
+                    prioritySupport: "Priority Support",
+
+                    certifiedMasterTechnicians: "Certified Master Technicians",
+                    luxuryLoanerVehicles: "Luxury Loaner Vehicles",
+                    emergencyService: "24/7 Emergency Service",
+                    predictiveAnalytics: "Predictive Analytics",
+                    aiPoweredInsights: "AI-Powered Insights",
+                    premiumOEMParts: "Premium OEM Parts",
+                    qualityCertified: "Quality Certified",
+                    vipTreatment: "VIP Treatment",
+
+                    rating: "Rating",
+                    clients: "Clients",
+                    excellence: "Excellence",
+                    success: "Success",
+
+                    scheduleConcierge: "Schedule Concierge",
+                    vipHotline: "VIP Hotline",
+
+                    initiatingEliteExperience: "Initiating Elite Experience",
+                    loadingPremiumSolutions: "Loading Premium Automotive Solutions"
                 }
             },
             ar: {
@@ -187,13 +263,12 @@ i18n
                     language: "اللغة",
                     concierge: "كونسيرج",
                     emergency: "طوارئ",
-                    // Home
 
+                    // Home Page - Stats
                     happyClients: "عملاء سعداء",
                     projectsCompleted: "مشاريع مكتملة",
                     awardsWon: "جوائز مكتسبة",
                     countriesServed: "دول مخدومة",
-
 
                     // Home Page - About Section
                     ourLegacyTitle: "إرثنا",
@@ -250,7 +325,6 @@ i18n
                     testimonial3: "حول فريق آجل جاراج سيارتي الكلاسيكية. حرفيتهم وتفانيهم للجودة لا مثيل له. موصى به بشدة لأي احتياجات سيارات!",
                     testimonial4: "لقد جربت العديد من مرآب السيارات، لكن آجل جاراج تبرز بخبرتها الفنية وخدمة العملاء. إنهم يفهمون حقًا ما يحتاجه مالكو السيارات.",
 
-
                     // Home Page - Team Section
                     ourExpertTeam: "فريقنا الخبير",
                     meetOurExperts: "قابل خبرائنا",
@@ -263,7 +337,6 @@ i18n
                     teamMember2Desc: "خبير في خدمة العملاء وتخطيط صيانة السيارات",
                     teamMember3Desc: "متخصص في تشخيص المحركات وضبط الأداء",
                     teamMember4Desc: "يضمن أن كل خدمة تفي بمعايير الجودة الممتازة لدينا",
-
 
                     // Home Page - Features/Services Section
                     ourServices: "خدماتنا",
@@ -311,7 +384,84 @@ i18n
                     modernWorkshop: "ورشة عمل حديثة",
                     stateOfTheArtFacility: "منشأة حديثة",
                     expertTechniciansTitle: "فنيون خبراء",
-                    certifiedProfessionals: "محترفون معتمدون"
+                    certifiedProfessionals: "محترفون معتمدون",
+
+                    // Additional Elite Services
+                    eliteAutomotiveExcellence: "التميز الفائق في عالم السيارات",
+                    precisionMeetsPerfection: "حيث تلتقي الدقة بالكمال",
+                    eliteAutomotiveDescription: "جرب ذروة العناية بالسيارات مع خدمة الكونسيرج الحصرية لدينا، المتاحة على مدار 24/7 لأكثر عملائنا تميزًا. كل التفاصيل مهمة.",
+                    certifiedElitePartner: "شريك النخبة المعتمد",
+
+                    aiPoweredDiagnostics: "تشخيص مدعوم بالذكاء الاصطناعي",
+                    intelligentSolutions: "حلول ذكية للمركبات الحديثة",
+                    aiDiagnosticsDescription: "تستخدم أنظمة التشخيص المتطورة لدينا الذكاء الاصطناعي لتوفير دقة لا مثيل لها وقدرات الصيانة التنبؤية.",
+
+                    premiumPartsCollection: "مجموعة قطع الغيار المميزة",
+                    authenticExcellence: "تميز أصلي في كل مكون",
+                    premiumPartsDescription: "نحن نورد حصريًا من الشركات المصنعة المميزة، مما يضمن الأداء الأمثل والموثوقية والمتانة لسيارتك الفاخرة.",
+
+                    expressEliteService: "خدمة النخبة السريعة",
+                    timeIsPriority: "وقتك هو أولويتنا",
+                    expressServiceDescription: "جرب مسار الخدمة السريع VIP مع وسائل الراحة الفاخرة المجانية والاهتمام الشخصي من فريقنا الخبير.",
+
+                    conciergeService: "خدمة الكونسيرج 24/7",
+                    lifetimeWarranty: "ضمان مدى الحياة",
+                    premiumPartsOnly: "قطع غيار مميزة فقط",
+                    masterTechnicians: "فنيون رئيسيون",
+                    aiPoweredAnalysis: "تحليل مدعوم بالذكاء الاصطناعي",
+                    realTimeMonitoring: "مراقبة في الوقت الحقيقي",
+                    predictiveMaintenance: "صيانة تنبؤية",
+                    remoteDiagnostics: "تشخيص عن بعد",
+                    oemCertified: "معتمد من OEM",
+                    performanceUpgrades: "ترقيات الأداء",
+                    fiveYearWarranty: "ضمان 5 سنوات",
+                    directImport: "استيراد مباشر",
+                    luxuryLoanerCars: "سيارات إعارة فاخرة",
+                    vipLounge: "صالة VIP",
+                    pickupDelivery: "استلام وتسليم",
+                    expressLane: "مسار سريع",
+
+                    comprehensiveProtection: "حماية شاملة",
+                    diagnosticGuarantee: "ضمان التشخيص",
+                    partsExcellence: "تميز القطع",
+                    serviceExcellence: "تميز الخدمة",
+
+                    allPartsCovered: "جميع القطع مغطاة",
+                    laborIncluded: "اليد العاملة مشمولة",
+                    nationwideSupport: "دعم على مستوى الدولة",
+                    claims24: "مطالبات 24/7",
+                    accuracyAssurance: "ضمان الدقة",
+                    freeRescans: "إعادة فحص مجانية",
+                    softwareUpdates: "تحديثات البرامج",
+                    expertSupport: "دعم الخبراء",
+                    genuineParts: "قطع أصلية",
+                    directReplacement: "استبدال مباشر",
+                    performanceGuarantee: "ضمان الأداء",
+                    quickProcessing: "معالجة سريعة",
+                    qualityAssurance: "ضمان الجودة",
+                    satisfactionGuaranteed: "مضمون الرضا",
+                    followUpService: "خدمة المتابعة",
+                    prioritySupport: "دعم ذو أولوية",
+
+                    certifiedMasterTechnicians: "فنيون رئيسيون معتمدون",
+                    luxuryLoanerVehicles: "مركبات إعارة فاخرة",
+                    emergencyService: "خدمة طوارئ 24/7",
+                    predictiveAnalytics: "تحليلات تنبؤية",
+                    aiPoweredInsights: "رؤى مدعومة بالذكاء الاصطناعي",
+                    premiumOEMParts: "قطع OEM مميزة",
+                    qualityCertified: "معتمد الجودة",
+                    vipTreatment: "معاملة VIP",
+
+                    rating: "التقييم",
+                    clients: "العملاء",
+                    excellence: "التميز",
+                    success: "النجاح",
+
+                    scheduleConcierge: "جدولة الكونسيرج",
+                    vipHotline: "الخط الساخن VIP",
+
+                    initiatingEliteExperience: "بدء تجربة النخبة",
+                    loadingPremiumSolutions: "تحميل حلول السيارات المميزة"
                 }
             },
             ur: {
@@ -404,7 +554,6 @@ i18n
                     testimonial3: "آجل گیراج کی ٹیم نے میری کلاسک کار کو تبدیل کر دیا۔ ان کا کاریگری اور معیار کے لیے وقف شدگی بے مثال ہے۔ کسی بھی آٹوموٹو ضرورت کے لیے انتہائی سفارش کی جاتی ہے!",
                     testimonial4: "میں نے بہت سے گیراج آزماۓ ہیں، لیکن آجل گیراج اپنی تکنیکی مہارت اور کسٹمر سروس کے ساتھ نمایاں ہے۔ وہ واقعی سمجھتے ہیں کہ کار مالکوں کو کیا چاہیے.",
 
-
                     // Home Page - Team Section
                     ourExpertTeam: "ہمارا ماہر ٹیم",
                     meetOurExperts: "ہمارے ماہرین سے ملیں",
@@ -464,86 +613,85 @@ i18n
                     modernWorkshop: "جدید ورکشاپ",
                     stateOfTheArtFacility: "جدید ترین سہولت",
                     expertTechniciansTitle: "ماہر ٹیکنیشن",
-                    certifiedProfessionals: "سرٹیفائیڈ پروفیشنلز"
+                    certifiedProfessionals: "سرٹیفائیڈ پروفیشنلز",
+
+                    // Additional Elite Services
+                    eliteAutomotiveExcellence: "ایلیٹ آٹوموٹو ایکسیلینس",
+                    precisionMeetsPerfection: "جہاں درستگی کمال سے ملتی ہے",
+                    eliteAutomotiveDescription: "ہمارے خصوصی کانسیرج سروس کے ساتھ آٹوموٹو کیئر کے عروج کا تجربہ کریں، جو ہمارے سب سے پرکھے ہوئے کلائنٹس کے لیے 24/7 دستیاب ہے۔ ہر تفصیل اہم ہے۔",
+                    certifiedElitePartner: "سرٹیفائیڈ ایلیٹ پارٹنر",
+
+                    aiPoweredDiagnostics: "AI سے چلنے والی ڈائیگناسٹکس",
+                    intelligentSolutions: "جدید گاڑیوں کے لیے ذہین حل",
+                    aiDiagnosticsDescription: "ہمارے جدید ترین ڈائیگناسٹک سسٹم مصنوعی ذہانت کا استعمال کرتے ہیں تاکہ بے مثال درستگی اور پیش گوئی بحالی کی صلاحیتیں فراہم کی جا سکیں۔",
+
+                    premiumPartsCollection: "پریمیم پارٹس کولیکشن",
+                    authenticExcellence: "ہر جزو میں مستند فضیلت",
+                    premiumPartsDescription: "ہم خصوصی طور پر پریمیم مینوفیکچررز سے سورس کرتے ہیں، آپ کی لگژری گاڑی کے لیے بہترین کارکردگی، قابل اعتمادیت اور دیرپا پن کو یقینی بناتے ہیں۔",
+
+                    expressEliteService: "ایکسپریس ایلیٹ سروس",
+                    timeIsPriority: "آپ کا وقت ہماری ترجیح ہے",
+                    expressServiceDescription: "ہماری تیز رفتار VIP سروس لین کا تجربہ کریں جس میں مفت لگژری سہولیات اور ہمارے ماہر ٹیم کی ذاتی توجہ شامل ہے۔",
+
+                    conciergeService: "24/7 کانسیرج سروس",
+                    lifetimeWarranty: "لائف ٹائم وارنٹی",
+                    premiumPartsOnly: "صرف پریمیم پارٹس",
+                    masterTechnicians: "ماسٹر ٹیکنیشن",
+                    aiPoweredAnalysis: "AI سے چلنے والا تجزیہ",
+                    realTimeMonitoring: "ریل ٹائم مانیٹرنگ",
+                    predictiveMaintenance: "پیش گوئی بحالی",
+                    remoteDiagnostics: "ریموٹ ڈائیگناسٹکس",
+                    oemCertified: "OEM سرٹیفائیڈ",
+                    performanceUpgrades: "کارکردگی کی اپ گریڈز",
+                    fiveYearWarranty: "5 سالہ وارنٹی",
+                    directImport: "براہ راست درآمد",
+                    luxuryLoanerCars: "لگژری لونر کارز",
+                    vipLounge: "VIP لاؤنج",
+                    pickupDelivery: "پک اپ اور ڈیلیوری",
+                    expressLane: "ایکسپریس لین",
+
+                    comprehensiveProtection: "جامع تحفظ",
+                    diagnosticGuarantee: "ڈائیگناسٹک گارنٹی",
+                    partsExcellence: "پارٹس ایکسیلینس",
+                    serviceExcellence: "سروس ایکسیلینس",
+
+                    allPartsCovered: "تمام پارٹس کوریڈ",
+                    laborIncluded: "لیبر شامل",
+                    nationwideSupport: "قومی سطح پر سپورٹ",
+                    claims24: "24/7 کلیمز",
+                    accuracyAssurance: "درستگی کی ضمانت",
+                    freeRescans: "مفت دوبارہ اسکین",
+                    softwareUpdates: "سافٹ ویئر اپ ڈیٹس",
+                    expertSupport: "ماہر سپورٹ",
+                    genuineParts: "اصلی پارٹس",
+                    directReplacement: "براہ راست تبدیلی",
+                    performanceGuarantee: "کارکردگی کی ضمانت",
+                    quickProcessing: "فوری پروسیسنگ",
+                    qualityAssurance: "کوالٹی اشورنس",
+                    satisfactionGuaranteed: "اطمینان کی ضمانت",
+                    followUpService: "فالو اپ سروس",
+                    prioritySupport: "ترجیحی سپورٹ",
+
+                    certifiedMasterTechnicians: "سرٹیفائیڈ ماسٹر ٹیکنیشن",
+                    luxuryLoanerVehicles: "لگژری لونر گاڑیاں",
+                    emergencyService: "24/7 ایمرجنسی سروس",
+                    predictiveAnalytics: "پیش گوئی تجزیہ",
+                    aiPoweredInsights: "AI سے چلنے والی بصیرتیں",
+                    premiumOEMParts: "پریمیم OEM پارٹس",
+                    qualityCertified: "کوالٹی سرٹیفائیڈ",
+                    vipTreatment: "VIP ٹریٹمنٹ",
+
+                    rating: "ریٹنگ",
+                    clients: "کلائنٹس",
+                    excellence: "فضیلت",
+                    success: "کامیابی",
+
+                    scheduleConcierge: "کانسیرج شیڈول کریں",
+                    vipHotline: "VIP ہاٹ لائن",
+
+                    initiatingEliteExperience: "ایلیٹ تجربہ شروع کر رہے ہیں",
+                    loadingPremiumSolutions: "پریمیم آٹوموٹو حل لوڈ ہو رہے ہیں"
                 }
-            },
-            ur: {
-                eliteAutomotiveExcellence: "ایلیٹ آٹوموٹو ایکسیلینس",
-                precisionMeetsPerfection: "جہاں درستگی کمال سے ملتی ہے",
-                eliteAutomotiveDescription: "ہمارے خصوصی کانسیرج سروس کے ساتھ آٹوموٹو کیئر کے عروج کا تجربہ کریں، جو ہمارے سب سے پرکھے ہوئے کلائنٹس کے لیے 24/7 دستیاب ہے۔ ہر تفصیل اہم ہے۔",
-                certifiedElitePartner: "سرٹیفائیڈ ایلیٹ پارٹنر",
-
-                aiPoweredDiagnostics: "AI سے چلنے والی ڈائیگناسٹکس",
-                intelligentSolutions: "جدید گاڑیوں کے لیے ذہین حل",
-                aiDiagnosticsDescription: "ہمارے جدید ترین ڈائیگناسٹک سسٹم مصنوعی ذہانت کا استعمال کرتے ہیں تاکہ بے مثال درستگی اور پیش گوئی بحالی کی صلاحیتیں فراہم کی جا سکیں۔",
-
-                premiumPartsCollection: "پریمیم پارٹس کولیکشن",
-                authenticExcellence: "ہر جزو میں مستند فضیلت",
-                premiumPartsDescription: "ہم خصوصی طور پر پریمیم مینوفیکچررز سے سورس کرتے ہیں، آپ کی لگژری گاڑی کے لیے بہترین کارکردگی، قابل اعتمادیت اور دیرپا پن کو یقینی بناتے ہیں۔",
-
-                expressEliteService: "ایکسپریس ایلیٹ سروس",
-                timeIsPriority: "آپ کا وقت ہماری ترجیح ہے",
-                expressServiceDescription: "ہماری تیز رفتار VIP سروس لین کا تجربہ کریں جس میں مفت لگژری سہولیات اور ہمارے ماہر ٹیم کی ذاتی توجہ شامل ہے۔",
-
-                conciergeService: "24/7 کانسیرج سروس",
-                lifetimeWarranty: "لائف ٹائم وارنٹی",
-                premiumPartsOnly: "صرف پریمیم پارٹس",
-                masterTechnicians: "ماسٹر ٹیکنیشن",
-                aiPoweredAnalysis: "AI سے چلنے والا تجزیہ",
-                realTimeMonitoring: "ریل ٹائم مانیٹرنگ",
-                predictiveMaintenance: "پیش گوئی بحالی",
-                remoteDiagnostics: "ریموٹ ڈائیگناسٹکس",
-                oemCertified: "OEM سرٹیفائیڈ",
-                performanceUpgrades: "کارکردگی کی اپ گریڈز",
-                fiveYearWarranty: "5 سالہ وارنٹی",
-                directImport: "براہ راست درآمد",
-                luxuryLoanerCars: "لگژری لونر کارز",
-                vipLounge: "VIP لاؤنج",
-                pickupDelivery: "پک اپ اور ڈیلیوری",
-                expressLane: "ایکسپریس لین",
-
-                comprehensiveProtection: "جامع تحفظ",
-                diagnosticGuarantee: "ڈائیگناسٹک گارنٹی",
-                partsExcellence: "پارٹس ایکسیلینس",
-                serviceExcellence: "سروس ایکسیلینس",
-
-                allPartsCovered: "تمام پارٹس کوریڈ",
-                laborIncluded: "لیبر شامل",
-                nationwideSupport: "قومی سطح پر سپورٹ",
-                claims24: "24/7 کلیمز",
-                accuracyAssurance: "درستگی کی ضمانت",
-                freeRescans: "مفت دوبارہ اسکین",
-                softwareUpdates: "سافٹ ویئر اپ ڈیٹس",
-                expertSupport: "ماہر سپورٹ",
-                genuineParts: "اصلی پارٹس",
-                directReplacement: "براہ راست تبدیلی",
-                performanceGuarantee: "کارکردگی کی ضمانت",
-                quickProcessing: "فوری پروسیسنگ",
-                qualityAssurance: "کوالٹی اشورنس",
-                satisfactionGuaranteed: "اطمینان کی ضمانت",
-                followUpService: "فالو اپ سروس",
-                prioritySupport: "ترجیحی سپورٹ",
-
-                certifiedMasterTechnicians: "سرٹیفائیڈ ماسٹر ٹیکنیشن",
-                luxuryLoanerVehicles: "لگژری لونر گاڑیاں",
-                emergencyService: "24/7 ایمرجنسی سروس",
-                predictiveAnalytics: "پیش گوئی تجزیہ",
-                aiPoweredInsights: "AI سے چلنے والی بصیرتیں",
-                premiumOEMParts: "پریمیم OEM پارٹس",
-                qualityCertified: "کوالٹی سرٹیفائیڈ",
-                vipTreatment: "VIP ٹریٹمنٹ",
-
-                rating: "ریٹنگ",
-                clients: "کلائنٹس",
-                excellence: "فضیلت",
-                success: "کامیابی",
-
-                scheduleConcierge: "کانسیرج شیڈول کریں",
-                vipHotline: "VIP ہاٹ لائن",
-
-                initiatingEliteExperience: "ایلیٹ تجربہ شروع کر رہے ہیں",
-                loadingPremiumSolutions: "پریمیم آٹوموٹو حل لوڈ ہو رہے ہیں",
-
             }
         },
         lng: "en",

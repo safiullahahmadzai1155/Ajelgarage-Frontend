@@ -16,10 +16,12 @@ import {
   Users as UsersIcon,
   Award as AwardIcon
 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 const Home = () => {
     const { t, i18n } = useTranslation();
+    const navigate= useNavigate()
   const [isVisible, setIsVisible] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [openFaq, setOpenFaq] = useState(null);
@@ -1475,7 +1477,7 @@ const Home = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <span className="relative z-10 flex items-center gap-2">
+                  <span className="relative z-10 flex items-center gap-2" onClick={()=>navigate("/gallery")}>
                     {t("exploreMore")} <ArrowRight className="h-5 w-5" />
                   </span>
                   <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
@@ -1615,6 +1617,7 @@ const Home = () => {
             viewport={{ once: true }}
           >
             <p className="text-amber-200/80 mb-6">{t("stillHaveQuestions")}</p>
+            <a href='Tel:+96879265646'>
             <motion.button 
               className="px-8 py-4 font-bold rounded-full text-lg transition-all relative overflow-hidden group bg-gradient-to-r from-amber-500 to-orange-500 hover:scale-105"
               whileHover={{ scale: 1.05 }}
@@ -1625,6 +1628,7 @@ const Home = () => {
               </span>
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
             </motion.button>
+            </a>
           </motion.div>
         </div>
       </section>
@@ -1654,6 +1658,7 @@ const Home = () => {
                 {t("startYourJourney")}
               </span>
             </motion.h2>
+            
             <motion.p 
               className="text-xl mb-8 max-w-2xl mx-auto text-amber-100/80"
               initial={{ opacity: 0 }}
@@ -1668,7 +1673,7 @@ const Home = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="relative z-10">{t("letsConnect")}</span>
+              <span className="relative z-10" onClick={()=>navigate("/contact")}>{t("letsConnect")}</span>
               <div className="absolute inset-0 bg-white/30 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
             </motion.button>
           </motion.div>
