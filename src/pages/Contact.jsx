@@ -225,7 +225,7 @@ const Contact = () => {
         phoneNumber: state.phoneNumber.trim(),
         VehicleType: state.VehicleType.trim(),
         serviceInterestedIn: state.serviceInterestedIn.trim(),
-        Location: state.Location.trim(), // This will be the Google Maps URL
+        Location: state.Location.trim(),
         Issue: state.Issue.trim(),
       };
       
@@ -299,13 +299,13 @@ const Contact = () => {
     {
       icon: MapPin,
       title: 'Visit Our Garage',
-      details: ['Abu Mahar, Barka', 'Sultanate of Oman', 'Near Barka Souq'],
+      details: ['10138Z , 7749 way , Industrial area 9, Al Maabilah Seeb, muscat , Oman'],
       color: '#f59e0b'
     },
     {
       icon: Phone,
       title: 'Call Us Today',
-      details: ['+968 XX XXX XXX', '+968 XX XXX XXX', 'Emergency: +968 XX XXX XXX'],
+      details: ['+968 7926 5646', '+968 7926 5646', 'Emergency: +968 7926 5646'],
       color: '#ea580c'
     },
     {
@@ -616,9 +616,11 @@ const Contact = () => {
                 <p className="text-red-200/80 mb-3">
                   Vehicle breakdown? We offer emergency roadside assistance and quick recovery services.
                 </p>
+                <a href='Tel:+96879265646'>
                 <button className="w-full px-4 py-2 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg font-semibold hover:scale-105 transition-all">
                   Emergency Call Now
                 </button>
+                </a>
               </div>
             </div>
           </div>
@@ -654,7 +656,7 @@ const Contact = () => {
               Join thousands of satisfied customers who trust Ajal Garage for their vehicle maintenance and repair needs
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+358415777317">
+              <a href="tel:+96879265646">
               <button className="inline-block px-10 py-5 font-black rounded-xl text-xl shadow-2xl transition-all hover:scale-110 relative overflow-hidden group bg-gradient-to-r from-amber-500 to-orange-500 text-white">
                 <span className="relative z-10">Call Now for Service</span>
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform"></div>
