@@ -1,0 +1,556 @@
+// src/i18n.js
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+
+i18n
+    .use(initReactI18next)
+    .init({
+        resources: {
+            en: {
+                translation: {
+                    // Navbar
+                    home: "Home",
+                    premiumServices: "Premium Services",
+                    ourLegacy: "Our Legacy",
+                    gallery: "Gallery",
+                    contact: "Contact",
+                    eliteEngineRepair: "Elite Engine Repair",
+                    advancedDiagnostics: "Advanced diagnostics & precision repair",
+                    performanceTuning: "Performance Tuning",
+                    maximizeVehicle: "Maximize your vehicle potential",
+                    ceramicBrakeService: "Ceramic Brake Service",
+                    highPerformanceBraking: "High-performance braking systems",
+                    syntheticOilChange: "Synthetic Oil Change",
+                    premiumSynthetic: "Premium synthetic fluids only",
+                    aiDiagnostics: "AI Diagnostics",
+                    aiAnalysis: "Artificial intelligence analysis",
+                    conciergeMaintenance: "Concierge Maintenance",
+                    scheduledLuxury: "Scheduled luxury maintenance",
+                    yearsExcellence: "25 Years Excellence",
+                    masterTechnicians: "Master Technicians",
+                    certifications: "Certifications",
+                    ajelGarage: "Ajel Garage",
+                    anytimeAnywhere: "Anytime anywhere",
+                    language: "Language",
+                    concierge: "Concierge",
+                    emergency: "Emergency",
+
+                    // Home Page - Stats
+                    happyClients: "Happy Clients",
+                    projectsCompleted: "Projects Completed",
+                    awardsWon: "Awards Won",
+                    countriesServed: "Countries Served",
+
+                    // Home Page - About Section
+                    ourLegacyTitle: "Our Legacy",
+                    premiumAuto: "Premium Auto",
+                    careExperts: "Care Experts",
+                    aboutText1: "Founded with a passion for automotive excellence, Ajel Garage has been delivering premium auto care services since 2010. We started as a small team of dedicated mechanics and have grown into a trusted name in automotive services.",
+                    aboutText2: "Today, we specialize in comprehensive automotive services including engine diagnostics, brake repair, transmission service, and premium car maintenance. Our state-of-the-art facility is equipped with the latest technology to serve your vehicle with the care it deserves.",
+                    certifiedTechnicians: "Certified Technicians",
+                    service24: "24/7 Service",
+                    genuineParts: "Genuine Parts",
+                    freePickup: "Free Pickup",
+
+                    // Home Page - Benefits Section
+                    whyChooseUs: "Why Choose Us",
+                    premiumAutomotiveCare: "Premium automotive care with expertise, innovation, and unwavering commitment",
+                    expertTechnicians: "Expert Technicians",
+                    expertTechniciansDesc: "Our certified mechanics have years of experience in handling all types of vehicles with precision and care.",
+                    quickService: "Quick Service",
+                    quickServiceDesc: "We value your time. Our efficient processes ensure your vehicle is serviced and ready when you need it.",
+                    qualityAssurance: "Quality Assurance",
+                    qualityAssuranceDesc: "Every service comes with our quality guarantee. We use only genuine parts and follow strict quality standards.",
+                    premiumCare: "Premium Care",
+                    premiumCareDesc: "From basic maintenance to complex repairs, we provide premium care that keeps your vehicle running smoothly.",
+                    advancedEquipment: "Advanced Equipment",
+                    advancedEquipmentDesc: "Our workshop is equipped with state-of-the-art diagnostic tools and technology for accurate repairs.",
+                    customerFirst: "Customer First",
+                    customerFirstDesc: "Your satisfaction is our priority. We provide transparent pricing and regular updates on your vehicle's status.",
+
+                    // Home Page - Values Section
+                    ourCoreValues: "Our Core Values",
+                    customerPassion: "Customer Passion",
+                    customerPassionDesc: "We are deeply committed to exceeding customer expectations and building lasting relationships.",
+                    excellence: "Excellence",
+                    excellenceDesc: "We strive for perfection in every service, ensuring the highest quality standards are met.",
+                    integrity: "Integrity",
+                    integrityDesc: "Honest, transparent service with fair pricing and clear communication at all times.",
+                    innovation: "Innovation",
+                    innovationDesc: "Continuously adopting new technologies and methods to provide better automotive solutions.",
+
+                    // Home Page - Testimonials
+                    testimonials: "Testimonials",
+                    whatOurClientsSay: "What Our Clients Say",
+                    realSuccessStories: "Real success stories from our valued customers and partners",
+                    carOwner: "Car Owner",
+                    premiumCustomer: "Premium Customer",
+                    fleetManager: "Fleet Manager",
+                    cityTransportCo: "City Transport Co.",
+                    businessOwner: "Business Owner",
+                    chenEnterprises: "Chen Enterprises",
+                    carEnthusiast: "Car Enthusiast",
+                    performanceSpecialist: "Performance Specialist",
+                    testimonial1: "Ajal Garage provided exceptional service for my luxury sedan. Their attention to detail and professional approach made me feel confident in their work. Will definitely return!",
+                    testimonial2: "We've trusted Ajal Garage with our entire fleet for over 3 years. Their reliability and expertise have saved us time and money. Outstanding service every time!",
+                    testimonial3: "The team at Ajal Garage transformed my classic car. Their craftsmanship and dedication to quality are unmatched. Highly recommended for any automotive needs!",
+                    testimonial4: "I've tried many garages, but Ajal Garage stands out with their technical expertise and customer service. They truly understand what car owners need.",
+
+
+                    // Home Page - Team Section
+                    ourExpertTeam: "Our Expert Team",
+                    meetOurExperts: "Meet Our Experts",
+                    teamDescription: "Our certified technicians bring years of experience and passion to every vehicle they service",
+                    headMechanic: "Head Mechanic",
+                    serviceManager: "Service Manager",
+                    technicalSpecialist: "Technical Specialist",
+                    qualityControl: "Quality Control",
+                    teamMember1Desc: "15+ years of experience in automotive repair and diagnostics",
+                    teamMember2Desc: "Expert in customer service and automotive maintenance planning",
+                    teamMember3Desc: "Specialized in engine diagnostics and performance tuning",
+                    teamMember4Desc: "Ensures every service meets our premium quality standards",
+
+                    // Home Page - Features/Services Section
+                    ourServices: "Our Services",
+                    comprehensiveAutoCare: "Comprehensive Auto Care",
+                    servicesDescription: "We combine technical expertise with premium service to deliver solutions that keep your vehicle running smoothly and safely.",
+                    exploreMore: "Explore More",
+
+                    // Home Page - Features List
+                    completeEngineDiagnostics: "Complete Engine Diagnostics",
+                    brakeSystemRepair: "Brake System Repair & Maintenance",
+                    transmissionServices: "Transmission Services",
+                    electricalSystemRepair: "Electrical System Repair",
+                    acHeatingServices: "AC & Heating Services",
+                    suspensionSteeringRepair: "Suspension & Steering Repair",
+                    oilChangeFluidServices: "Oil Change & Fluid Services",
+                    tireServicesWheelAlignment: "Tire Services & Wheel Alignment",
+
+                    // Home Page - FAQ Section
+                    gotQuestions: "Got Questions?",
+                    frequentlyAskedQuestions: "Frequently Asked Questions",
+                    faqDescription: "Everything you need to know about our automotive services",
+                    faq1: "How long does a typical service take?",
+                    faq1Answer: "Most standard services like oil changes and basic maintenance take 1-2 hours. Complex repairs may take longer, but we always provide accurate time estimates upfront.",
+                    faq2: "Do you offer warranty on your services?",
+                    faq2Answer: "Yes, all our services come with a comprehensive warranty. We stand behind our work and use only genuine parts to ensure long-lasting quality.",
+                    faq3: "Can I get a quote before the service?",
+                    faq3Answer: "Absolutely! We provide detailed, transparent quotes before any work begins. There are no hidden charges, and we'll explain everything clearly.",
+                    faq4: "Do you work on all vehicle brands?",
+                    faq4Answer: "Yes, our certified technicians are trained to work on all major vehicle brands, from domestic to European and Asian imports.",
+                    faq5: "What are your service hours?",
+                    faq5Answer: "We're open Monday to Saturday from 8:00 AM to 6:00 PM. Emergency services may be available outside these hours - please call to check.",
+                    stillHaveQuestions: "Still have questions? We're here to help!",
+                    contactSupport: "Contact Support",
+
+                    // Home Page - Footer CTA
+                    startYourJourney: "Start Your Journey Today",
+                    joinHundreds: "Join hundreds of satisfied customers who trust Ajal Garage for premium automotive care",
+                    letsConnect: "Let's Connect",
+
+                    // Home Page - Garage Images
+                    premiumCarService: "Premium Car Service",
+                    luxuryVehicleMaintenance: "Luxury vehicle maintenance",
+                    engineDiagnostics: "Engine Diagnostics",
+                    advancedTechnicalCare: "Advanced technical care",
+                    modernWorkshop: "Modern Workshop",
+                    stateOfTheArtFacility: "State-of-the-art facility",
+                    expertTechniciansTitle: "Expert Technicians",
+                    certifiedProfessionals: "Certified professionals"
+                }
+            },
+            ar: {
+                translation: {
+                    // Navbar
+                    home: "الرئيسية",
+                    premiumServices: "الخدمات المميزة",
+                    ourLegacy: "إرثنا",
+                    gallery: "معرض الصور",
+                    contact: "اتصل بنا",
+                    eliteEngineRepair: "إصلاح المحرك المتميز",
+                    advancedDiagnostics: "تشخيص متقدم وإصلاح دقيق",
+                    performanceTuning: "ضبط الأداء",
+                    maximizeVehicle: "استفد من إمكانيات سيارتك",
+                    ceramicBrakeService: "خدمة فرامل السيراميك",
+                    highPerformanceBraking: "أنظمة فرامل عالية الأداء",
+                    syntheticOilChange: "تغيير الزيت الاصطناعي",
+                    premiumSynthetic: "مواد اصطناعية مميزة فقط",
+                    aiDiagnostics: "تشخيص الذكاء الاصطناعي",
+                    aiAnalysis: "تحليل الذكاء الاصطناعي",
+                    conciergeMaintenance: "صيانة الكونسيرج",
+                    scheduledLuxury: "صيانة فاخرة مجدولة",
+                    yearsExcellence: "25 عامًا من التميز",
+                    masterTechnicians: "الفنيون الرئيسيون",
+                    certifications: "الشهادات",
+                    ajelGarage: "آجل جاراج",
+                    anytimeAnywhere: "في أي وقت وفي أي مكان",
+                    language: "اللغة",
+                    concierge: "كونسيرج",
+                    emergency: "طوارئ",
+                    // Home
+
+                    happyClients: "عملاء سعداء",
+                    projectsCompleted: "مشاريع مكتملة",
+                    awardsWon: "جوائز مكتسبة",
+                    countriesServed: "دول مخدومة",
+
+
+                    // Home Page - About Section
+                    ourLegacyTitle: "إرثنا",
+                    premiumAuto: "العناية",
+                    careExperts: "السيارات المميزة",
+                    aboutText1: "تأسست آجل جاراج بشغف التميز في عالم السيارات، حيث تقدم خدمات العناية المميزة بالسيارات منذ عام 2010. بدأنا كفريق صغير من الميكانيكيين المتفانين ونمونا لتصبح اسمًا موثوقًا في خدمات السيارات.",
+                    aboutText2: "اليوم، نحن متخصصون في خدمات السيارات الشاملة بما في ذلك تشخيص المحرك، إصلاح الفرامل، خدمة ناقل الحركة، وصيانة السيارات المميزة. منشأتنا الحديثة مجهزة بأحدث التقنيات لخدمة سيارتك بالعناية التي تستحقها.",
+                    certifiedTechnicians: "فنيون معتمدون",
+                    service24: "خدمة 24/7",
+                    genuineParts: "قطع أصلية",
+                    freePickup: "استلام مجاني",
+
+                    // Home Page - Benefits Section
+                    whyChooseUs: "لماذا تختارنا",
+                    premiumAutomotiveCare: "رعاية سيارات مميزة مع الخبرة والابتكار والالتزام الثابت",
+                    expertTechnicians: "فنيون خبراء",
+                    expertTechniciansDesc: "يتمتع ميكانيكيونا المعتمدون بخبرة سنوات في التعامل مع جميع أنواع المركبات بدقة وعناية.",
+                    quickService: "خدمة سريعة",
+                    quickServiceDesc: "نقدر وقتك. تضمن عملياتنا الفعالة خدمة سيارتك وجاهزيتها عندما تحتاجها.",
+                    qualityAssurance: "ضمان الجودة",
+                    qualityAssuranceDesc: "تأتي كل خدمة مع ضمان الجودة الخاص بنا. نستخدم فقط قطع الغيار الأصلية ونتبع معايير الجودة الصارمة.",
+                    premiumCare: "رعاية مميزة",
+                    premiumCareDesc: "من الصيانة الأساسية إلى الإصلاحات المعقدة، نقدم رعاية مميزة تحافظ على سير سيارتك بسلاسة.",
+                    advancedEquipment: "معدات متطورة",
+                    advancedEquipmentDesc: "مجهز ورشة العمل الخاصة بنا بأحدث أدوات التشخيص والتكنولوجيا للإصلاحات الدقيقة.",
+                    customerFirst: "العميل أولاً",
+                    customerFirstDesc: "رضاك هو أولويتنا. نقدم تسعيرًا شفافًا وتحديثات منتظمة عن حالة سيارتك.",
+
+                    // Home Page - Values Section
+                    ourCoreValues: "قيمنا الأساسية",
+                    customerPassion: "شغف العملاء",
+                    customerPassionDesc: "نحن ملتزمون بعمق بتجاوز توقعات العملاء وبناء علاقات دائمة.",
+                    excellence: "التميز",
+                    excellenceDesc: "نسعى للكمال في كل خدمة، وضمان تحقيق أعلى معايير الجودة.",
+                    integrity: "النزاهة",
+                    integrityDesc: "خدمة صادقة وشفافة مع تسعير عادل وتواصل واضح في جميع الأوقات.",
+                    innovation: "الابتكار",
+                    innovationDesc: "تبني التقنيات والطرق الجديدة باستمرار لتقديم حلول سيارات أفضل.",
+
+                    // Home Page - Testimonials
+                    testimonials: "آراء العملاء",
+                    whatOurClientsSay: "ماذا يقول عملاؤنا",
+                    realSuccessStories: "قصص نجاح حقيقية من عملائنا وشركائنا القيمين",
+                    carOwner: "مالك سيارة",
+                    premiumCustomer: "عميل مميز",
+                    fleetManager: "مدير أسطول",
+                    cityTransportCo: "شركة نقل المدينة",
+                    businessOwner: "صاحب عمل",
+                    chenEnterprises: "مشاريع تشين",
+                    carEnthusiast: "هواة السيارات",
+                    performanceSpecialist: "أخصائي أداء",
+                    testimonial1: "قدمت آجل جاراج خدمة استثنائية لسيارتي السيدان الفاخرة. جعلتني اهتمامهم بالتفاصيل ونهجهم المهني أشعر بالثقة في عملهم. سأعود بالتأكيد!",
+                    testimonial2: "لقد وثقنا بآجل جاراج مع أسطولنا بالكامل لأكثر من 3 سنوات. موثوقيتهم وخبرتهم وفرت لنا الوقت والمال. خدمة متميزة في كل مرة!",
+                    testimonial3: "حول فريق آجل جاراج سيارتي الكلاسيكية. حرفيتهم وتفانيهم للجودة لا مثيل له. موصى به بشدة لأي احتياجات سيارات!",
+                    testimonial4: "لقد جربت العديد من مرآب السيارات، لكن آجل جاراج تبرز بخبرتها الفنية وخدمة العملاء. إنهم يفهمون حقًا ما يحتاجه مالكو السيارات.",
+
+
+                    // Home Page - Team Section
+                    ourExpertTeam: "فريقنا الخبير",
+                    meetOurExperts: "قابل خبرائنا",
+                    teamDescription: "يجلب فنيونا المعتمدون سنوات من الخبرة والشغف إلى كل مركبة يخدمونها",
+                    headMechanic: "ميكانيكي رئيسي",
+                    serviceManager: "مدير الخدمة",
+                    technicalSpecialist: "أخصائي تقني",
+                    qualityControl: "مراقبة الجودة",
+                    teamMember1Desc: "أكثر من 15 عامًا من الخبرة في إصلاح السيارات والتشخيص",
+                    teamMember2Desc: "خبير في خدمة العملاء وتخطيط صيانة السيارات",
+                    teamMember3Desc: "متخصص في تشخيص المحركات وضبط الأداء",
+                    teamMember4Desc: "يضمن أن كل خدمة تفي بمعايير الجودة الممتازة لدينا",
+
+
+                    // Home Page - Features/Services Section
+                    ourServices: "خدماتنا",
+                    comprehensiveAutoCare: "رعاية سيارات شاملة",
+                    servicesDescription: "نجمع بين الخبرة الفنية والخدمة المميزة لتقديم حلول تحافظ على سير سيارتك بسلاسة وأمان.",
+                    exploreMore: "استكشف المزيد",
+
+                    // Home Page - Features List
+                    completeEngineDiagnostics: "تشخيص محرك كامل",
+                    brakeSystemRepair: "إصلاح وصيانة نظام الفرامل",
+                    transmissionServices: "خدمات ناقل الحركة",
+                    electricalSystemRepair: "إصلاح النظام الكهربائي",
+                    acHeatingServices: "خدمات التكييف والتدفئة",
+                    suspensionSteeringRepair: "إصلاح التعليق والتوجيه",
+                    oilChangeFluidServices: "تغيير الزيت وخدمات السوائل",
+                    tireServicesWheelAlignment: "خدمات الإطارات ومحاذاة العجلات",
+
+                    // Home Page - FAQ Section
+                    gotQuestions: "هل لديك أسئلة؟",
+                    frequentlyAskedQuestions: "الأسئلة الشائعة",
+                    faqDescription: "كل ما تحتاج لمعرفته عن خدماتنا للسيارات",
+                    faq1: "كم من الوقت تستغرق الخدمة النموذجية؟",
+                    faq1Answer: "معظم الخدمات القياسية مثل تغيير الزيت والصيانة الأساسية تستغرق 1-2 ساعة. قد تستغرق الإصلاحات المعقدة وقتًا أطول، لكننا نقدم دائمًا تقديرات وقت دقيقة مسبقًا.",
+                    faq2: "هل تقدمون ضمانًا على خدماتكم؟",
+                    faq2Answer: "نعم، جميع خدماتنا تأتي مع ضمان شامل. نقف وراء عملنا ونستخدم فقط قطع الغيار الأصلية لضمان الجودة الدائمة.",
+                    faq3: "هل يمكنني الحصول على عرض سعر قبل الخدمة؟",
+                    faq3Answer: "بالتأكيد! نقدم عروض أسعار مفصلة وشفافة قبل بدء أي عمل. لا توجد رسوم خفية، وسنشرح كل شيء بوضوح.",
+                    faq4: "هل تعملون على جميع ماركات السيارات؟",
+                    faq4Answer: "نعم، تم تدريب فنيينا المعتمدين للعمل على جميع ماركات السيارات الرئيسية، من المحلية إلى الأوروبية والآسيوية.",
+                    faq5: "ما هي ساعات الخدمة لديكم؟",
+                    faq5Answer: "نحن نعمل من الإثنين إلى السبت من 8:00 صباحًا إلى 6:00 مساءً. قد تكون خدمات الطوارئ متاحة خارج هذه الساعات - يرجى الاتصال للتحقق.",
+                    stillHaveQuestions: "لا تزال لديك أسئلة؟ نحن هنا لمساعدتك!",
+                    contactSupport: "اتصل بالدعم",
+
+                    // Home Page - Footer CTA
+                    startYourJourney: "ابدأ رحلتك اليوم",
+                    joinHundreds: "انضم إلى المئات من العملاء الراضين الذين يثقون بآجل جاراج للعناية المميزة بالسيارات",
+                    letsConnect: "لنتواصل",
+
+                    // Home Page - Garage Images
+                    premiumCarService: "خدمة سيارات مميزة",
+                    luxuryVehicleMaintenance: "صيانة مركبات فاخرة",
+                    engineDiagnostics: "تشخيص المحرك",
+                    advancedTechnicalCare: "رعاية تقنية متقدمة",
+                    modernWorkshop: "ورشة عمل حديثة",
+                    stateOfTheArtFacility: "منشأة حديثة",
+                    expertTechniciansTitle: "فنيون خبراء",
+                    certifiedProfessionals: "محترفون معتمدون"
+                }
+            },
+            ur: {
+                translation: {
+                    // Navbar
+                    home: "ہوم",
+                    premiumServices: "پریمیم سروسز",
+                    ourLegacy: "ہمارا ورثہ",
+                    gallery: "گیلری",
+                    contact: "رابطہ",
+                    eliteEngineRepair: "ایلیٹ انجن مرمت",
+                    advancedDiagnostics: "اعلیٰ درجے کی تشخیص اور درستگی کی مرمت",
+                    performanceTuning: "کارکردگی کی اصلاح",
+                    maximizeVehicle: "اپنی گاڑی کی صلاحیت کو بڑھائیں",
+                    ceramicBrakeService: "سیرامک بریک سروس",
+                    highPerformanceBraking: "اعلیٰ کارکردگی بریکنگ سسٹم",
+                    syntheticOilChange: "سنتھیٹک آئل چینج",
+                    premiumSynthetic: "صرف پریمیم سنتھیٹک سیال",
+                    aiDiagnostics: "AI ڈائیگناسٹکس",
+                    aiAnalysis: "مصنوعی ذہانت کا تجزیہ",
+                    conciergeMaintenance: "کانسیرج بحالی",
+                    scheduledLuxury: "شیڈولڈ لگژری بحالی",
+                    yearsExcellence: "25 سال کی فضیلت",
+                    masterTechnicians: "ماسٹر ٹیکنیشن",
+                    certifications: "سرٹیفیکیشن",
+                    ajelGarage: "آجل گیراج",
+                    anytimeAnywhere: "کسی بھی وقت کہیں بھی",
+                    language: "زبان",
+                    concierge: "کانسیرج",
+                    emergency: "ایمرجنسی",
+
+                    // Home Page - Stats
+                    happyClients: "خوش گاہک",
+                    projectsCompleted: "مکمل پروجیکٹس",
+                    awardsWon: "ایوارڈز جیتے",
+                    countriesServed: "خدمت والے ممالک",
+
+                    // Home Page - About Section
+                    ourLegacyTitle: "ہمارا ورثہ",
+                    premiumAuto: "پریمیم آٹو",
+                    careExperts: "کیئر ایکسپرٹس",
+                    aboutText1: "آٹوموٹو ایکسیلینس کے جذبے کے ساتھ قائم کیا گیا، آجل گیراج 2010 سے پریمیم آٹو کیئر سروسز فراہم کر رہا ہے۔ ہم نے وقف مکینکس کی ایک چھوٹی ٹیم کے طور پر شروعات کی اور آٹوموٹو سروسز میں ایک معتبر نام بن کر ابھرے ہیں۔",
+                    aboutText2: "آج، ہم جامع آٹوموٹو سروسز میں مہارت رکھتے ہیں جن میں انجن ڈائیگناسٹکس، بریک مرمت، ٹرانسمیشن سروس، اور پریمیم کار بحالی شامل ہیں۔ ہماری جدید ترین سہولت تازہ ترین ٹیکنالوجی سے لیس ہے تاکہ آپ کی گاڑی کو وہ دیکھ بھال فراہم کی جا سکے جس کی وہ مستحق ہے۔",
+                    certifiedTechnicians: "سرٹیفائیڈ ٹیکنیشن",
+                    service24: "24/7 سروس",
+                    genuineParts: "اصلی پرزے",
+                    freePickup: "مفت پک اپ",
+
+                    // Home Page - Benefits Section
+                    whyChooseUs: "ہمیں کیوں منتخب کریں",
+                    premiumAutomotiveCare: "مہارت، اختراع، اور غیر متزلزل عزم کے ساتھ پریمیم آٹوموٹو کیئر",
+                    expertTechnicians: "ماہر ٹیکنیشن",
+                    expertTechniciansDesc: "ہمارے سرٹیفائیڈ مکینکس کے پاس تمام قسم کی گاڑیوں کو درستگی اور دیکھ بھال سے ہینڈل کرنے کے سالوں کا تجربہ ہے۔",
+                    quickService: "فوری سروس",
+                    quickServiceDesc: "ہم آپ کے وقت کی قدر کرتے ہیں۔ ہمارے موثر عمل یقینی بناتے ہیں کہ آپ کی گاڑی کی خدمت کی جائے اور جب آپ کو ضرورت ہو تیار ہو۔",
+                    qualityAssurance: "کوالٹی اشورنس",
+                    qualityAssuranceDesc: "ہر سروس ہمارے کوالٹی گارنٹی کے ساتھ آتی ہے۔ ہم صرف اصلی پرزے استعمال کرتے ہیں اور سخت کوالٹی کے معیارات پر عمل کرتے ہیں۔",
+                    premiumCare: "پریمیم کیئر",
+                    premiumCareDesc: "بنیادی بحالی سے لے کر پیچیدہ مرمتوں تک، ہم پریمیم کیئر فراہم کرتے ہیں جو آپ کی گاڑی کو ہموار چلاتی رکھتی ہے۔",
+                    advancedEquipment: "ایڈوانسڈ آلات",
+                    advancedEquipmentDesc: "ہماری ورکشاپ درست مرمتوں کے لیے جدید ترین ڈائیگناسٹک ٹولز اور ٹیکنالوجی سے لیس ہے۔",
+                    customerFirst: "کسٹمر فرسٹ",
+                    customerFirstDesc: "آپ کی تسلی ہماری ترجیح ہے۔ ہم شفاف قیمتوں کا تعین اور آپ کی گاڑی کی حیثیت پر باقاعدہ اپ ڈیٹس فراہم کرتے ہیں۔",
+
+                    // Home Page - Values Section
+                    ourCoreValues: "ہمارے بنیادی اقدار",
+                    customerPassion: "کسٹمر پاشن",
+                    customerPassionDesc: "ہم گاہکوں کی توقعات سے تجاوز کرنے اور پائیدار تعلقات استوار کرنے کے لیے گہری طور پر پرعزم ہیں۔",
+                    excellence: "فضیلت",
+                    excellenceDesc: "ہم ہر سروس میں کمال کے حصول کی کوشش کرتے ہیں، یقینی بناتے ہیں کہ اعلیٰ ترین معیارات پورے ہوں۔",
+                    integrity: "دیانتداری",
+                    integrityDesc: "منصفانہ قیمتوں کے ساتھ ایماندار، شفاف سروس اور ہر وقت واضح مواصلات۔",
+                    innovation: "اختراع",
+                    innovationDesc: "بہتر آٹوموٹو حل فراہم کرنے کے لیے مسلسل نئی ٹیکنالوجیز اور طریقوں کو اپنانا۔",
+
+                    // Home Page - Testimonials
+                    testimonials: "توصیفات",
+                    whatOurClientsSay: "ہمارے گاہک کیا کہتے ہیں",
+                    realSuccessStories: "ہمارے قابل قدر گاہکوں اور شراکت داروں کی حقیقی کامیابی کی کہانیاں",
+                    carOwner: "کار مالک",
+                    premiumCustomer: "پریمیم کسٹمر",
+                    fleetManager: "فلیٹ مینیجر",
+                    cityTransportCo: "سٹی ٹرانسپورٹ کمپنی",
+                    businessOwner: "بزنس مالک",
+                    chenEnterprises: "چین انٹرپرائزز",
+                    carEnthusiast: "کار انتھوسیاسٹ",
+                    performanceSpecialist: "پرفارمنس اسپیشلسٹ",
+                    testimonial1: "آجل گیراج نے میری لگژری سیڈن کے لیے شاندار سروس فراہم کی۔ تفصیلات پر ان کی توجہ اور پیشہ ورانہ رویہ نے مجھے ان کے کام پر پراعتماد بنایا۔ ضرور واپس آؤں گا!",
+                    testimonial2: "ہم اپنی پوری فلیٹ کے ساتھ آجل گیراج پر 3 سال سے زیادہ عرصے سے بھروسہ کر رہے ہیں۔ ان کی قابل اعتمادیت اور مہارت نے ہمارا وقت اور پیسہ بچایا ہے۔ ہر بار شاندار سروس!",
+                    testimonial3: "آجل گیراج کی ٹیم نے میری کلاسک کار کو تبدیل کر دیا۔ ان کا کاریگری اور معیار کے لیے وقف شدگی بے مثال ہے۔ کسی بھی آٹوموٹو ضرورت کے لیے انتہائی سفارش کی جاتی ہے!",
+                    testimonial4: "میں نے بہت سے گیراج آزماۓ ہیں، لیکن آجل گیراج اپنی تکنیکی مہارت اور کسٹمر سروس کے ساتھ نمایاں ہے۔ وہ واقعی سمجھتے ہیں کہ کار مالکوں کو کیا چاہیے.",
+
+
+                    // Home Page - Team Section
+                    ourExpertTeam: "ہمارا ماہر ٹیم",
+                    meetOurExperts: "ہمارے ماہرین سے ملیں",
+                    teamDescription: "ہمارے سرٹیفائیڈ ٹیکنیشن ہر گاڑی میں سالوں کا تجربہ اور جذبہ لاتے ہیں جس کی وہ خدمت کرتے ہیں",
+                    headMechanic: "ہیڈ مکینک",
+                    serviceManager: "سروس مینیجر",
+                    technicalSpecialist: "تکنیکی ماہر",
+                    qualityControl: "کوالٹی کنٹرول",
+                    teamMember1Desc: "آٹوموٹو مرمت اور تشخیص میں 15+ سال کا تجربہ",
+                    teamMember2Desc: "کسٹمر سروس اور آٹوموٹو بحالی کی منصوبہ بندی میں ماہر",
+                    teamMember3Desc: "انجن ڈائیگناسٹکس اور کارکردگی کی اصلاح میں مہارت",
+                    teamMember4Desc: "یقینی بناتے ہیں کہ ہر سروس ہمارے پریمیم کوالٹی کے معیارات پر پورا اترے",
+
+                    // Home Page - Features/Services Section
+                    ourServices: "ہماری سروسز",
+                    comprehensiveAutoCare: "جامع آٹو کیئر",
+                    servicesDescription: "ہم تکنیکی مہارت کو پریمیم سروس کے ساتھ ملاتے ہیں تاکہ ایسے حل فراہم کیے جا سکیں جو آپ کی گاڑی کو ہموار اور محفوظ طریقے سے چلاتے رہیں۔",
+                    exploreMore: "مزید دریافت کریں",
+
+                    // Home Page - Features List
+                    completeEngineDiagnostics: "مکمل انجن ڈائیگناسٹکس",
+                    brakeSystemRepair: "بریک سسٹم مرمت اور بحالی",
+                    transmissionServices: "ٹرانسمیشن سروسز",
+                    electricalSystemRepair: "الیکٹریکل سسٹم مرمت",
+                    acHeatingServices: "AC اور ہیٹنگ سروسز",
+                    suspensionSteeringRepair: "سسپنشن اور سٹیئرنگ مرمت",
+                    oilChangeFluidServices: "آئل چینج اور فلویڈ سروسز",
+                    tireServicesWheelAlignment: "ٹائر سروسز اور وہیل الائنمنٹ",
+
+                    // Home Page - FAQ Section
+                    gotQuestions: "سوالات ہیں؟",
+                    frequentlyAskedQuestions: "اکثر پوچھے جانے والے سوالات",
+                    faqDescription: "ہماری آٹوموٹو سروسز کے بارے میں وہ سب کچھ جو آپ کو جاننے کی ضرورت ہے",
+                    faq1: "عام سروس میں کتنا وقت لگتا ہے؟",
+                    faq1Answer: "زیادہ تر معیاری خدمات جیسے آئل چینج اور بنیادی بحالی میں 1-2 گھنٹے لگتے ہیں۔ پیچیدہ مرمتیں زیادہ وقت لے سکتی ہیں، لیکن ہم ہمیشہ پہلے سے درست وقت کا تخمینہ فراہم کرتے ہیں۔",
+                    faq2: "کیا آپ اپنی خدمات پر وارنٹی پیش کرتے ہیں؟",
+                    faq2Answer: "جی ہاں، ہماری تمام خدمات ایک جامع وارنٹی کے ساتھ آتی ہیں۔ ہم اپنے کام کے پیچھے کھڑے ہیں اور دیرپا معیار کو یقینی بنانے کے لیے صرف اصلی پرزے استعمال کرتے ہیں۔",
+                    faq3: "کیا میں سروس سے پہلے کوٹیشن حاصل کر سکتا ہوں؟",
+                    faq3Answer: "بالکل! ہم کام شروع کرنے سے پہلے تفصیلی، شفاف کوٹیشنز فراہم کرتے ہیں۔ کوئی پوشیدہ چارجز نہیں ہیں، اور ہم ہر چیز کو واضح طور پر بیان کریں گے۔",
+                    faq4: "کیا آپ تمام گاڑیوں کے برانڈز پر کام کرتے ہیں؟",
+                    faq4Answer: "جی ہاں، ہمارے سرٹیفائیڈ ٹیکنیشنز کو تمام اہم گاڑیوں کے برانڈز پر کام کرنے کے لیے تربیت دی گئی ہے، گھریلو سے لے کر یورپی اور ایشیائی درآمدات تک۔",
+                    faq5: "آپ کے سروس کے اوقات کیا ہیں؟",
+                    faq5Answer: "ہم پیر سے ہفتہ تک صبح 8:00 بجے سے شام 6:00 بجے تک کھلے رہتے ہیں۔ ایمرجنسی سروسز ان اوقات کے باہر دستیاب ہو سکتی ہیں - براہ کرم چیک کرنے کے لیے کال کریں۔",
+                    stillHaveQuestions: "اب بھی سوالات ہیں؟ ہم مدد کے لیے موجود ہیں!",
+                    contactSupport: "سپورٹ سے رابطہ کریں",
+
+                    // Home Page - Footer CTA
+                    startYourJourney: "آج ہی اپنا سفر شروع کریں",
+                    joinHundreds: "سینکڑوں مطمئن گاہکوں میں شامل ہوں جو پریمیم آٹوموٹو کیئر کے لیے آجل گیراج پر بھروسہ کرتے ہیں",
+                    letsConnect: "آئیے رابطہ کریں",
+
+                    // Home Page - Garage Images
+                    premiumCarService: "پریمیم کار سروس",
+                    luxuryVehicleMaintenance: "لگژری گاڑی کی بحالی",
+                    engineDiagnostics: "انجن ڈائیگناسٹکس",
+                    advancedTechnicalCare: "ایڈوانسڈ تکنیکی دیکھ بھال",
+                    modernWorkshop: "جدید ورکشاپ",
+                    stateOfTheArtFacility: "جدید ترین سہولت",
+                    expertTechniciansTitle: "ماہر ٹیکنیشن",
+                    certifiedProfessionals: "سرٹیفائیڈ پروفیشنلز"
+                }
+            },
+            ur: {
+                eliteAutomotiveExcellence: "ایلیٹ آٹوموٹو ایکسیلینس",
+                precisionMeetsPerfection: "جہاں درستگی کمال سے ملتی ہے",
+                eliteAutomotiveDescription: "ہمارے خصوصی کانسیرج سروس کے ساتھ آٹوموٹو کیئر کے عروج کا تجربہ کریں، جو ہمارے سب سے پرکھے ہوئے کلائنٹس کے لیے 24/7 دستیاب ہے۔ ہر تفصیل اہم ہے۔",
+                certifiedElitePartner: "سرٹیفائیڈ ایلیٹ پارٹنر",
+
+                aiPoweredDiagnostics: "AI سے چلنے والی ڈائیگناسٹکس",
+                intelligentSolutions: "جدید گاڑیوں کے لیے ذہین حل",
+                aiDiagnosticsDescription: "ہمارے جدید ترین ڈائیگناسٹک سسٹم مصنوعی ذہانت کا استعمال کرتے ہیں تاکہ بے مثال درستگی اور پیش گوئی بحالی کی صلاحیتیں فراہم کی جا سکیں۔",
+
+                premiumPartsCollection: "پریمیم پارٹس کولیکشن",
+                authenticExcellence: "ہر جزو میں مستند فضیلت",
+                premiumPartsDescription: "ہم خصوصی طور پر پریمیم مینوفیکچررز سے سورس کرتے ہیں، آپ کی لگژری گاڑی کے لیے بہترین کارکردگی، قابل اعتمادیت اور دیرپا پن کو یقینی بناتے ہیں۔",
+
+                expressEliteService: "ایکسپریس ایلیٹ سروس",
+                timeIsPriority: "آپ کا وقت ہماری ترجیح ہے",
+                expressServiceDescription: "ہماری تیز رفتار VIP سروس لین کا تجربہ کریں جس میں مفت لگژری سہولیات اور ہمارے ماہر ٹیم کی ذاتی توجہ شامل ہے۔",
+
+                conciergeService: "24/7 کانسیرج سروس",
+                lifetimeWarranty: "لائف ٹائم وارنٹی",
+                premiumPartsOnly: "صرف پریمیم پارٹس",
+                masterTechnicians: "ماسٹر ٹیکنیشن",
+                aiPoweredAnalysis: "AI سے چلنے والا تجزیہ",
+                realTimeMonitoring: "ریل ٹائم مانیٹرنگ",
+                predictiveMaintenance: "پیش گوئی بحالی",
+                remoteDiagnostics: "ریموٹ ڈائیگناسٹکس",
+                oemCertified: "OEM سرٹیفائیڈ",
+                performanceUpgrades: "کارکردگی کی اپ گریڈز",
+                fiveYearWarranty: "5 سالہ وارنٹی",
+                directImport: "براہ راست درآمد",
+                luxuryLoanerCars: "لگژری لونر کارز",
+                vipLounge: "VIP لاؤنج",
+                pickupDelivery: "پک اپ اور ڈیلیوری",
+                expressLane: "ایکسپریس لین",
+
+                comprehensiveProtection: "جامع تحفظ",
+                diagnosticGuarantee: "ڈائیگناسٹک گارنٹی",
+                partsExcellence: "پارٹس ایکسیلینس",
+                serviceExcellence: "سروس ایکسیلینس",
+
+                allPartsCovered: "تمام پارٹس کوریڈ",
+                laborIncluded: "لیبر شامل",
+                nationwideSupport: "قومی سطح پر سپورٹ",
+                claims24: "24/7 کلیمز",
+                accuracyAssurance: "درستگی کی ضمانت",
+                freeRescans: "مفت دوبارہ اسکین",
+                softwareUpdates: "سافٹ ویئر اپ ڈیٹس",
+                expertSupport: "ماہر سپورٹ",
+                genuineParts: "اصلی پارٹس",
+                directReplacement: "براہ راست تبدیلی",
+                performanceGuarantee: "کارکردگی کی ضمانت",
+                quickProcessing: "فوری پروسیسنگ",
+                qualityAssurance: "کوالٹی اشورنس",
+                satisfactionGuaranteed: "اطمینان کی ضمانت",
+                followUpService: "فالو اپ سروس",
+                prioritySupport: "ترجیحی سپورٹ",
+
+                certifiedMasterTechnicians: "سرٹیفائیڈ ماسٹر ٹیکنیشن",
+                luxuryLoanerVehicles: "لگژری لونر گاڑیاں",
+                emergencyService: "24/7 ایمرجنسی سروس",
+                predictiveAnalytics: "پیش گوئی تجزیہ",
+                aiPoweredInsights: "AI سے چلنے والی بصیرتیں",
+                premiumOEMParts: "پریمیم OEM پارٹس",
+                qualityCertified: "کوالٹی سرٹیفائیڈ",
+                vipTreatment: "VIP ٹریٹمنٹ",
+
+                rating: "ریٹنگ",
+                clients: "کلائنٹس",
+                excellence: "فضیلت",
+                success: "کامیابی",
+
+                scheduleConcierge: "کانسیرج شیڈول کریں",
+                vipHotline: "VIP ہاٹ لائن",
+
+                initiatingEliteExperience: "ایلیٹ تجربہ شروع کر رہے ہیں",
+                loadingPremiumSolutions: "پریمیم آٹوموٹو حل لوڈ ہو رہے ہیں",
+
+            }
+        },
+        lng: "en",
+        fallbackLng: "en",
+        interpolation: {
+            escapeValue: false,
+        }
+    });
+
+export default i18n;

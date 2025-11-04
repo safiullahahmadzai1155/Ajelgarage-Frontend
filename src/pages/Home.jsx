@@ -16,8 +16,10 @@ import {
   Users as UsersIcon,
   Award as AwardIcon
 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Home = () => {
+    const { t, i18n } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [openFaq, setOpenFaq] = useState(null);
@@ -40,49 +42,49 @@ const Home = () => {
     );
   };
 
-  const stats = [
-    { icon: Users, value: '500+', label: 'Happy Clients' },
-    { icon: CheckCircle, value: '1000+', label: 'Projects Completed' },
-    { icon: Award, value: '50+', label: 'Awards Won' },
-    { icon: Globe, value: '30+', label: 'Countries Served' }
-  ];
+ const stats = [
+    { icon: Users, value: '500+', label: t('happyClients') },
+    { icon: CheckCircle, value: '1000+', label: t('projectsCompleted') },
+    { icon: Award, value: '50+', label: t('awardsWon') },
+    { icon: Globe, value: '30+', label: t('countriesServed') }
+];
 
   // Benefits data array
   const benefits = [
     {
       icon: Wrench,
-      title: "Expert Technicians",
-      description: "Our certified mechanics have years of experience in handling all types of vehicles with precision and care.",
+      title: t("expertTechnicians"),
+      description: t("expertTechniciansDesc"),
       color: "#f59e0b"
     },
     {
       icon: Clock,
-      title: "Quick Service",
-      description: "We value your time. Our efficient processes ensure your vehicle is serviced and ready when you need it.",
+      title: t("quickService"),
+      description: t("quickServiceDesc"),
       color: "#f97316"
     },
     {
       icon: ShieldCheck,
-      title: "Quality Assurance",
-      description: "Every service comes with our quality guarantee. We use only genuine parts and follow strict quality standards.",
+      title: t("qualityAssurance"),
+      description: t("qualityAssuranceDesc"),
       color: "#d97706"
     },
     {
       icon: Sparkles,
-      title: "Premium Care",
-      description: "From basic maintenance to complex repairs, we provide premium care that keeps your vehicle running smoothly.",
+      title: t("premiumCare"),
+      description: t("premiumCareDesc"),
       color: "#ea580c"
     },
     {
       icon: Settings,
-      title: "Advanced Equipment",
-      description: "Our workshop is equipped with state-of-the-art diagnostic tools and technology for accurate repairs.",
+      title: t("advancedEquipment"),
+      description: t("advancedEquipmentDesc"),
       color: "#dc2626"
     },
     {
       icon: Users,
-      title: "Customer First",
-      description: "Your satisfaction is our priority. We provide transparent pricing and regular updates on your vehicle's status.",
+      title: t("customerFirst"),
+      description: t("customerFirstDesc"),
       color: "#65a30d"
     }
   ];
@@ -91,26 +93,26 @@ const Home = () => {
   const values = [
     {
       icon: Heart,
-      title: "Customer Passion",
-      description: "We are deeply committed to exceeding customer expectations and building lasting relationships.",
+      title: t("customerPassion"),
+      description: t("customerPassionDesc"),
       color: "#f59e0b"
     },
     {
       icon: Target,
-      title: "Excellence",
-      description: "We strive for perfection in every service, ensuring the highest quality standards are met.",
+      title: t("excellence"),
+      description: t("excellenceDesc"),
       color: "#f97316"
     },
     {
       icon: UsersIcon,
-      title: "Integrity",
-      description: "Honest, transparent service with fair pricing and clear communication at all times.",
+      title: t("integrity"),
+      description: t("integrityDesc"),
       color: "#d97706"
     },
     {
       icon: AwardIcon,
-      title: "Innovation",
-      description: "Continuously adopting new technologies and methods to provide better automotive solutions.",
+      title: t("innovation"),
+      description: t("innovationDesc"),
       color: "#ea580c"
     }
   ];
@@ -119,31 +121,31 @@ const Home = () => {
   const testimonials = [
     {
       name: "Sarah Johnson",
-      position: "Car Owner",
-      company: "Premium Customer",
+      position: t("carOwner"),
+      company: t("premiumCustomer"),
       rating: 5,
-      text: "Ajal Garage provided exceptional service for my luxury sedan. Their attention to detail and professional approach made me feel confident in their work. Will definitely return!"
+      text: t("testimonial1")
     },
     {
       name: "Mike Rodriguez",
-      position: "Fleet Manager",
-      company: "City Transport Co.",
+      position: t("fleetManager"),
+      company: t("cityTransportCo"),
       rating: 5,
-      text: "We've trusted Ajal Garage with our entire fleet for over 3 years. Their reliability and expertise have saved us time and money. Outstanding service every time!"
+      text: t("testimonial2")
     },
     {
       name: "Emily Chen",
-      position: "Business Owner",
-      company: "Chen Enterprises",
+      position: t("businessOwner"),
+      company: t("chenEnterprises"),
       rating: 5,
-      text: "The team at Ajal Garage transformed my classic car. Their craftsmanship and dedication to quality are unmatched. Highly recommended for any automotive needs!"
+      text: t("testimonial3")
     },
     {
       name: "David Thompson",
-      position: "Car Enthusiast",
-      company: "Performance Specialist",
+      position: t("carEnthusiast"),
+      company: t("performanceSpecialist"),
       rating: 5,
-      text: "I've tried many garages, but Ajal Garage stands out with their technical expertise and customer service. They truly understand what car owners need."
+      text: t("testimonial4")
     }
   ];
 
@@ -151,66 +153,91 @@ const Home = () => {
   const team = [
     {
       name: "Alex Johnson",
-      position: "Head Mechanic",
+      position: t("headMechanic"),
       image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&auto=format",
-      description: "15+ years of experience in automotive repair and diagnostics"
+      description: t("teamMember1Desc")
     },
     {
       name: "Sarah Williams",
-      position: "Service Manager",
+      position: t("serviceManager"),
       image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&auto=format",
-      description: "Expert in customer service and automotive maintenance planning"
+      description: t("teamMember2Desc")
     },
     {
       name: "Mike Chen",
-      position: "Technical Specialist",
+      position: t("technicalSpecialist"),
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&auto=format",
-      description: "Specialized in engine diagnostics and performance tuning"
+      description: t("teamMember3Desc")
     },
     {
       name: "Emily Rodriguez",
-      position: "Quality Control",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&auto=format",
-      description: "Ensures every service meets our premium quality standards"
+      position: t("qualityControl"),
+      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&auto=format",
+      description: t("teamMember4Desc")
     }
   ];
 
   // Features data array
   const features = [
-    "Complete Engine Diagnostics",
-    "Brake System Repair & Maintenance",
-    "Transmission Services",
-    "Electrical System Repair",
-    "AC & Heating Services",
-    "Suspension & Steering Repair",
-    "Oil Change & Fluid Services",
-    "Tire Services & Wheel Alignment"
+    t("completeEngineDiagnostics"),
+    t("brakeSystemRepair"),
+    t("transmissionServices"),
+    t("electricalSystemRepair"),
+    t("acHeatingServices"),
+    t("suspensionSteeringRepair"),
+    t("oilChangeFluidServices"),
+    t("tireServicesWheelAlignment")
   ];
 
   // FAQ data array
   const faqs = [
     {
-      question: "How long does a typical service take?",
-      answer: "Most standard services like oil changes and basic maintenance take 1-2 hours. Complex repairs may take longer, but we always provide accurate time estimates upfront."
+      question: t("faq1"),
+      answer: t("faq1Answer")
     },
     {
-      question: "Do you offer warranty on your services?",
-      answer: "Yes, all our services come with a comprehensive warranty. We stand behind our work and use only genuine parts to ensure long-lasting quality."
+      question: t("faq2"),
+      answer: t("faq2Answer")
     },
     {
-      question: "Can I get a quote before the service?",
-      answer: "Absolutely! We provide detailed, transparent quotes before any work begins. There are no hidden charges, and we'll explain everything clearly."
+      question: t("faq3"),
+      answer: t("faq3Answer")
     },
     {
-      question: "Do you work on all vehicle brands?",
-      answer: "Yes, our certified technicians are trained to work on all major vehicle brands, from domestic to European and Asian imports."
+      question: t("faq4"),
+      answer: t("faq4Answer")
     },
     {
-      question: "What are your service hours?",
-      answer: "We're open Monday to Saturday from 8:00 AM to 6:00 PM. Emergency services may be available outside these hours - please call to check."
+      question: t("faq5"),
+      answer: t("faq5Answer")
     }
   ];
 
+  // Garage images data array
+  const garageImages = [
+    {
+      url: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&h=300&fit=crop&auto=format",
+      title: t("premiumCarService"),
+      description: t("luxuryVehicleMaintenance")
+    },
+    {
+      url: "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=400&h=300&fit=crop&auto=format",
+      title: t("engineDiagnostics"),
+      description: t("advancedTechnicalCare")
+    },
+    {
+      url: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&h=300&fit=crop&auto=format",
+      title: t("modernWorkshop"),
+      description: t("stateOfTheArtFacility")
+    },
+    {
+      url: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=400&h=300&fit=crop&auto=format",
+      title: t("expertTechniciansTitle"),
+      description: t("certifiedProfessionals")
+    }
+  ];
+
+  // Animation variants (same as before)
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -384,29 +411,6 @@ const Home = () => {
     }
   };
 
-  const garageImages = [
-    {
-      url: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&h=300&fit=crop&auto=format",
-      title: "Premium Car Service",
-      description: "Luxury vehicle maintenance"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=400&h=300&fit=crop&auto=format",
-      title: "Engine Diagnostics",
-      description: "Advanced technical care"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&h=300&fit=crop&auto=format",
-      title: "Modern Workshop",
-      description: "State-of-the-art facility"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=400&h=300&fit=crop&auto=format",
-      title: "Expert Technicians",
-      description: "Certified professionals"
-    }
-  ];
-
   return (
     <div
       className="text-white min-h-screen"
@@ -416,6 +420,7 @@ const Home = () => {
     >
       <Imageslider />
       
+      {/* Stats Section */}
       <section id="stats" className="py-20 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0">
@@ -529,6 +534,7 @@ const Home = () => {
         </div>
       </section>
 
+      {/* About Section */}
       <section id="about" className="py-20 relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0">
@@ -654,7 +660,7 @@ const Home = () => {
                   transition={{ delay: 0.4 }}
                   viewport={{ once: true }}
                 >
-                  Our Legacy
+                  {t("ourLegacyTitle")}
                 </motion.span>
                 <motion.div 
                   className="w-12 h-px bg-gradient-to-r from-orange-500 to-amber-500"
@@ -673,11 +679,11 @@ const Home = () => {
                 viewport={{ once: true }}
               >
                 <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-                  Premium Auto
+                 {t("premiumAuto")}
                 </span>
                 <br />
                 <span className="bg-gradient-to-r from-orange-300 to-amber-200 bg-clip-text text-transparent">
-                  Care Experts
+                  {t("careExperts")}
                 </span>
               </motion.h2>
 
@@ -696,7 +702,7 @@ const Home = () => {
                   transition={{ duration: 0.3 }}
                 >
                   <p className="text-amber-100/90 leading-relaxed text-lg">
-                    Founded with a passion for automotive excellence, <span className="text-amber-300 font-semibold">Ajal Garage</span> has been delivering premium auto care services since 2010. We started as a small team of dedicated mechanics and have grown into a trusted name in automotive services.
+                    {t("aboutText1")}
                   </p>
                 </motion.div>
 
@@ -711,7 +717,7 @@ const Home = () => {
                   transition={{ duration: 0.3, delay: 0.1 }}
                 >
                   <p className="text-amber-100/90 leading-relaxed text-lg">
-                    Today, we specialize in comprehensive automotive services including engine diagnostics, brake repair, transmission service, and premium car maintenance. Our state-of-the-art facility is equipped with the latest technology to serve your vehicle with the care it deserves.
+                    {t("aboutText2")}
                   </p>
                 </motion.div>
 
@@ -721,10 +727,10 @@ const Home = () => {
                   variants={containerVariants}
                 >
                   {[
-                    "Certified Technicians",
-                    "24/7 Service",
-                    "Genuine Parts",
-                    "Free Pickup"
+                    t("certifiedTechnicians"),
+                    t("service24"),
+                    t("genuineParts"),
+                    t("freePickup")
                   ].map((feature, idx) => (
                     <motion.div 
                       key={idx} 
@@ -822,7 +828,7 @@ const Home = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 viewport={{ once: true }}
               />
-              Why Choose Us
+              {t("whyChooseUs")}
               <motion.div 
                 className="w-12 h-px bg-gradient-to-l from-transparent to-amber-500"
                 initial={{ width: 0 }}
@@ -840,7 +846,7 @@ const Home = () => {
               viewport={{ once: true }}
             >
               <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-                Ajal Garage
+                {t("ajelGarage")}
               </span>
             </motion.h2>
             
@@ -851,7 +857,7 @@ const Home = () => {
               transition={{ delay: 0.6 }}
               viewport={{ once: true }}
             >
-              Premium automotive care with expertise, innovation, and unwavering commitment
+              {t("premiumAutomotiveCare")}
             </motion.p>
           </motion.div>
           
@@ -931,35 +937,9 @@ const Home = () => {
               );
             })}
           </div>
-
-          {/* Bottom CTA */}
-          {/* <motion.div 
-            className="text-center mt-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <motion.div 
-              className="inline-flex items-center gap-4 px-8 py-4 backdrop-blur-xl bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/30 rounded-2xl group cursor-pointer"
-              whileHover={{ 
-                scale: 1.05,
-                borderColor: "rgba(251, 191, 36, 0.5)",
-                boxShadow: "0 0 30px rgba(251, 191, 36, 0.3)"
-              }}
-              transition={{ duration: 0.3 }}
-            >
-              <span className="text-amber-300 font-semibold text-lg">Experience Premium Service</span>
-              <motion.div
-                animate={{ x: [0, 5, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-              >
-                <ChevronRight className="w-5 h-5 text-amber-400" />
-              </motion.div>
-            </motion.div>
-          </motion.div> */}
         </div>
       </section>
+
       {/* Values Section */}
       <section id="values" className="py-20 bg-gradient-to-b from-black via-amber-900/10 to-black relative overflow-hidden">
         {/* Background Effects */}
@@ -1000,7 +980,7 @@ const Home = () => {
             viewport={{ once: true }}
           >
             <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-              Our Core Values
+              {t("ourCoreValues")}
             </span>
           </motion.h2>
           
@@ -1099,7 +1079,7 @@ const Home = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 viewport={{ once: true }}
               />
-              Testimonials
+              {t("testimonials")}
               <motion.div 
                 className="w-12 h-px bg-gradient-to-l from-transparent to-amber-500"
                 initial={{ width: 0 }}
@@ -1117,7 +1097,7 @@ const Home = () => {
               viewport={{ once: true }}
             >
               <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-                What Our Clients Say
+                {t("whatOurClientsSay")}
               </span>
             </motion.h2>
             
@@ -1128,7 +1108,7 @@ const Home = () => {
               transition={{ delay: 0.6 }}
               viewport={{ once: true }}
             >
-              Real success stories from our valued customers and partners
+              {t("realSuccessStories")}
             </motion.p>
           </div>
 
@@ -1308,7 +1288,7 @@ const Home = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 viewport={{ once: true }}
               />
-              Our Expert Team
+              {t("ourExpertTeam")}
               <motion.div 
                 className="w-12 h-px bg-gradient-to-l from-transparent to-amber-500"
                 initial={{ width: 0 }}
@@ -1326,7 +1306,7 @@ const Home = () => {
               viewport={{ once: true }}
             >
               <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-                Meet Our Experts
+                {t("meetOurExperts")}
               </span>
             </motion.h2>
             
@@ -1337,7 +1317,7 @@ const Home = () => {
               transition={{ delay: 0.6 }}
               viewport={{ once: true }}
             >
-              Our certified technicians bring years of experience and passion to every vehicle they service
+              {t("teamDescription")}
             </motion.p>
           </motion.div>
 
@@ -1453,7 +1433,7 @@ const Home = () => {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     viewport={{ once: true }}
                   />
-                  Our Services
+                  {t("ourServices")}
                 </div>
                 <motion.h3 
                   className="text-4xl md:text-5xl font-black mb-6"
@@ -1463,7 +1443,7 @@ const Home = () => {
                   viewport={{ once: true }}
                 >
                   <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-                    Comprehensive Auto Care
+                    {t("comprehensiveAutoCare")}
                   </span>
                 </motion.h3>
                 <motion.p 
@@ -1473,7 +1453,7 @@ const Home = () => {
                   transition={{ delay: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  We combine technical expertise with premium service to deliver solutions that keep your vehicle running smoothly and safely.
+                  {t("servicesDescription")}
                 </motion.p>
                 <div className="grid grid-cols-1 gap-4">
                   {features.map((feature, index) => (
@@ -1496,7 +1476,7 @@ const Home = () => {
                   whileTap={{ scale: 0.95 }}
                 >
                   <span className="relative z-10 flex items-center gap-2">
-                    Explore More <ArrowRight className="h-5 w-5" />
+                    {t("exploreMore")} <ArrowRight className="h-5 w-5" />
                   </span>
                   <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
                 </motion.button>
@@ -1513,7 +1493,7 @@ const Home = () => {
                 <div className="relative backdrop-blur-xl bg-gradient-to-br from-amber-500/5 to-orange-500/5 border border-amber-400/30 rounded-2xl overflow-hidden h-96">
                   <img 
                     src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop" 
-                    alt="Our Services" 
+                    alt={t("ourServices")} 
                     className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
@@ -1552,7 +1532,7 @@ const Home = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 viewport={{ once: true }}
               />
-              Got Questions?
+              {t("gotQuestions")}
               <motion.div 
                 className="w-12 h-px bg-gradient-to-l from-transparent to-amber-500"
                 initial={{ width: 0 }}
@@ -1570,7 +1550,7 @@ const Home = () => {
               viewport={{ once: true }}
             >
               <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-                Frequently Asked Questions
+                {t("frequentlyAskedQuestions")}
               </span>
             </motion.h2>
             
@@ -1581,7 +1561,7 @@ const Home = () => {
               transition={{ delay: 0.6 }}
               viewport={{ once: true }}
             >
-              Everything you need to know about our automotive services
+              {t("faqDescription")}
             </motion.p>
           </motion.div>
 
@@ -1615,7 +1595,7 @@ const Home = () => {
                   
                   <motion.div
                     className={`overflow-hidden transition-all duration-500 ${
-                      isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                      isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity=0'
                     }`}
                   >
                     <div className="px-6 pb-6 text-amber-200/80 leading-relaxed border-t border-amber-500/20 pt-4">
@@ -1634,14 +1614,14 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            <p className="text-amber-200/80 mb-6">Still have questions? We're here to help!</p>
+            <p className="text-amber-200/80 mb-6">{t("stillHaveQuestions")}</p>
             <motion.button 
               className="px-8 py-4 font-bold rounded-full text-lg transition-all relative overflow-hidden group bg-gradient-to-r from-amber-500 to-orange-500 hover:scale-105"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <span className="relative z-10 flex items-center gap-2 mx-auto justify-center">
-                Contact Support <ArrowRight className="h-5 w-5" />
+                {t("contactSupport")} <ArrowRight className="h-5 w-5" />
               </span>
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
             </motion.button>
@@ -1671,7 +1651,7 @@ const Home = () => {
               viewport={{ once: true }}
             >
               <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-                Start Your Journey Today
+                {t("startYourJourney")}
               </span>
             </motion.h2>
             <motion.p 
@@ -1681,14 +1661,14 @@ const Home = () => {
               transition={{ delay: 0.4 }}
               viewport={{ once: true }}
             >
-              Join hundreds of satisfied customers who trust Ajal Garage for premium automotive care
+              {t("joinHundreds")}
             </motion.p>
             <motion.button 
               className="px-10 py-5 font-black rounded-full text-xl transition-all hover:scale-110 relative overflow-hidden group bg-gradient-to-r from-amber-400 to-orange-500 text-black"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="relative z-10">Let's Connect</span>
+              <span className="relative z-10">{t("letsConnect")}</span>
               <div className="absolute inset-0 bg-white/30 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
             </motion.button>
           </motion.div>

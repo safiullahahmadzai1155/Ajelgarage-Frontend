@@ -19,77 +19,87 @@ import {
   Calendar,
   MessageCircle,
   Crown,
-  Sparkles
+  Sparkles,
+  Globe
 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const navigate = useNavigate();
+  const { t, i18n } = useTranslation();
 
   const navLinks = [
-    { path: '/', label: 'Home' },
+    { path: '/', label: t('home') },
     {
-      label: 'Premium Services',
+      label: t('premiumServices'),
       path: '/service',
       submenu: [
         { 
           path: '/Services/EngineRepair', 
-          label: 'Elite Engine Repair', 
+          label: t('eliteEngineRepair'), 
           icon: Settings,
-          description: 'Advanced diagnostics & precision repair',
+          description: t('advancedDiagnostics'),
           badge: 'Premium'
         },
         { 
           path: '/Services/PerformanceTuning', 
-          label: 'Performance Tuning', 
+          label: t('performanceTuning'), 
           icon: Zap,
-          description: 'Maximize your vehicle potential',
+          description: t('maximizeVehicle'),
           badge: 'Elite'
         },
         { 
           path: '/Services/BrakeService',
-          label: 'Ceramic Brake Service', 
+          label: t('ceramicBrakeService'), 
           icon: Car,
-          description: 'High-performance braking systems',
+          description: t('highPerformanceBraking'),
           badge: 'Luxury'
         },
         { 
           path: '/Services/OilChange', 
-          label: 'Synthetic Oil Change', 
+          label: t('syntheticOilChange'), 
           icon: Wrench,
-          description: 'Premium synthetic fluids only',
+          description: t('premiumSynthetic'),
           badge: 'Premium'
         },
         { 
           path: '/Services/Diagnostics', 
-          label: 'AI Diagnostics', 
+          label: t('aiDiagnostics'), 
           icon: TrendingUp,
-          description: 'Artificial intelligence analysis',
+          description: t('aiAnalysis'),
           badge: 'Tech'
         },
         { 
           path: '/Services/Maintenance', 
-          label: 'Concierge Maintenance', 
+          label: t('conciergeMaintenance'), 
           icon: Clock,
-          description: 'Scheduled luxury maintenance',
+          description: t('scheduledLuxury'),
           badge: 'VIP'
         },
       ],
     },
     { 
       path: '/Legacy', 
-      label: 'Our Legacy',
+      label: t('ourLegacy'),
       submenu: [
-        { path: '/Legacy/Heritage', label: '25 Years Excellence', icon: Award },
-        { path: '/Legacy/MasterTechnicians', label: 'Master Technicians', icon: Users },
-        { path: '/Legacy/Certifications', label: 'Certifications', icon: Shield },
+        { path: '/Legacy/Heritage', label: t('yearsExcellence'), icon: Award },
+        { path: '/Legacy/MasterTechnicians', label: t('masterTechnicians'), icon: Users },
+        { path: '/Legacy/Certifications', label: t('certifications'), icon: Shield },
       ]
     },
-    { path: '/gallery', label: 'Gallery' },
-    { path: '/contact', label: 'Contact' },
+    { path: '/gallery', label: t('gallery') },
+    { path: '/contact', label: t('contact') },
+  ];
+
+  const languages = [
+    { code: 'en', name: 'English', flag: '🇺🇸' },
+    { code: 'ar', name: 'العربية', flag: '🇸🇦' },
+    { code: 'ur', name: 'اردو', flag: '🇵🇰' }
   ];
 
   const handleNavigation = (path) => {
@@ -100,12 +110,32 @@ const Navbar = () => {
     }
   };
 
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    setIsLanguageOpen(false);
+  };
+
+  const getCurrentLanguage = () => {
+    return languages.find(lang => lang.code === i18n.language) || languages[0];
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!event.target.closest('.language-dropdown')) {
+        setIsLanguageOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
   return (
@@ -163,10 +193,10 @@ const Navbar = () => {
             {/* Logo Text */}
             <div className="flex flex-col">
               <span className="hidden sm:block text-lg md:text-xl lg:text-2xl font-black bg-gradient-to-r from-amber-300 to-orange-300 bg-clip-text text-transparent tracking-tight">
-                Ajel Garage
+                {t('ajelGarage')}
               </span>
               <span className="hidden sm:block text-[10px] md:text-xs text-amber-500/80 font-medium tracking-widest uppercase">
-                Anytime anywhere
+                {t('anytimeAnywhere')}
               </span>
             </div>
           </div>
@@ -253,6 +283,58 @@ const Navbar = () => {
                 )}
               </div>
             ))}
+
+            {/* Language Dropdown - Desktop */}
+            <div className="relative language-dropdown">
+              <button
+                onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+                className="relative px-3 md:px-4 lg:px-6 py-2 md:py-3 lg:py-4 font-semibold text-amber-100/90 hover:text-amber-50 flex items-center space-x-2 rounded-xl lg:rounded-2xl transition-all duration-500 overflow-hidden group/language"
+              >
+                {/* Animated Background */}
+                <div className="absolute inset-0 border-2 border-amber-500/20 rounded-xl lg:rounded-2xl group-hover/language:border-amber-400/40 transition-all duration-500" />
+                <div 
+                  className="absolute inset-0 bg-gradient-to-r from-amber-500/0 via-amber-500/10 to-amber-500/0 opacity-0 group-hover/language:opacity-100 transition-all duration-700"
+                  style={{ animation: 'premium-shimmer 4s linear infinite', backgroundSize: '200% 100%' }}
+                />
+                
+                <Globe className="relative z-10 h-4 w-4 text-amber-400" />
+                <span className="relative z-10 text-sm lg:text-base">{getCurrentLanguage().flag}</span>
+                <ChevronDown className={`relative z-10 h-3 w-3 md:h-4 md:w-4 transition-transform duration-500 ${isLanguageOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              {/* Language Dropdown Menu */}
+              {isLanguageOpen && (
+                <div className="absolute right-0 mt-2 w-48 opacity-100 visible transition-all duration-500 transform origin-top">
+                  <div className="relative bg-black/95 backdrop-blur-2xl p-2 border-2 border-amber-500/20 rounded-2xl overflow-hidden">
+                    {/* Dropdown Glow */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-orange-500/5 rounded-2xl" />
+                    
+                    <div className="grid grid-cols-1 gap-1 relative z-10">
+                      {languages.map((language) => (
+                        <button
+                          key={language.code}
+                          onClick={() => changeLanguage(language.code)}
+                          className={`relative flex items-center gap-3 w-full text-left p-3 rounded-xl text-amber-100/80 hover:text-amber-50 transition-all duration-500 group/item overflow-hidden ${
+                            i18n.language === language.code ? 'bg-amber-500/20 border border-amber-400/30' : ''
+                          }`}
+                        >
+                          {/* Hover Background */}
+                          <div className="absolute inset-0 border border-amber-500/10 rounded-xl group-hover/item:border-amber-400/30 transition-all duration-500" />
+                          <div className="absolute inset-0 bg-gradient-to-r from-amber-500/0 via-amber-500/5 to-amber-500/0 opacity-0 group-hover/item:opacity-100 transition-all duration-500" />
+                          
+                          <span className="text-lg">{language.flag}</span>
+                          <span className="font-medium text-sm">{language.name}</span>
+                          
+                          {i18n.language === language.code && (
+                            <div className="ml-auto w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
+                          )}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Mobile Menu Button - Premium */}
@@ -356,6 +438,54 @@ const Navbar = () => {
               )}
             </div>
           ))}
+
+          {/* Mobile Language Dropdown */}
+          <div className="relative language-dropdown">
+            <button
+              onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+              className="relative w-full text-left px-4 sm:px-6 py-3 sm:py-4 font-semibold text-amber-100/90 flex items-center justify-between rounded-xl sm:rounded-2xl transition-all duration-500 overflow-hidden group"
+            >
+              <div className="absolute inset-0 border-2 border-amber-500/20 rounded-xl sm:rounded-2xl group-hover:border-amber-400/40 transition-all duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-500/0 via-amber-500/10 to-amber-500/0 opacity-0 group-hover:opacity-100 transition-all duration-500" />
+              <div className="relative z-10 flex items-center gap-2">
+                <Globe className="h-4 w-4 text-amber-400" />
+                <span className="tracking-wide text-sm sm:text-base">{t('language')}</span>
+                <span className="text-amber-400">{getCurrentLanguage().flag}</span>
+              </div>
+              <ChevronDown
+                className={`relative z-10 h-4 w-4 sm:h-5 sm:w-5 transition-transform duration-500 ${isLanguageOpen ? 'rotate-180 text-amber-400' : ''}`}
+              />
+            </button>
+            
+            <div className={`overflow-hidden transition-all duration-700 ${
+              isLanguageOpen ? 'max-h-48 opacity-100 mt-2 sm:mt-3' : 'max-h-0 opacity-0'
+            }`}>
+              <div className="pl-3 sm:pl-4 space-y-2 sm:space-y-3 border-l-2 border-amber-500/20 ml-3 sm:ml-4">
+                {languages.map((language, index) => (
+                  <button
+                    key={language.code}
+                    onClick={() => changeLanguage(language.code)}
+                    className={`relative flex items-center gap-3 w-full text-left px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl text-amber-100/80 hover:text-amber-50 transition-all duration-500 overflow-hidden group ${
+                      i18n.language === language.code ? 'bg-amber-500/20 border border-amber-400/30' : ''
+                    }`}
+                    style={{
+                      animationDelay: isLanguageOpen ? `${index * 0.05 + 0.3}s` : '0s'
+                    }}
+                  >
+                    <div className="absolute inset-0 border border-amber-500/10 rounded-lg sm:rounded-xl group-hover:border-amber-400/30 transition-all duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-amber-500/0 via-amber-500/5 to-amber-500/0 opacity-0 group-hover:opacity-100 transition-all duration-500" />
+                    
+                    <span className="text-lg">{language.flag}</span>
+                    <span className="font-medium text-sm">{language.name}</span>
+                    
+                    {i18n.language === language.code && (
+                      <div className="ml-auto w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
+                    )}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
           
           {/* Mobile CTA Buttons */}
           <div className="grid grid-cols-2 gap-2 sm:gap-3 mt-4 sm:mt-6">
@@ -369,7 +499,7 @@ const Navbar = () => {
               />
               <span className="relative z-10 flex items-center justify-center gap-1 sm:gap-2">
                 <MessageCircle className="w-3 h-3 sm:w-4 sm:h-4" />
-                Concierge
+                {t('concierge')}
               </span>
             </button>
 
@@ -377,7 +507,7 @@ const Navbar = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-red-500/0 via-red-500/10 to-red-500/0 opacity-0 group-hover:opacity-100 transition-all duration-500" />
               <span className="relative z-10 flex items-center justify-center gap-1 sm:gap-2">
                 <Phone className="w-3 h-3 sm:w-4 sm:h-4" />
-                Emergency
+                {t('emergency')}
               </span>
             </button>
           </div>
