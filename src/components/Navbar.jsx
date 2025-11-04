@@ -488,21 +488,9 @@ const Navbar = () => {
           </div>
           
           {/* Mobile CTA Buttons */}
-          <div className="grid grid-cols-2 gap-2 sm:gap-3 mt-4 sm:mt-6">
-            <button 
-              onClick={() => handleNavigation('/contact')}
-              className="relative px-4 sm:px-6 py-3 sm:py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold rounded-xl sm:rounded-2xl overflow-hidden group text-sm"
-            >
-              <div 
-                className="absolute inset-0 border-2 border-amber-300/50 rounded-xl sm:rounded-2xl"
-                style={{ animation: 'premium-border 3s ease-in-out infinite' }}
-              />
-              <span className="relative z-10 flex items-center justify-center gap-1 sm:gap-2">
-                <MessageCircle className="w-3 h-3 sm:w-4 sm:h-4" />
-                {t('concierge')}
-              </span>
-            </button>
-
+          <div className="flex justify-center gap-2 sm:gap-3 mt-4 sm:mt-6">
+           
+            <a href='Tel:+96879265646'>
             <button className="relative px-4 sm:px-6 py-3 sm:py-4 bg-gradient-to-br from-red-500/20 to-red-600/10 backdrop-blur-xl border-2 border-red-400/30 text-red-100 rounded-xl sm:rounded-2xl overflow-hidden group text-sm">
               <div className="absolute inset-0 bg-gradient-to-r from-red-500/0 via-red-500/10 to-red-500/0 opacity-0 group-hover:opacity-100 transition-all duration-500" />
               <span className="relative z-10 flex items-center justify-center gap-1 sm:gap-2">
@@ -510,6 +498,7 @@ const Navbar = () => {
                 {t('emergency')}
               </span>
             </button>
+            </a>
           </div>
         </div>
       </div>

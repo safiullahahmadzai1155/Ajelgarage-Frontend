@@ -31,7 +31,7 @@ function WhatsApp() {
   }, 200), []);
 
   const handleWhatsAppClick = useCallback(debounce((serviceName = '', specificService = '') => {
-    const phoneNumber = '+358415777317';
+    const phoneNumber = '+96879265646';
     let message = 'Hello Ajel Garage! ';
     
     if (serviceName && specificService) {

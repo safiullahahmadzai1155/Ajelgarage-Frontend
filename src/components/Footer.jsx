@@ -1,31 +1,34 @@
 import { useState } from 'react';
 import { Code2, Mail, MapPin, Facebook, Twitter, Linkedin, Github, ArrowRight, Shield, FileText, Cookie } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+
 const Footer = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const currentYear = new Date().getFullYear();
   const [activeSection, setActiveSection] = useState('home');
 
   const services = [
-    { label: "Engine Diagnostics", route: "/Services/Diagnostics" },
-    { label: "Brake Repair", route: "/Services/BrakeService" },
-    { label: "Vehicle Maintenance", route: "/Services/Maintenance" },
-    { label: "Oil Change", route: "/Services/OilChange" },
-    { label: "Performance Tuning", route: "/Services/PerformanceTuning" }
+    { label: t('engineDiagnostics'), route: "/Services/Diagnostics" },
+    { label: t('brakeRepair'), route: "/Services/BrakeService" },
+    { label: t('vehicleMaintenance'), route: "/Services/Maintenance" },
+    { label: t('oilChange'), route: "/Services/OilChange" },
+    { label: t('performanceTuning'), route: "/Services/PerformanceTuning" }
   ];
 
   const companyLinks = [
-    { label: "AI Diagnostics Tech", route: "/Services/Diagnostics" },
-    { label: "Testimonials", route: "/testimonials" },
-    { label: "Services", route: "/service" },
-    { label: "Legacy", route: "Legacy" }
+    { label: t('aiDiagnosticsTech'), route: "/Services/Diagnostics" },
+    { label: t('testimonials'), route: "/testimonials" },
+    { label: t('services'), route: "/service" },
+    { label: t('legacy'), route: "/Legacy" }
   ];
 
   const legalLinks = [
-    { label: "Privacy Policy", route: "privacy", icon: Shield },
-    { label: "Terms & Conditions", route: "terms", icon: FileText },
-    { label: "Cookie Policy", route: "cookies", icon: Cookie },
-    { label: "Sitemap", route: "sitemap" }
+    { label: t('privacyPolicy'), route: "/Rule/Privacy", icon: Shield },
+    { label: t('termsConditions'), route: "/Rule/Terms", icon: FileText },
+    { label: t('cookiePolicy'), route: "/Rule/Cookies", icon: Cookie },
+    { label: t('sitemap'), route: "/sitemap" }
   ];
 
   const handleNavigation = (route) => {
@@ -44,6 +47,7 @@ const Footer = () => {
 
   const handleHomeNavigation = () => {
     setActiveSection('home');
+    navigate('/');
   };
 
   const handleEmailNavigation = (type) => {
@@ -64,10 +68,10 @@ const Footer = () => {
     const emailInput = document.querySelector('input[type="email"]');
     if (emailInput && emailInput.value) {
       console.log('Newsletter signup for:', emailInput.value);
-      alert(`Thank you for subscribing with: ${emailInput.value}`);
+      alert(t('newsletterThankYou', { email: emailInput.value }));
       emailInput.value = '';
     } else {
-      alert('Please enter your email address');
+      alert(t('enterEmailAlert'));
     }
   };
 
@@ -90,7 +94,7 @@ const Footer = () => {
   };
 
   return (
-      <footer className="bg-gradient-to-br from-stone-950 via-amber-950 to-black relative overflow-hidden border-t-4 border-orange-600/40 shadow-2xl shadow-orange-900/50">
+    <footer className="bg-gradient-to-br from-stone-950 via-amber-950 to-black relative overflow-hidden border-t-4 border-orange-600/40 shadow-2xl shadow-orange-900/50">
       {/* Animated Grid Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{ 
@@ -119,13 +123,11 @@ const Footer = () => {
               <span className={`text-3xl font-bold text-amber-50 tracking-tight transition-all duration-300 ${
                 activeSection === 'home' ? 'text-orange-400' : ''
               }`}>
-                Ajal Garage
+                {t('ajelGarage')}
               </span>
             </div>
             <p className="text-amber-100/70 mb-8 leading-relaxed text-base">
-              Premium automotive care and repair services in Oman. Our expert technicians provide 
-              comprehensive vehicle maintenance, from engine diagnostics to complete overhauls. 
-              Trust Ajal Garage for quality service and exceptional customer care.
+              {t('footerDescription')}
             </p>
             <div className="flex space-x-3">
               {[
@@ -151,7 +153,7 @@ const Footer = () => {
               <div className="bg-gradient-to-br from-orange-600 to-amber-700 p-1.5 rounded-lg mr-3 border-2 border-orange-500/40 shadow-lg shadow-orange-900/30">
                 <ArrowRight className="h-4 w-4 text-amber-50" />
               </div>
-              Our Services
+              {t('ourServices')}
             </h3>
             <ul className="space-y-3">
               {services.map((service, index) => (
@@ -177,7 +179,7 @@ const Footer = () => {
               <div className="bg-gradient-to-br from-orange-600 to-amber-700 p-1.5 rounded-lg mr-3 border-2 border-orange-500/40 shadow-lg shadow-orange-900/30">
                 <ArrowRight className="h-4 w-4 text-amber-50" />
               </div>
-              Company
+              {t('company')}
             </h3>
             <ul className="space-y-3">
               {companyLinks.map((link, index) => (
@@ -203,7 +205,7 @@ const Footer = () => {
               <div className="bg-gradient-to-br from-orange-600 to-amber-700 p-1.5 rounded-lg mr-3 border-2 border-orange-500/40 shadow-lg shadow-orange-900/30">
                 <ArrowRight className="h-4 w-4 text-amber-50" />
               </div>
-              Get In Touch
+              {t('getInTouch')}
             </h3>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3 group">
@@ -213,8 +215,8 @@ const Footer = () => {
                   <MapPin className="h-5 w-5 text-orange-400 flex-shrink-0" />
                 </div>
                 <div>
-                  <span className="block text-sm font-medium text-amber-100">Abu Mahar, Barka</span>
-                  <span className="block text-sm text-amber-100/60">Sultanate of Oman</span>
+                  <span className="block text-sm font-medium text-amber-100">{t('locationArea')}</span>
+                  <span className="block text-sm text-amber-100/60">{t('locationCountry')}</span>
                 </div>
               </li>
               <li className="flex items-start space-x-3 group">
@@ -230,7 +232,7 @@ const Footer = () => {
                       activeSection === 'contact' ? 'text-orange-400' : 'text-amber-100 hover:text-orange-400'
                     }`}
                   >
-                    info@ajalgarage.com
+                    {t('contactEmail')}
                   </button>
                   <button 
                     onClick={() => handleEmailNavigation('support')}
@@ -238,7 +240,7 @@ const Footer = () => {
                       activeSection === 'support' ? 'text-orange-400' : 'text-amber-100/60 hover:text-orange-400'
                     }`}
                   >
-                    support@ajalgarage.com
+                    {t('supportEmail')}
                   </button>
                 </div>
               </li>
@@ -249,14 +251,14 @@ const Footer = () => {
               <div className="flex">
                 <input 
                   type="email" 
-                  placeholder="Your email"
+                  placeholder={t('emailPlaceholder')}
                   className="flex-1 px-4 py-2.5 bg-stone-900/60 border-2 border-orange-800/30 rounded-l-xl text-sm focus:outline-none focus:border-orange-600 focus:ring-2 focus:ring-orange-500/50 transition-all text-amber-100 placeholder-amber-100/40"
                 />
                 <button 
                   onClick={handleNewsletterSignup}
                   className="bg-gradient-to-r from-orange-600 to-amber-700 hover:from-orange-700 hover:to-amber-800 px-5 py-2.5 rounded-r-xl text-amber-50 text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-orange-600/50 border-2 border-orange-500/40"
                 >
-                  Join
+                  {t('join')}
                 </button>
               </div>
             </div>
@@ -268,45 +270,26 @@ const Footer = () => {
           <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
             <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-8">
               <p className="text-amber-100/80 text-sm font-medium">
-                &copy; {currentYear} Ajal Garage. All rights reserved.
+                {t('copyright', { year: currentYear })}
               </p>
               <div className="flex items-center space-x-2 text-xs text-amber-100/60">
-                <span className="bg-stone-900/60 px-3 py-1 rounded-full border-2 border-orange-800/30">Registered in Oman</span>
+                <span className="bg-stone-900/60 px-3 py-1 rounded-full border-2 border-orange-800/30">{t('registeredOman')}</span>
                 <span>•</span>
-                <span>Commercial Registration</span>
+                <span>{t('commercialRegistration')}</span>
               </div>
             </div>
             
             <div className="flex flex-wrap justify-center gap-6">
-              <button 
-                onClick={() => navigate('/Rule/Privacy')}
-                className="text-amber-100/80 hover:text-orange-400 transition-colors text-sm flex items-center group"
-              >
-                <Shield className="h-3.5 w-3.5 mr-2 group-hover:scale-110 transition-transform" />
-                Privacy Policy
-              </button>
-              
-              <button 
-                onClick={() => navigate('/Rule/Terms')}
-                className="text-amber-100/80 hover:text-orange-400 transition-colors text-sm flex items-center group"
-              >
-                <FileText className="h-3.5 w-3.5 mr-2 group-hover:scale-110 transition-transform" />
-                Terms & Conditions
-              </button>
-              
-              <button 
-                onClick={() => navigate('Rule/Cookies')}
-                className="text-amber-100/80 hover:text-orange-400 transition-colors text-sm flex items-center group"
-              >
-                <Cookie className="h-3.5 w-3.5 mr-2 group-hover:scale-110 transition-transform" />
-                Cookie Policy
-              </button>
-              <button 
-               
-                className="text-amber-100/80 hover:text-orange-400 transition-colors text-sm"
-              >
-                Sitemap
-              </button>
+              {legalLinks.map((link, index) => (
+                <button 
+                  key={index}
+                  onClick={() => navigate(link.route)}
+                  className="text-amber-100/80 hover:text-orange-400 transition-colors text-sm flex items-center group"
+                >
+                  {link.icon && <link.icon className="h-3.5 w-3.5 mr-2 group-hover:scale-110 transition-transform" />}
+                  {link.label}
+                </button>
+              ))}
             </div>
           </div>
         </div>

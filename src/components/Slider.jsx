@@ -19,103 +19,108 @@ import {
   Calendar,
   CheckCircle
 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 const Slider = () => {
+  const { t } = useTranslation();
+  const navigate = useNavigate()
+  
   const slides = [
     {
       image: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1920&q=80',
-      title: 'Elite Automotive Excellence',
-      caption: 'Where Precision Meets Perfection',
-      description: 'Experience the pinnacle of automotive care with our bespoke concierge service, available 24/7 for our most discerning clients. Every detail matters.',
+      title: t('eliteAutomotiveExcellence'),
+      caption: t('precisionMeetsPerfection'),
+      description: t('eliteAutomotiveDescription'),
       icon: Crown,
       color: 'from-amber-500 to-orange-600',
       gradient: 'linear-gradient(135deg, #f59e0b 0%, #ea580c 100%)',
-      stats: '25+ Years Legacy',
-      features: ['24/7 Concierge Service', 'Lifetime Warranty', 'Premium Parts Only', 'Master Technicians'],
+      stats: t('yearsExcellence'),
+      features: [t('conciergeService'), t('lifetimeWarranty'), t('premiumPartsOnly'), t('masterTechnicians')],
       rating: '4.9/5',
       clients: '5000+',
       warranty: {
-        years: '5-Year Platinum',
-        title: 'Comprehensive Protection',
-        features: ['All Parts Covered', 'Labor Included', 'Nationwide Support', '24/7 Claims'],
+        years: t('fiveYearWarranty'),
+        title: t('comprehensiveProtection'),
+        features: [t('allPartsCovered'), t('laborIncluded'), t('nationwideSupport'), t('claims24')],
         icon: ShieldCheck
       },
       highlights: [
-        { icon: Users, text: 'Certified Master Technicians' },
-        { icon: Car, text: 'Luxury Loaner Vehicles' },
-        { icon: Clock, text: '24/7 Emergency Service' }
+        { icon: Users, text: t('certifiedMasterTechnicians') },
+        { icon: Car, text: t('luxuryLoanerVehicles') },
+        { icon: Clock, text: t('emergencyService') }
       ]
     },
     {
       image: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1920&q=80',
-      title: 'AI-Powered Diagnostics',
-      caption: 'Intelligent Solutions for Modern Vehicles',
-      description: 'Our cutting-edge diagnostic systems leverage artificial intelligence to provide unparalleled accuracy and predictive maintenance capabilities.',
+      title: t('aiPoweredDiagnostics'),
+      caption: t('intelligentSolutions'),
+      description: t('aiDiagnosticsDescription'),
       icon: TrendingUp,
       color: 'from-cyan-500 to-blue-600',
       gradient: 'linear-gradient(135deg, #06b6d4 0%, #2563eb 100%)',
-      stats: '99.9% Accuracy',
-      features: ['AI-Powered Analysis', 'Real-Time Monitoring', 'Predictive Maintenance', 'Remote Diagnostics'],
+      stats: t('accuracyAssurance'),
+      features: [t('aiPoweredAnalysis'), t('realTimeMonitoring'), t('predictiveMaintenance'), t('remoteDiagnostics')],
       rating: '4.95/5',
       clients: '2800+',
       warranty: {
-        years: '3-Year Elite',
-        title: 'Diagnostic Guarantee',
-        features: ['Accuracy Assurance', 'Free Re-scans', 'Software Updates', 'Expert Support'],
+        years: t('diagnosticGuarantee'),
+        title: t('diagnosticGuarantee'),
+        features: [t('accuracyAssurance'), t('freeRescans'), t('softwareUpdates'), t('expertSupport')],
         icon: ShieldCheck
       },
       highlights: [
-        { icon: TrendingUp, text: 'Predictive Analytics' },
-        { icon: Clock, text: 'Real-time Monitoring' },
-        { icon: Users, text: 'AI-Powered Insights' }
+        { icon: TrendingUp, text: t('predictiveAnalytics') },
+        { icon: Clock, text: t('realTimeMonitoring') },
+        { icon: Users, text: t('aiPoweredInsights') }
       ]
     },
     {
       image: 'https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=1920&q=80',
-      title: 'Premium Parts Collection',
-      caption: 'Authentic Excellence in Every Component',
-      description: 'We source exclusively from premium manufacturers, ensuring optimal performance, reliability, and longevity for your luxury vehicle.',
+      title: t('premiumPartsCollection'),
+      caption: t('authenticExcellence'),
+      description: t('premiumPartsDescription'),
       icon: Award,
       color: 'from-emerald-500 to-green-600',
       gradient: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
-      stats: 'Lifetime Guarantee',
-      features: ['OEM Certified', 'Performance Upgrades', '5-Year Warranty', 'Direct Import'],
+      stats: t('lifetimeWarranty'),
+      features: [t('oemCertified'), t('performanceUpgrades'), t('fiveYearWarranty'), t('directImport')],
       rating: '4.92/5',
       clients: '3200+',
       warranty: {
-        years: '5-Year Premium',
-        title: 'Parts Excellence',
-        features: ['Genuine Parts', 'Direct Replacement', 'Performance Guarantee', 'Quick Processing'],
+        years: t('fiveYearWarranty'),
+        title: t('partsExcellence'),
+        features: [t('genuineParts'), t('directReplacement'), t('performanceGuarantee'), t('quickProcessing')],
         icon: ShieldCheck
       },
       highlights: [
-        { icon: Award, text: 'Premium OEM Parts' },
-        { icon: TrendingUp, text: 'Performance Upgrades' },
-        { icon: ShieldCheck, text: 'Quality Certified' }
+        { icon: Award, text: t('premiumOEMParts') },
+        { icon: TrendingUp, text: t('performanceUpgrades') },
+        { icon: ShieldCheck, text: t('qualityCertified') }
       ]
     },
     {
       image: 'https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=1920&q=80',
-      title: 'Express Elite Service',
-      caption: 'Your Time is Our Priority',
-      description: 'Experience our expedited VIP service lane with complimentary luxury amenities and personalized attention from our expert team.',
+      title: t('expressEliteService'),
+      caption: t('timeIsPriority'),
+      description: t('expressServiceDescription'),
       icon: Clock,
       color: 'from-violet-500 to-purple-600',
       gradient: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)',
-      stats: 'Same-Day Service',
-      features: ['Luxury Loaner Cars', 'VIP Lounge', 'Pickup & Delivery', 'Express Lane'],
+      stats: t('sameDayService'),
+      features: [t('luxuryLoanerCars'), t('vipLounge'), t('pickupDelivery'), t('expressLane')],
       rating: '4.88/5',
       clients: '4200+',
       warranty: {
-        years: '2-Year Premium',
-        title: 'Service Excellence',
-        features: ['Quality Assurance', 'Satisfaction Guaranteed', 'Follow-up Service', 'Priority Support'],
+        years: t('serviceExcellence'),
+        title: t('serviceExcellence'),
+        features: [t('qualityAssurance'), t('satisfactionGuaranteed'), t('followUpService'), t('prioritySupport')],
         icon: Heart
       },
       highlights: [
-        { icon: Car, text: 'Luxury Loaner Fleet' },
-        { icon: MapPin, text: 'Pickup & Delivery' },
-        { icon: Crown, text: 'VIP Treatment' }
+        { icon: Car, text: t('luxuryLoanerVehicles') },
+        { icon: MapPin, text: t('pickupDelivery') },
+        { icon: Crown, text: t('vipTreatment') }
       ]
     }
   ];
@@ -219,10 +224,10 @@ const Slider = () => {
             <Sparkles className="absolute -top-1 -right-1 w-4 h-4 text-amber-400 animate-pulse" />
           </div>
           <div className="mt-4 text-amber-100 text-sm font-light tracking-widest animate-pulse">
-            INITIATING ELITE EXPERIENCE
+            {t('initiatingEliteExperience')}
           </div>
           <div className="mt-1 text-amber-500/60 text-xs">
-            Loading Premium Automotive Solutions
+            {t('loadingPremiumSolutions')}
           </div>
         </div>
       </div>
@@ -278,16 +283,16 @@ const Slider = () => {
       <div className="relative w-full h-full">
         {/* Premium Control Panel */}
         <div className="absolute top-4 md:top-8 right-4 md:right-8 z-50 flex gap-2 md:gap-3">
-        <button
-          onClick={() => setIsPaused(!isPaused)}
-          className="hidden md:flex group relative bg-black/50 backdrop-blur-2xl border-2 border-amber-500/30 text-amber-100 p-2 md:p-3 rounded-xl md:rounded-2xl transition-all duration-500 hover:scale-110 hover:border-amber-400/50 hover:bg-amber-500/20 shadow-2xl"
-          aria-label="Play/Pause"
-        >
-          {isPaused ? <Play size={16} className="md:w-5 md:h-5" /> : <Pause size={16} className="md:w-5 md:h-5" />}
-          <div className="absolute inset-0 rounded-xl md:rounded-2xl bg-gradient-to-r from-amber-500/10 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-          <Sparkles className="absolute -top-0.5 -right-0.5 w-2 h-2 md:w-3 md:h-3 text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        </button>
-      </div>
+          <button
+            onClick={() => setIsPaused(!isPaused)}
+            className="hidden md:flex group relative bg-black/50 backdrop-blur-2xl border-2 border-amber-500/30 text-amber-100 p-2 md:p-3 rounded-xl md:rounded-2xl transition-all duration-500 hover:scale-110 hover:border-amber-400/50 hover:bg-amber-500/20 shadow-2xl"
+            aria-label={isPaused ? t('play') : t('pause')}
+          >
+            {isPaused ? <Play size={16} className="md:w-5 md:h-5" /> : <Pause size={16} className="md:w-5 md:h-5" />}
+            <div className="absolute inset-0 rounded-xl md:rounded-2xl bg-gradient-to-r from-amber-500/10 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <Sparkles className="absolute -top-0.5 -right-0.5 w-2 h-2 md:w-3 md:h-3 text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          </button>
+        </div>
 
         {/* Enhanced Progress Bar */}
         <div className="absolute top-0 left-0 w-full h-1 z-40 bg-white/5 backdrop-blur-lg">
@@ -356,7 +361,7 @@ const Slider = () => {
                             <Sparkles className="absolute -top-0.5 -right-0.5 w-1 h-1 md:w-1.5 md:h-1.5 text-amber-300 animate-spin-slow" />
                           </div>
                           <span className="text-amber-200 font-bold tracking-widest text-xs md:text-sm uppercase">
-                            Certified Elite Partner
+                            {t('certifiedElitePartner')}
                           </span>
                           <Crown className="w-3 h-3 md:w-4 md:h-4 text-amber-400 group-hover:scale-110 transition-transform duration-300" />
                         </div>
@@ -452,10 +457,10 @@ const Slider = () => {
                           }}
                         >
                           {[
-                            { icon: Star, value: slide.rating, label: 'Rating' },
-                            { icon: Users, value: slide.clients, label: 'Clients' },
-                            { icon: Award, value: slide.stats, label: 'Excellence' },
-                            { icon: TrendingUp, value: '100%', label: 'Success' }
+                            { icon: Star, value: slide.rating, label: t('rating') },
+                            { icon: Users, value: slide.clients, label: t('clients') },
+                            { icon: Award, value: slide.stats, label: t('excellence') },
+                            { icon: TrendingUp, value: '100%', label: t('success') }
                           ].map((stat, idx) => (
                             <div key={idx} className="text-center p-2 md:p-3 bg-black/40 backdrop-blur-xl border-2 border-amber-500/20 rounded-lg md:rounded-xl hover:border-amber-400/40 hover:scale-105 transition-all duration-500 group/stat">
                               <stat.icon className="w-3 h-3 md:w-4 md:h-4 mx-auto text-amber-400 mb-0.5 md:mb-1" />
@@ -543,22 +548,23 @@ const Slider = () => {
                             opacity: 0,
                           }}
                         >
-                          <button className="group relative px-4 md:px-8 py-3 md:py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-black text-sm md:text-base rounded-lg md:rounded-xl shadow-2xl overflow-hidden transition-all duration-500 hover:scale-105 min-w-[140px] md:min-w-[200px]">
+                          <button className="group relative px-4 md:px-8 py-3 md:py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-black text-sm md:text-base rounded-lg md:rounded-xl shadow-2xl overflow-hidden transition-all duration-500 hover:scale-105 min-w-[140px] md:min-w-[200px]" onClick={()=>navigate("/contact")}>
                             <div className="absolute inset-0 border-2 border-amber-300/50 rounded-lg md:rounded-xl animate-premium-border" />
                             <div className="absolute inset-0 bg-gradient-to-r from-amber-600 to-orange-600 opacity-0 group-hover:opacity-100 transition-all duration-500" />
                             <span className="relative z-10 flex items-center justify-center gap-2 md:gap-3">
                               <Calendar className="w-3 h-3 md:w-4 md:h-4 group-hover:scale-110 transition-transform duration-300" />
-                              Schedule Concierge
+                              {t('scheduleConcierge')}
                               <ChevronRight className="w-3 h-3 md:w-4 md:h-4 group-hover:translate-x-0.5 md:group-hover:translate-x-1 transition-transform duration-300" />
                             </span>
                             <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
                           </button>
-
+                          <a href='Tel:+96879265646'>
                           <button className="group px-3 md:px-6 py-3 md:py-4 bg-black/50 backdrop-blur-2xl border-2 border-amber-500/30 text-amber-100 font-bold rounded-lg md:rounded-xl transition-all duration-500 hover:scale-105 hover:border-amber-400/50 hover:bg-amber-500/20 flex items-center gap-2 md:gap-3 min-w-[120px] md:min-w-[160px] justify-center">
                             <Phone className="w-3 h-3 md:w-4 md:h-4 group-hover:animate-ring transition-all duration-300" />
-                            VIP Hotline
+                            {t('vipHotline')}
                             <Sparkles className="w-2 h-2 md:w-3 md:h-3 text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                           </button>
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -573,7 +579,7 @@ const Slider = () => {
         <button
           onClick={prevSlide}
           className="absolute left-2 md:left-4 lg:left-6 top-1/2 -translate-y-1/2 z-30 group bg-black/50 backdrop-blur-2xl border-2 border-amber-500/30 text-amber-100 p-2 md:p-3 lg:p-4 rounded-lg md:rounded-xl transition-all duration-500 hover:scale-110 hover:border-amber-400/50 hover:bg-amber-500/20 shadow-2xl"
-          aria-label="Previous slide"
+          aria-label={t('previousSlide')}
         >
           <ChevronLeft className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 transition-transform group-hover:-translate-x-0.5" />
           <Sparkles className="absolute -top-0.5 -left-0.5 w-1 h-1 md:w-1.5 md:h-1.5 lg:w-2 lg:h-2 text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -582,7 +588,7 @@ const Slider = () => {
         <button
           onClick={nextSlide}
           className="absolute right-2 md:right-4 lg:right-6 top-1/2 -translate-y-1/2 z-30 group bg-black/50 backdrop-blur-2xl border-2 border-amber-500/30 text-amber-100 p-2 md:p-3 lg:p-4 rounded-lg md:rounded-xl transition-all duration-500 hover:scale-110 hover:border-amber-400/50 hover:bg-amber-500/20 shadow-2xl"
-          aria-label="Next slide"
+          aria-label={t('nextSlide')}
         >
           <ChevronRight className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 transition-transform group-hover:translate-x-0.5" />
           <Sparkles className="absolute -top-0.5 -right-0.5 w-1 h-1 md:w-1.5 md:h-1.5 lg:w-2 lg:h-2 text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -595,7 +601,7 @@ const Slider = () => {
               key={index}
               onClick={() => goToSlide(index)}
               className="group relative focus:outline-none"
-              aria-label={`Go to slide ${index + 1}`}
+              aria-label={`${t('goToSlide')} ${index + 1}`}
             >
               <div className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full transition-all duration-500 ${
                 index === currentIndex
@@ -605,7 +611,7 @@ const Slider = () => {
               <div className={`absolute -bottom-4 md:-bottom-5 left-1/2 -translate-x-1/2 text-xs text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap ${
                 index === currentIndex ? 'opacity-100' : ''
               }`}>
-                Slide {index + 1}
+                {t('slide')} {index + 1}
               </div>
             </button>
           ))}
