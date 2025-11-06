@@ -50,8 +50,8 @@ i18n
                     ourServices: "Our Services",
                     company: "Company",
                     getInTouch: "Get In Touch",
-                    locationArea: " Oman , muscat",
-                    locationCountry: "10138Z , 7749 way , Industrial area 9, Al Maabilah Seeb",
+                    locationArea: "Oman, muscat",
+                    locationCountry: "10138Z, 7749 way, Industrial area 9, Al Maabilah Seeb",
                     contactEmail: "info@ajalgarage.com",
                     supportEmail: "support@ajalgarage.com",
                     emailPlaceholder: "Your email",
@@ -260,9 +260,7 @@ i18n
                     expertTechniciansTitle: "Expert Technicians",
                     certifiedProfessionals: "Certified professionals",
 
-                    // start service
-
-                    // Add to English translations
+                    // Services Page Translations
                     computerizedDiagnostics: "Computerized Diagnostics",
                     engineOverhaul: "Engine Overhaul",
                     emissionTesting: "Emission Testing",
@@ -287,6 +285,7 @@ i18n
                     decadesOfExcellence: "Decades of excellence in automotive care with thousands of satisfied customers across Oman.",
                     experienceTheDifference: "Experience the difference with our commitment to quality, transparency, and customer satisfaction.",
                     explore: "Explore",
+                    qualityAssuranceDesc: "Quality guaranteed with genuine parts and strict standards for lasting performance.",
                     ourProcess: "Our Process",
                     processDescription: "We follow a systematic approach to vehicle maintenance and repair. From comprehensive diagnostics to precision repairs using genuine parts, our certified technicians ensure your vehicle receives the care it deserves with complete transparency at every step.",
                     customerCommitment: "Customer Commitment",
@@ -553,8 +552,7 @@ i18n
                     expertTechniciansTitle: "فنيون خبراء",
                     certifiedProfessionals: "محترفون معتمدون",
 
-                    // start service 
-                    // Add to Arabic translations
+                    // Services Page Translations
                     computerizedDiagnostics: "تشخيص حاسوبي",
                     engineOverhaul: "إصلاح شامل للمحرك",
                     emissionTesting: "فحص الانبعاثات",
@@ -588,7 +586,8 @@ i18n
                     acServiceDescription: "صيانة وإصلاح وتعبئة غاز نظام تكييف الهواء بالكامل.",
                     suspensionServiceDescription: "محاذاة محترفة، استبدال ممتص الصدمات، وإصلاح نظام التوجيه.",
                     prePurchaseInspection: "فحص ما قبل الشراء",
-                    inspectionDescription: "فحص شامل للمركبة قبل الشراء لضمان القيمة والسلامة."
+                    inspectionDescription: "فحص شامل للمركبة قبل الشراء لضمان القيمة والسلامة.",
+                    qualityAssuranceDesc: "جودة مضمونة بقطع أصلية ومعايير صارمة لأداء دائم."
                 }
             },
             ur: {
@@ -845,8 +844,7 @@ i18n
                     expertTechniciansTitle: "ماہر ٹیکنیشن",
                     certifiedProfessionals: "سرٹیفائیڈ پروفیشنلز",
 
-                    // Service start
-                    // Add to Urdu translations
+                    // Services Page Translations
                     computerizedDiagnostics: "کمپیوٹرائزڈ ڈائیگناسٹکس",
                     engineOverhaul: "انجن اوورہال",
                     emissionTesting: "ایمیشن ٹیسٹنگ",
@@ -880,6 +878,7 @@ i18n
                     acServiceDescription: "مکمل ایئر کنڈیشنگ سسٹم کی بحالی، مرمت، اور ریفریجرنٹ ریچارج۔",
                     suspensionServiceDescription: "پروفیشنل الائنمنٹ، شاک ابزاربر تبدیلی، اور سٹیئرنگ سسٹم مرمت۔",
                     prePurchaseInspection: "خریدنے سے پہلے معائنہ",
+                    qualityAssuranceDesc: "اصلی پرزے اور سخت معیارات کے ساتھ دیرپا کارکردگی کے لیے معیار کی ضمانت۔",
                     inspectionDescription: "قدر اور حفاظت کو یقینی بنانے کے لیے خریداری سے پہلے گاڑی کا جامع معائنہ۔"
                 }
             }
