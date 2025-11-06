@@ -1,6 +1,8 @@
 import { Car, Wrench, Settings, Zap, Shield, Clock, Users, Award, Sparkles, Cog } from 'lucide-react';
 import Banner from '../components/Banner';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 // Animation variants
 const containerVariants = {
@@ -95,69 +97,110 @@ const AnimatedSection = ({ children, className = "" }) => {
 };
 
 const Services = () => {
+    const { t } = useTranslation();
+    const navigate = useNavigate()
+
     const services = [
         {
             icon: Car,
-            title: 'Engine Diagnostics & Repair',
-            description: 'Comprehensive engine analysis and precision repair services using advanced diagnostic equipment.',
-            features: ['Computerized Diagnostics', 'Engine Overhaul', 'Performance Tuning', 'Emission Testing']
+            title: t('completeEngineDiagnostics'),
+            description: t('servicesDescription'),
+            features: [
+                t('computerizedDiagnostics', { defaultValue: 'Computerized Diagnostics' }),
+                t('engineOverhaul', { defaultValue: 'Engine Overhaul' }),
+                t('performanceTuning'),
+                t('emissionTesting', { defaultValue: 'Emission Testing' })
+            ]
         },
         {
             icon: Wrench,
-            title: 'Brake System Service',
-            description: 'Complete brake inspection, repair and replacement with premium quality components.',
-            features: ['Brake Pad Replacement', 'Rotor Resurfacing', 'ABS System Repair', 'Brake Fluid Flush']
+            title: t('brakeSystemRepair'),
+            description: t('brakeServiceDescription', { defaultValue: 'Complete brake inspection, repair and replacement with premium quality components.' }),
+            features: [
+                t('brakePadReplacement', { defaultValue: 'Brake Pad Replacement' }),
+                t('rotorResurfacing', { defaultValue: 'Rotor Resurfacing' }),
+                t('absSystemRepair', { defaultValue: 'ABS System Repair' }),
+                t('brakeFluidFlush', { defaultValue: 'Brake Fluid Flush' })
+            ]
         },
         {
             icon: Settings,
-            title: 'Transmission Service',
-            description: 'Expert automatic and manual transmission repair, maintenance, and rebuilding services.',
-            features: ['Transmission Flush', 'Clutch Replacement', 'Gearbox Repair', 'CVT Service']
+            title: t('transmissionServices'),
+            description: t('transmissionServiceDescription', { defaultValue: 'Expert automatic and manual transmission repair, maintenance, and rebuilding services.' }),
+            features: [
+                t('transmissionFlush', { defaultValue: 'Transmission Flush' }),
+                t('clutchReplacement', { defaultValue: 'Clutch Replacement' }),
+                t('gearboxRepair', { defaultValue: 'Gearbox Repair' }),
+                t('cvtService', { defaultValue: 'CVT Service' })
+            ]
         },
         {
             icon: Zap,
-            title: 'Electrical Systems',
-            description: 'Advanced electrical diagnostics and repair for all vehicle systems and components.',
-            features: ['Battery Service', 'Alternator Repair', 'Wiring Issues', 'ECU Programming']
+            title: t('electricalSystemRepair'),
+            description: t('electricalServiceDescription', { defaultValue: 'Advanced electrical diagnostics and repair for all vehicle systems and components.' }),
+            features: [
+                t('batteryService', { defaultValue: 'Battery Service' }),
+                t('alternatorRepair', { defaultValue: 'Alternator Repair' }),
+                t('wiringIssues', { defaultValue: 'Wiring Issues' }),
+                t('ecuProgramming', { defaultValue: 'ECU Programming' })
+            ]
         }
     ];
 
     const whyUs = [
         {
             icon: Shield,
-            title: 'Certified Technicians',
-            description: 'ASE certified mechanics with extensive training and experience.'
+            title: t('certifiedTechnicians'),
+            description: t('expertTechniciansDesc')
         },
         {
             icon: Clock,
-            title: 'Quick Service',
-            description: 'Efficient repairs with most services completed within 24 hours.'
+            title: t('quickService'),
+            description: t('quickServiceDesc')
         },
         {
             icon: Award,
-            title: 'Quality Guarantee',
-            description: '12-month warranty on all repairs and genuine parts guarantee.'
+            title: t('qualityAssurance'),
+            description: t('qualityAssuranceDesc')
         },
         {
             icon: Users,
-            title: 'Customer Focused',
-            description: 'Personalized service with transparent pricing and regular updates.'
+            title: t('customerFirst'),
+            description: t('customerFirstDesc')
         }
     ];
 
     const stats = [
-        { number: '15,000+', label: 'Vehicles Serviced' },
-        { number: '25+', label: 'Years Experience' },
-        { number: '98%', label: 'Customer Satisfaction' },
-        { number: '24/7', label: 'Roadside Assistance' }
+        { number: '15,000+', label: t('vehiclesServiced', { defaultValue: 'Vehicles Serviced' }) },
+        { number: '25+', label: t('yearsExcellence') },
+        { number: '98%', label: t('customerSatisfaction', { defaultValue: 'Customer Satisfaction' }) },
+        { number: '24/7', label: t('emergencyService') }
+    ];
+
+    const specializedServices = [
+        {
+            title: t('acHeatingServices'),
+            description: t('acServiceDescription', { defaultValue: 'Complete air conditioning system maintenance, repair, and refrigerant recharge.' }),
+            icon: Zap
+        },
+        {
+            title: t('suspensionSteeringRepair'),
+            description: t('suspensionServiceDescription', { defaultValue: 'Professional alignment, shock absorber replacement, and steering system repair.' }),
+            icon: Settings
+        },
+        {
+            title: t('prePurchaseInspection', { defaultValue: 'Pre-Purchase Inspection' }),
+            description: t('inspectionDescription', { defaultValue: 'Comprehensive vehicle inspection before purchase to ensure value and safety.' }),
+            icon: Shield
+        }
     ];
 
     return (
         <div className="min-h-screen bg-black text-white">
             {/* Banner Section - Automotive Theme */}
             <Banner
-                title="Premium Automotive Services"
-                subtitle="Expert vehicle maintenance and repair services in Oman. Trust our certified technicians for quality workmanship and reliable results."
+                title={t('ourServices')}
+                subtitle={t('servicesDescription')}
                 iconOne={Car}
                 iconTwo={Sparkles}
             />
@@ -169,12 +212,12 @@ const Services = () => {
                         <div className="inline-flex items-center gap-3 mb-4">
                             <div className="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></div>
                             <h2 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-amber-300 to-orange-300 bg-clip-text text-transparent">
-                                Our Premium Services
+                                {t('ourServices')}
                             </h2>
                             <div className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
                         </div>
                         <p className="text-amber-100/80 text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
-                            Experience unparalleled automotive care with our state-of-the-art equipment, genuine parts, and master technicians dedicated to keeping your vehicle in peak condition.
+                            {t('premiumAutomotiveCare')}
                         </p>
                     </motion.div>
 
@@ -261,7 +304,7 @@ const Services = () => {
                                             {/* Hover Action Indicator */}
                                             <div className="pt-3 mt-auto">
                                                 <div className="inline-flex items-center gap-1 text-amber-400/60 group-hover:text-amber-300 transition-colors duration-300">
-                                                    <span className="text-xs font-semibold tracking-widest uppercase">Explore</span>
+                                                    <span className="text-xs font-semibold tracking-widest uppercase">{t('explore', { defaultValue: 'Explore' })}</span>
                                                     <motion.div
                                                         animate={{ x: [0, 3, 0] }}
                                                         transition={{ duration: 1.5, repeat: Infinity }}
@@ -299,9 +342,9 @@ const Services = () => {
                         className="bg-gradient-to-br from-amber-900/20 to-orange-900/20 backdrop-blur-sm border border-amber-500/20 rounded-xl shadow-xl p-12"
                     >
                         <motion.div variants={fadeInUp} className="text-center mb-12">
-                            <h2 className="text-4xl font-bold text-amber-100 mb-4">Trusted by Oman</h2>
+                            <h2 className="text-4xl font-bold text-amber-100 mb-4">{t('trustedByOman', { defaultValue: 'Trusted by Oman' })}</h2>
                             <p className="text-amber-200/70 text-lg max-w-2xl mx-auto">
-                                Decades of excellence in automotive care with thousands of satisfied customers across Oman.
+                                {t('decadesOfExcellence', { defaultValue: 'Decades of excellence in automotive care with thousands of satisfied customers across Oman.' })}
                             </p>
                         </motion.div>
 
@@ -339,9 +382,9 @@ const Services = () => {
                 {/* Why Choose Us - Automotive Theme */}
                 <AnimatedSection className="mb-20">
                     <motion.div variants={fadeInUp} className="text-center mb-12">
-                        <h2 className="text-4xl font-bold text-amber-100 mb-4">Why Choose Ajal Garage</h2>
+                        <h2 className="text-4xl font-bold text-amber-100 mb-4">{t('whyChooseUs')}</h2>
                         <p className="text-amber-200/70 text-lg max-w-3xl mx-auto">
-                            Experience the difference with our commitment to quality, transparency, and customer satisfaction.
+                            {t('experienceTheDifference', { defaultValue: 'Experience the difference with our commitment to quality, transparency, and customer satisfaction.' })}
                         </p>
                     </motion.div>
 
@@ -392,12 +435,10 @@ const Services = () => {
                                 >
                                     <Cog className="h-8 w-8 text-white" />
                                 </motion.div>
-                                <h2 className="text-3xl font-bold text-amber-100">Our Process</h2>
+                                <h2 className="text-3xl font-bold text-amber-100">{t('ourProcess', { defaultValue: 'Our Process' })}</h2>
                             </div>
                             <p className="text-amber-200/80 leading-relaxed text-lg">
-                                We follow a systematic approach to vehicle maintenance and repair. From comprehensive diagnostics
-                                to precision repairs using genuine parts, our certified technicians ensure your vehicle receives
-                                the care it deserves with complete transparency at every step.
+                                {t('processDescription', { defaultValue: 'We follow a systematic approach to vehicle maintenance and repair. From comprehensive diagnostics to precision repairs using genuine parts, our certified technicians ensure your vehicle receives the care it deserves with complete transparency at every step.' })}
                             </p>
                         </motion.div>
 
@@ -414,12 +455,10 @@ const Services = () => {
                                 >
                                     <Users className="h-8 w-8 text-white" />
                                 </motion.div>
-                                <h2 className="text-3xl font-bold text-amber-100">Customer Commitment</h2>
+                                <h2 className="text-3xl font-bold text-amber-100">{t('customerCommitment', { defaultValue: 'Customer Commitment' })}</h2>
                             </div>
                             <p className="text-amber-200/80 leading-relaxed text-lg">
-                                Your vehicle's health and your satisfaction are our top priorities. We provide detailed explanations,
-                                competitive pricing, and regular updates throughout the service process. Our team is dedicated to
-                                building long-term relationships based on trust and exceptional service quality.
+                                {t('commitmentDescription', { defaultValue: 'Your vehicle\'s health and your satisfaction are our top priorities. We provide detailed explanations, competitive pricing, and regular updates throughout the service process. Our team is dedicated to building long-term relationships based on trust and exceptional service quality.' })}
                             </p>
                         </motion.div>
                     </motion.div>
@@ -428,9 +467,9 @@ const Services = () => {
                 {/* Additional Services */}
                 <AnimatedSection className="mb-20">
                     <motion.div variants={fadeInUp} className="text-center mb-12">
-                        <h2 className="text-4xl font-bold text-amber-100 mb-4">Specialized Services</h2>
+                        <h2 className="text-4xl font-bold text-amber-100 mb-4">{t('specializedServices', { defaultValue: 'Specialized Services' })}</h2>
                         <p className="text-amber-200/70 text-lg max-w-3xl mx-auto">
-                            Beyond routine maintenance, we offer specialized automotive services to meet all your vehicle needs.
+                            {t('specializedServicesDescription', { defaultValue: 'Beyond routine maintenance, we offer specialized automotive services to meet all your vehicle needs.' })}
                         </p>
                     </motion.div>
 
@@ -438,23 +477,7 @@ const Services = () => {
                         variants={staggerContainer}
                         className="grid md:grid-cols-3 gap-8"
                     >
-                        {[
-                            {
-                                title: 'AC Service & Repair',
-                                description: 'Complete air conditioning system maintenance, repair, and refrigerant recharge.',
-                                icon: Zap
-                            },
-                            {
-                                title: 'Suspension & Steering',
-                                description: 'Professional alignment, shock absorber replacement, and steering system repair.',
-                                icon: Settings
-                            },
-                            {
-                                title: 'Pre-Purchase Inspection',
-                                description: 'Comprehensive vehicle inspection before purchase to ensure value and safety.',
-                                icon: Shield
-                            }
-                        ].map((service, index) => {
+                        {specializedServices.map((service, index) => {
                             const Icon = service.icon;
                             return (
                                 <motion.div
@@ -500,7 +523,7 @@ const Services = () => {
                                 viewport={{ once: true }}
                             >
                                 <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-                                    Start Your Journey Today
+                                    {t('startYourJourney')}
                                 </span>
                             </motion.h2>
                             <motion.p
@@ -510,14 +533,14 @@ const Services = () => {
                                 transition={{ delay: 0.4 }}
                                 viewport={{ once: true }}
                             >
-                                Join hundreds of satisfied customers who trust Ajal Garage for premium automotive care
+                                {t('joinHundreds')}
                             </motion.p>
                             <motion.button
                                 className="px-10 py-5 font-black rounded-full text-xl transition-all hover:scale-110 relative overflow-hidden group bg-gradient-to-r from-amber-400 to-orange-500 text-black"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                <span className="relative z-10">Let's Connect</span>
+                                <span className="relative z-10" onClick={()=>navigate("/contact")}>{t('letsConnect')}</span>
                                 <div className="absolute inset-0 bg-white/30 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
                             </motion.button>
                         </motion.div>

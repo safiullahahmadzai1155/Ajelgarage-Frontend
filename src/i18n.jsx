@@ -40,9 +40,7 @@ i18n
                     brakeRepair: "Brake Repair",
                     vehicleMaintenance: "Vehicle Maintenance",
                     oilChange: "Oil Change",
-                    performanceTuning: "Performance Tuning",
                     aiDiagnosticsTech: "AI Diagnostics Tech",
-                    testimonials: "Testimonials",
                     services: "Services",
                     legacy: "Legacy",
                     privacyPolicy: "Privacy Policy",
@@ -52,7 +50,7 @@ i18n
                     ourServices: "Our Services",
                     company: "Company",
                     getInTouch: "Get In Touch",
-                    locationArea: " Oman , muscat",
+                    locationArea: " Oman , muscat",
                     locationCountry: "10138Z , 7749 way , Industrial area 9, Al Maabilah Seeb",
                     contactEmail: "info@ajalgarage.com",
                     supportEmail: "support@ajalgarage.com",
@@ -84,7 +82,6 @@ i18n
                     conciergeService: "24/7 Concierge Service",
                     lifetimeWarranty: "Lifetime Warranty",
                     premiumPartsOnly: "Premium Parts Only",
-                    masterTechnicians: "Master Technicians",
                     aiPoweredAnalysis: "AI-Powered Analysis",
                     realTimeMonitoring: "Real-time Monitoring",
                     predictiveMaintenance: "Predictive Maintenance",
@@ -135,7 +132,6 @@ i18n
                     clients: "Clients",
                     excellence: "Excellence",
                     success: "Success",
-                    yearsExcellence: "25+ Years Legacy",
                     sameDayService: "Same-Day Service",
 
                     // CTA and UI
@@ -164,7 +160,6 @@ i18n
                     aboutText2: "Today, we specialize in comprehensive automotive services including engine diagnostics, brake repair, transmission service, and premium car maintenance. Our state-of-the-art facility is equipped with the latest technology to serve your vehicle with the care it deserves.",
                     certifiedTechnicians: "Certified Technicians",
                     service24: "24/7 Service",
-                    genuineParts: "Genuine Parts",
                     freePickup: "Free Pickup",
 
                     // Home Page - Benefits Section
@@ -174,8 +169,6 @@ i18n
                     expertTechniciansDesc: "Our certified mechanics have years of experience in handling all types of vehicles with precision and care.",
                     quickService: "Quick Service",
                     quickServiceDesc: "We value your time. Our efficient processes ensure your vehicle is serviced and ready when you need it.",
-                    qualityAssurance: "Quality Assurance",
-                    qualityAssuranceDesc: "Every service comes with our quality guarantee. We use only genuine parts and follow strict quality standards.",
                     premiumCare: "Premium Care",
                     premiumCareDesc: "From basic maintenance to complex repairs, we provide premium care that keeps your vehicle running smoothly.",
                     advancedEquipment: "Advanced Equipment",
@@ -187,15 +180,12 @@ i18n
                     ourCoreValues: "Our Core Values",
                     customerPassion: "Customer Passion",
                     customerPassionDesc: "We are deeply committed to exceeding customer expectations and building lasting relationships.",
-                    excellence: "Excellence",
-                    excellenceDesc: "We strive for perfection in every service, ensuring the highest quality standards are met.",
                     integrity: "Integrity",
                     integrityDesc: "Honest, transparent service with fair pricing and clear communication at all times.",
                     innovation: "Innovation",
                     innovationDesc: "Continuously adopting new technologies and methods to provide better automotive solutions.",
 
                     // Home Page - Testimonials
-                    testimonials: "Testimonials",
                     whatOurClientsSay: "What Our Clients Say",
                     realSuccessStories: "Real success stories from our valued customers and partners",
                     carOwner: "Car Owner",
@@ -225,7 +215,6 @@ i18n
                     teamMember4Desc: "Ensures every service meets our premium quality standards",
 
                     // Home Page - Features/Services Section
-                    ourServices: "Our Services",
                     comprehensiveAutoCare: "Comprehensive Auto Care",
                     servicesDescription: "We combine technical expertise with premium service to deliver solutions that keep your vehicle running smoothly and safely.",
                     exploreMore: "Explore More",
@@ -265,12 +254,49 @@ i18n
                     // Home Page - Garage Images
                     premiumCarService: "Premium Car Service",
                     luxuryVehicleMaintenance: "Luxury vehicle maintenance",
-                    engineDiagnostics: "Engine Diagnostics",
                     advancedTechnicalCare: "Advanced technical care",
                     modernWorkshop: "Modern Workshop",
                     stateOfTheArtFacility: "State-of-the-art facility",
                     expertTechniciansTitle: "Expert Technicians",
-                    certifiedProfessionals: "Certified professionals"
+                    certifiedProfessionals: "Certified professionals",
+
+                    // start service
+
+                    // Add to English translations
+                    computerizedDiagnostics: "Computerized Diagnostics",
+                    engineOverhaul: "Engine Overhaul",
+                    emissionTesting: "Emission Testing",
+                    brakeServiceDescription: "Complete brake inspection, repair and replacement with premium quality components.",
+                    brakePadReplacement: "Brake Pad Replacement",
+                    rotorResurfacing: "Rotor Resurfacing",
+                    absSystemRepair: "ABS System Repair",
+                    brakeFluidFlush: "Brake Fluid Flush",
+                    transmissionServiceDescription: "Expert automatic and manual transmission repair, maintenance, and rebuilding services.",
+                    transmissionFlush: "Transmission Flush",
+                    clutchReplacement: "Clutch Replacement",
+                    gearboxRepair: "Gearbox Repair",
+                    cvtService: "CVT Service",
+                    electricalServiceDescription: "Advanced electrical diagnostics and repair for all vehicle systems and components.",
+                    batteryService: "Battery Service",
+                    alternatorRepair: "Alternator Repair",
+                    wiringIssues: "Wiring Issues",
+                    ecuProgramming: "ECU Programming",
+                    vehiclesServiced: "Vehicles Serviced",
+                    customerSatisfaction: "Customer Satisfaction",
+                    trustedByOman: "Trusted by Oman",
+                    decadesOfExcellence: "Decades of excellence in automotive care with thousands of satisfied customers across Oman.",
+                    experienceTheDifference: "Experience the difference with our commitment to quality, transparency, and customer satisfaction.",
+                    explore: "Explore",
+                    ourProcess: "Our Process",
+                    processDescription: "We follow a systematic approach to vehicle maintenance and repair. From comprehensive diagnostics to precision repairs using genuine parts, our certified technicians ensure your vehicle receives the care it deserves with complete transparency at every step.",
+                    customerCommitment: "Customer Commitment",
+                    commitmentDescription: "Your vehicle's health and your satisfaction are our top priorities. We provide detailed explanations, competitive pricing, and regular updates throughout the service process. Our team is dedicated to building long-term relationships based on trust and exceptional service quality.",
+                    specializedServices: "Specialized Services",
+                    specializedServicesDescription: "Beyond routine maintenance, we offer specialized automotive services to meet all your vehicle needs.",
+                    acServiceDescription: "Complete air conditioning system maintenance, repair, and refrigerant recharge.",
+                    suspensionServiceDescription: "Professional alignment, shock absorber replacement, and steering system repair.",
+                    prePurchaseInspection: "Pre-Purchase Inspection",
+                    inspectionDescription: "Comprehensive vehicle inspection before purchase to ensure value and safety."
                 }
             },
             ar: {
@@ -307,9 +333,7 @@ i18n
                     brakeRepair: "إصلاح الفرامل",
                     vehicleMaintenance: "صيانة المركبات",
                     oilChange: "تغيير الزيت",
-                    performanceTuning: "ضبط الأداء",
                     aiDiagnosticsTech: "تقنية التشخيص بالذكاء الاصطناعي",
-                    testimonials: "آراء العملاء",
                     services: "الخدمات",
                     legacy: "الإرث",
                     privacyPolicy: "سياسة الخصوصية",
@@ -351,7 +375,6 @@ i18n
                     conciergeService: "خدمة الكونسيرج 24/7",
                     lifetimeWarranty: "ضمان مدى الحياة",
                     premiumPartsOnly: "قطع غيار مميزة فقط",
-                    masterTechnicians: "فنيون رئيسيون",
                     aiPoweredAnalysis: "تحليل مدعوم بالذكاء الاصطناعي",
                     realTimeMonitoring: "مراقبة في الوقت الحقيقي",
                     predictiveMaintenance: "صيانة تنبؤية",
@@ -402,7 +425,6 @@ i18n
                     clients: "العملاء",
                     excellence: "التميز",
                     success: "النجاح",
-                    yearsExcellence: "إرث 25+ سنة",
                     sameDayService: "خدمة في نفس اليوم",
 
                     // CTA and UI
@@ -431,7 +453,6 @@ i18n
                     aboutText2: "اليوم، نحن متخصصون في خدمات السيارات الشاملة بما في ذلك تشخيص المحرك، إصلاح الفرامل، خدمة ناقل الحركة، وصيانة السيارات المميزة. منشأتنا الحديثة مجهزة بأحدث التقنيات لخدمة سيارتك بالعناية التي تستحقها.",
                     certifiedTechnicians: "فنيون معتمدون",
                     service24: "خدمة 24/7",
-                    genuineParts: "قطع أصلية",
                     freePickup: "استلام مجاني",
 
                     // Home Page - Benefits Section
@@ -441,8 +462,6 @@ i18n
                     expertTechniciansDesc: "يتمتع ميكانيكيونا المعتمدون بخبرة سنوات في التعامل مع جميع أنواع المركبات بدقة وعناية.",
                     quickService: "خدمة سريعة",
                     quickServiceDesc: "نقدر وقتك. تضمن عملياتنا الفعالة خدمة سيارتك وجاهزيتها عندما تحتاجها.",
-                    qualityAssurance: "ضمان الجودة",
-                    qualityAssuranceDesc: "تأتي كل خدمة مع ضمان الجودة الخاص بنا. نستخدم فقط قطع الغيار الأصلية ونتبع معايير الجودة الصارمة.",
                     premiumCare: "رعاية مميزة",
                     premiumCareDesc: "من الصيانة الأساسية إلى الإصلاحات المعقدة، نقدم رعاية مميزة تحافظ على سير سيارتك بسلاسة.",
                     advancedEquipment: "معدات متطورة",
@@ -454,15 +473,12 @@ i18n
                     ourCoreValues: "قيمنا الأساسية",
                     customerPassion: "شغف العملاء",
                     customerPassionDesc: "نحن ملتزمون بعمق بتجاوز توقعات العملاء وبناء علاقات دائمة.",
-                    excellence: "التميز",
-                    excellenceDesc: "نسعى للكمال في كل خدمة، وضمان تحقيق أعلى معايير الجودة.",
                     integrity: "النزاهة",
                     integrityDesc: "خدمة صادقة وشفافة مع تسعير عادل وتواصل واضح في جميع الأوقات.",
                     innovation: "الابتكار",
                     innovationDesc: "تبني التقنيات والطرق الجديدة باستمرار لتقديم حلول سيارات أفضل.",
 
                     // Home Page - Testimonials
-                    testimonials: "آراء العملاء",
                     whatOurClientsSay: "ماذا يقول عملاؤنا",
                     realSuccessStories: "قصص نجاح حقيقية من عملائنا وشركائنا القيمين",
                     carOwner: "مالك سيارة",
@@ -492,7 +508,6 @@ i18n
                     teamMember4Desc: "يضمن أن كل خدمة تفي بمعايير الجودة الممتازة لدينا",
 
                     // Home Page - Features/Services Section
-                    ourServices: "خدماتنا",
                     comprehensiveAutoCare: "رعاية سيارات شاملة",
                     servicesDescription: "نجمع بين الخبرة الفنية والخدمة المميزة لتقديم حلول تحافظ على سير سيارتك بسلاسة وأمان.",
                     exploreMore: "استكشف المزيد",
@@ -532,12 +547,48 @@ i18n
                     // Home Page - Garage Images
                     premiumCarService: "خدمة سيارات مميزة",
                     luxuryVehicleMaintenance: "صيانة مركبات فاخرة",
-                    engineDiagnostics: "تشخيص المحرك",
                     advancedTechnicalCare: "رعاية تقنية متقدمة",
                     modernWorkshop: "ورشة عمل حديثة",
                     stateOfTheArtFacility: "منشأة حديثة",
                     expertTechniciansTitle: "فنيون خبراء",
-                    certifiedProfessionals: "محترفون معتمدون"
+                    certifiedProfessionals: "محترفون معتمدون",
+
+                    // start service 
+                    // Add to Arabic translations
+                    computerizedDiagnostics: "تشخيص حاسوبي",
+                    engineOverhaul: "إصلاح شامل للمحرك",
+                    emissionTesting: "فحص الانبعاثات",
+                    brakeServiceDescription: "فحص فرامل كامل وإصلاح واستبدال بمكونات عالية الجودة.",
+                    brakePadReplacement: "استبدال وسادات الفرامل",
+                    rotorResurfacing: "تجديد سطح الدوار",
+                    absSystemRepair: "إصلاح نظام ABS",
+                    brakeFluidFlush: "تغيير سائل الفرامل",
+                    transmissionServiceDescription: "خدمات إصلاح وصيانة وترميم ناقل الحركة الأوتوماتيكي واليدوي من قبل خبراء.",
+                    transmissionFlush: "تنظيف ناقل الحركة",
+                    clutchReplacement: "استبدال القابض",
+                    gearboxRepair: "إصلاح علبة التروس",
+                    cvtService: "خدمة CVT",
+                    electricalServiceDescription: "تشخيص وإصلاح كهربائي متقدم لجميع أنظمة ومكونات المركبة.",
+                    batteryService: "خدمة البطارية",
+                    alternatorRepair: "إصلاح المولد",
+                    wiringIssues: "مشاكل الأسلاك",
+                    ecuProgramming: "برمجة وحدة التحكم الإلكترونية",
+                    vehiclesServiced: "مركبات تم خدمتها",
+                    customerSatisfaction: "رضا العملاء",
+                    trustedByOman: "موثوق به في عمان",
+                    decadesOfExcellence: "عقود من التميز في العناية بالسيارات مع آلاف العملاء الراضين في جميع أنحاء عمان.",
+                    experienceTheDifference: "جرب الفرق مع التزامنا بالجودة والشفافية ورضا العملاء.",
+                    explore: "استكشف",
+                    ourProcess: "عملنا",
+                    processDescription: "نتبع نهجًا منهجيًا في صيانة وإصلاح المركبات. من التشخيص الشامل إلى الإصلاحات الدقيقة باستخدام قطع الغيار الأصلية، يضمن فنيونا المعتمدون أن مركبتك تحصل على الرعاية التي تستحقها مع الشفافية الكاملة في كل خطوة.",
+                    customerCommitment: "التزام تجاه العملاء",
+                    commitmentDescription: "صحة مركبتك ورضاك هما أولويتنا القصوى. نقدم تفسيرات مفصلة وأسعارًا تنافسية وتحديثات منتظمة طوال عملية الخدمة. فريقنا مخصص لبناء علاقات طويلة الأمد تقوم على الثقة وجودة الخدمة الاستثنائية.",
+                    specializedServices: "خدمات متخصصة",
+                    specializedServicesDescription: "إلى جانب الصيانة الروتينية، نقدم خدمات سيارات متخصصة لتلبية جميع احتياجات مركبتك.",
+                    acServiceDescription: "صيانة وإصلاح وتعبئة غاز نظام تكييف الهواء بالكامل.",
+                    suspensionServiceDescription: "محاذاة محترفة، استبدال ممتص الصدمات، وإصلاح نظام التوجيه.",
+                    prePurchaseInspection: "فحص ما قبل الشراء",
+                    inspectionDescription: "فحص شامل للمركبة قبل الشراء لضمان القيمة والسلامة."
                 }
             },
             ur: {
@@ -574,9 +625,7 @@ i18n
                     brakeRepair: "بریک مرمت",
                     vehicleMaintenance: "گاڑی کی بحالی",
                     oilChange: "آئل چینج",
-                    performanceTuning: "کارکردگی کی اصلاح",
                     aiDiagnosticsTech: "AI ڈائیگناسٹکس ٹیک",
-                    testimonials: "توصیفات",
                     services: "سروسز",
                     legacy: "ورثہ",
                     privacyPolicy: "پرائیویسی پالیسی",
@@ -618,7 +667,6 @@ i18n
                     conciergeService: "24/7 کانسیرج سروس",
                     lifetimeWarranty: "لائف ٹائم وارنٹی",
                     premiumPartsOnly: "صرف پریمیم پارٹس",
-                    masterTechnicians: "ماسٹر ٹیکنیشن",
                     aiPoweredAnalysis: "AI سے چلنے والا تجزیہ",
                     realTimeMonitoring: "ریل ٹائم مانیٹرنگ",
                     predictiveMaintenance: "پیش گوئی بحالی",
@@ -669,7 +717,6 @@ i18n
                     clients: "کلائنٹس",
                     excellence: "فضیلت",
                     success: "کامیابی",
-                    yearsExcellence: "25+ سال کا ورثہ",
                     sameDayService: "اسی دن سروس",
 
                     // CTA and UI
@@ -698,7 +745,6 @@ i18n
                     aboutText2: "آج، ہم جامع آٹوموٹو سروسز میں مہارت رکھتے ہیں جن میں انجن ڈائیگناسٹکس، بریک مرمت، ٹرانسمیشن سروس، اور پریمیم کار بحالی شامل ہیں۔ ہماری جدید ترین سہولت تازہ ترین ٹیکنالوجی سے لیس ہے تاکہ آپ کی گاڑی کو وہ دیکھ بھال فراہم کی جا سکے جس کی وہ مستحق ہے۔",
                     certifiedTechnicians: "سرٹیفائیڈ ٹیکنیشن",
                     service24: "24/7 سروس",
-                    genuineParts: "اصلی پرزے",
                     freePickup: "مفت پک اپ",
 
                     // Home Page - Benefits Section
@@ -708,8 +754,6 @@ i18n
                     expertTechniciansDesc: "ہمارے سرٹیفائیڈ مکینکس کے پاس تمام قسم کی گاڑیوں کو درستگی اور دیکھ بھال سے ہینڈل کرنے کے سالوں کا تجربہ ہے۔",
                     quickService: "فوری سروس",
                     quickServiceDesc: "ہم آپ کے وقت کی قدر کرتے ہیں۔ ہمارے موثر عمل یقینی بناتے ہیں کہ آپ کی گاڑی کی خدمت کی جائے اور جب آپ کو ضرورت ہو تیار ہو۔",
-                    qualityAssurance: "کوالٹی اشورنس",
-                    qualityAssuranceDesc: "ہر سروس ہمارے کوالٹی گارنٹی کے ساتھ آتی ہے۔ ہم صرف اصلی پرزے استعمال کرتے ہیں اور سخت کوالٹی کے معیارات پر عمل کرتے ہیں۔",
                     premiumCare: "پریمیم کیئر",
                     premiumCareDesc: "بنیادی بحالی سے لے کر پیچیدہ مرمتوں تک، ہم پریمیم کیئر فراہم کرتے ہیں جو آپ کی گاڑی کو ہموار چلاتی رکھتی ہے۔",
                     advancedEquipment: "ایڈوانسڈ آلات",
@@ -721,15 +765,12 @@ i18n
                     ourCoreValues: "ہمارے بنیادی اقدار",
                     customerPassion: "کسٹمر پاشن",
                     customerPassionDesc: "ہم گاہکوں کی توقعات سے تجاوز کرنے اور پائیدار تعلقات استوار کرنے کے لیے گہری طور پر پرعزم ہیں۔",
-                    excellence: "فضیلت",
-                    excellenceDesc: "ہم ہر سروس میں کمال کے حصول کی کوشش کرتے ہیں، یقینی بناتے ہیں کہ اعلیٰ ترین معیارات پورے ہوں۔",
                     integrity: "دیانتداری",
                     integrityDesc: "منصفانہ قیمتوں کے ساتھ ایماندار، شفاف سروس اور ہر وقت واضح مواصلات۔",
                     innovation: "اختراع",
                     innovationDesc: "بہتر آٹوموٹو حل فراہم کرنے کے لیے مسلسل نئی ٹیکنالوجیز اور طریقوں کو اپنانا۔",
 
                     // Home Page - Testimonials
-                    testimonials: "توصیفات",
                     whatOurClientsSay: "ہمارے گاہک کیا کہتے ہیں",
                     realSuccessStories: "ہمارے قابل قدر گاہکوں اور شراکت داروں کی حقیقی کامیابی کی کہانیاں",
                     carOwner: "کار مالک",
@@ -759,7 +800,6 @@ i18n
                     teamMember4Desc: "یقینی بناتے ہیں کہ ہر سروس ہمارے پریمیم کوالٹی کے معیارات پر پورا اترے",
 
                     // Home Page - Features/Services Section
-                    ourServices: "ہماری سروسز",
                     comprehensiveAutoCare: "جامع آٹو کیئر",
                     servicesDescription: "ہم تکنیکی مہارت کو پریمیم سروس کے ساتھ ملاتے ہیں تاکہ ایسے حل فراہم کیے جا سکیں جو آپ کی گاڑی کو ہموار اور محفوظ طریقے سے چلاتے رہیں۔",
                     exploreMore: "مزید دریافت کریں",
@@ -799,12 +839,48 @@ i18n
                     // Home Page - Garage Images
                     premiumCarService: "پریمیم کار سروس",
                     luxuryVehicleMaintenance: "لگژری گاڑی کی بحالی",
-                    engineDiagnostics: "انجن ڈائیگناسٹکس",
                     advancedTechnicalCare: "ایڈوانسڈ تکنیکی دیکھ بھال",
                     modernWorkshop: "جدید ورکشاپ",
                     stateOfTheArtFacility: "جدید ترین سہولت",
                     expertTechniciansTitle: "ماہر ٹیکنیشن",
-                    certifiedProfessionals: "سرٹیفائیڈ پروفیشنلز"
+                    certifiedProfessionals: "سرٹیفائیڈ پروفیشنلز",
+
+                    // Service start
+                    // Add to Urdu translations
+                    computerizedDiagnostics: "کمپیوٹرائزڈ ڈائیگناسٹکس",
+                    engineOverhaul: "انجن اوورہال",
+                    emissionTesting: "ایمیشن ٹیسٹنگ",
+                    brakeServiceDescription: "پریمیم کوالٹی کے پرزے جات کے ساتھ مکمل بریک معائنہ، مرمت اور تبدیلی۔",
+                    brakePadReplacement: "بریک پیڈ تبدیلی",
+                    rotorResurfacing: "روٹر ریسرفیسنگ",
+                    absSystemRepair: "ABS سسٹم مرمت",
+                    brakeFluidFlush: "بریک فلش فلش",
+                    transmissionServiceDescription: "ماہر آٹومیٹک اور مینوئل ٹرانسمیشن مرمت، بحالی، اور تعمیر نو کی خدمات۔",
+                    transmissionFlush: "ٹرانسمیشن فلش",
+                    clutchReplacement: "کلچ تبدیلی",
+                    gearboxRepair: "گیئر باکس مرمت",
+                    cvtService: "CVT سروس",
+                    electricalServiceDescription: "تمام گاڑی کے نظاموں اور پرزہ جات کے لیے اعلیٰ درجے کی الیکٹریکل ڈائیگناسٹکس اور مرمت۔",
+                    batteryService: "بیٹری سروس",
+                    alternatorRepair: "الٹرنیٹر مرمت",
+                    wiringIssues: "وائرنگ مسائل",
+                    ecuProgramming: "ECU پروگرامنگ",
+                    vehiclesServiced: "گاڑیاں سروسڈ",
+                    customerSatisfaction: "کسٹمر سٹسفیکشن",
+                    trustedByOman: "عمان میں معتبر",
+                    decadesOfExcellence: "عمان بھر میں ہزاروں مطمئن گاہکوں کے ساتھ آٹوموٹو کیئر میں عشروں کی فضیلت۔",
+                    experienceTheDifference: "معیار، شفافیت، اور کسٹمر کی تسلی کے ہمارے عزم کے ساتھ فرق کو محسوس کریں۔",
+                    explore: "دریافت کریں",
+                    ourProcess: "ہمارا عمل",
+                    processDescription: "ہم گاڑی کی بحالی اور مرمت کے لیے ایک منظم نقطہ نظر اپناتے ہیں۔ جامع تشخیص سے لے کر اصلی پرزے جات کا استعمال کرتے ہوئے درست مرمتوں تک، ہمارے سرٹیفائیڈ ٹیکنیشن یقینی بناتے ہیں کہ آپ کی گاڑی کو وہ دیکھ بھال ملے جس کی وہ مستحق ہے ہر قدم پر مکمل شفافیت کے ساتھ۔",
+                    customerCommitment: "کسٹمر عہد",
+                    commitmentDescription: "آپ کی گاڑی کی صحت اور آپ کی تسلی ہماری اولین ترجیح ہیں۔ ہم سروس کے عمل کے دوران تفصیلی وضاحتیں، مسابقتی قیمتیں، اور باقاعدہ اپ ڈیٹس فراہم کرتے ہیں۔ ہماری ٹیم اعتماد اور غیر معمولی سروس کوالٹی پر مبنی طویل مدتی تعلقات استوار کرنے کے لیے وقف ہے۔",
+                    specializedServices: "خصوصی خدمات",
+                    specializedServicesDescription: "روٹین بحالی سے ہٹ کر، ہم آپ کی گاڑی کی تمام ضروریات کو پورا کرنے کے لیے خصوصی آٹوموٹو خدمات پیش کرتے ہیں۔",
+                    acServiceDescription: "مکمل ایئر کنڈیشنگ سسٹم کی بحالی، مرمت، اور ریفریجرنٹ ریچارج۔",
+                    suspensionServiceDescription: "پروفیشنل الائنمنٹ، شاک ابزاربر تبدیلی، اور سٹیئرنگ سسٹم مرمت۔",
+                    prePurchaseInspection: "خریدنے سے پہلے معائنہ",
+                    inspectionDescription: "قدر اور حفاظت کو یقینی بنانے کے لیے خریداری سے پہلے گاڑی کا جامع معائنہ۔"
                 }
             }
         },
