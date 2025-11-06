@@ -1,11 +1,14 @@
 import { useState } from 'react';
 import { Target, Eye, Award, Users, Lightbulb, Heart, Rocket, Wrench, Car, Cog } from 'lucide-react';
 import Banner from '../components/Banner';
+import { useTranslation } from 'react-i18next';
+import Charva from "../Assists/Cars/charvalaite.avif"
 
 const Legacy = () => {
   const [isVisible, setIsVisible] = useState({});
+  const { t } = useTranslation();
   
- const team = [
+  const team = [
     {
       name: "Sarah Johnson",
       role: "CEO & Founder",
@@ -32,26 +35,26 @@ const Legacy = () => {
   const values = [
     {
       icon: Award,
-      title: 'Quality Excellence',
-      description: 'We use only genuine parts and follow manufacturer specifications for every repair.',
+      title: t('qualityExcellence'),
+      description: t('qualityExcellenceDesc'),
       color: '#f59e0b'
     },
     {
       icon: Users,
-      title: 'Customer Trust',
-      description: 'Building lifelong relationships through transparent pricing and honest service.',
+      title: t('customerTrust'),
+      description: t('customerTrustDesc'),
       color: '#ea580c'
     },
     {
       icon: Lightbulb,
-      title: 'Technical Innovation',
-      description: 'State-of-the-art diagnostic equipment and continuous technician training.',
+      title: t('technicalInnovation'),
+      description: t('technicalInnovationDesc'),
       color: '#d97706'
     },
     {
       icon: Heart,
-      title: 'Passion for Cars',
-      description: 'Genuine love for automotive excellence drives every service we provide.',
+      title: t('passionForCars'),
+      description: t('passionForCarsDesc'),
       color: '#dc2626'
     }
   ];
@@ -60,8 +63,8 @@ const Legacy = () => {
     <div className="min-h-screen bg-black text-white">
       {/* Hero Banner */}
       <Banner 
-        title="Legacy Ajal Garage"
-        subtitle="25+ years of automotive excellence in Oman. Your trusted partner for premium vehicle care and maintenance."
+        title={t('legacyTitle')}
+        subtitle={t('legacySubtitle')}
         iconOne={Wrench}
         iconTwo={Car}
       />
@@ -73,16 +76,16 @@ const Legacy = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-amber-500/20 to-orange-500/20 blur-3xl rounded-full group-hover:blur-4xl transition-all duration-500" />
             <div className="relative backdrop-blur-xl bg-black/60 border-2 border-amber-500/30 rounded-2xl overflow-hidden group-hover:border-amber-400/50 transition-all duration-500">
               <img 
-                src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=983" 
+                src={Charva}
                 alt="Ajal Garage Workshop"
                 className="w-full h-96 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
                 <div className="text-3xl font-black text-amber-400" style={{ textShadow: '0 0 20px #f59e0b' }}>
-                  Our Legacy
+                  {t('ourLegacy')}
                 </div>
-                <div className="text-amber-200 font-semibold text-sm">Since 1998 • Barka, Oman</div>
+                <div className="text-amber-200 font-semibold text-sm">{t('since1998BarkaOman')}</div>
               </div>
             </div>
           </div>
@@ -90,25 +93,20 @@ const Legacy = () => {
           <div>
             <div className="text-amber-400 text-sm font-bold tracking-widest uppercase mb-4 flex items-center gap-2">
               <span className="w-8 h-px bg-amber-400"></span>
-              Our Story
+              {t('ourStory')}
             </div>
             <h2 className="text-4xl md:text-5xl font-black mb-6 text-amber-100" style={{ textShadow: '0 0 40px #f59e0b80' }}>
-              Automotive Excellence Since 1998
+              {t('automotiveExcellenceSince')}
             </h2>
             <div className="space-y-4 text-amber-200/80 text-lg leading-relaxed">
               <p className="backdrop-blur-xl bg-amber-900/20 border border-amber-500/20 rounded-xl p-4">
-                Founded in 1998 in Barka, Ajal Garage began with a simple mission: to provide honest, 
-                reliable automotive services to the Omani community. What started as a small workshop 
-                has grown into a premier automotive service center trusted by thousands.
+                {t('foundedIn1998')}
               </p>
               <p className="backdrop-blur-xl bg-amber-900/20 border border-amber-500/20 rounded-xl p-4">
-                Today, we specialize in comprehensive vehicle maintenance, from routine servicing to 
-                complex engine repairs. Our team of certified technicians handles everything from 
-                Japanese compacts to European luxury vehicles with equal expertise.
+                {t('todayWeSpecialize')}
               </p>
               <p className="backdrop-blur-xl bg-amber-900/20 border border-amber-500/20 rounded-xl p-4">
-                We believe in building lasting relationships with our customers, becoming their trusted 
-                automotive partner for life. Your vehicle's health and your satisfaction are our top priorities.
+                {t('weBelieveIn')}
               </p>
             </div>
           </div>
@@ -124,12 +122,10 @@ const Legacy = () => {
                   <Target className="h-8 w-8 text-amber-400" />
                 </div>
               </div>
-              <h2 className="text-3xl font-black text-amber-100">Our Mission</h2>
+              <h2 className="text-3xl font-black text-amber-100">{t('ourMission')}</h2>
             </div>
             <p className="text-amber-200/80 leading-relaxed text-lg">
-              To provide exceptional automotive care using genuine parts, advanced diagnostics, and 
-              certified expertise. We strive to deliver reliable, transparent services that keep 
-              your vehicle running safely and efficiently for years to come.
+              {t('missionDescription')}
             </p>
           </div>
 
@@ -141,12 +137,10 @@ const Legacy = () => {
                   <Eye className="h-8 w-8 text-orange-400" />
                 </div>
               </div>
-              <h2 className="text-3xl font-black text-amber-100">Our Vision</h2>
+              <h2 className="text-3xl font-black text-amber-100">{t('ourVision')}</h2>
             </div>
             <p className="text-amber-200/80 leading-relaxed text-lg">
-              To be Oman's most trusted automotive service center, recognized for our technical 
-              excellence, customer commitment, and unwavering dedication to quality. We envision 
-              setting the standard for automotive care in the region.
+              {t('visionDescription')}
             </p>
           </div>
         </div>
@@ -156,11 +150,11 @@ const Legacy = () => {
           <div className="text-center mb-16">
             <div className="text-amber-400 text-sm font-bold tracking-widest uppercase mb-4 flex items-center justify-center gap-2">
               <span className="w-8 h-px bg-amber-400"></span>
-              Our Values
+              {t('ourValues')}
               <span className="w-8 h-px bg-amber-400"></span>
             </div>
             <h2 className="text-5xl font-black mb-4 text-amber-100" style={{ textShadow: '0 0 40px #f59e0b80' }}>
-              The Ajal Garage Promise
+              {t('theAjalGaragePromise')}
             </h2>
           </div>
           
@@ -203,15 +197,14 @@ const Legacy = () => {
           <div className="text-center mb-16">
             <div className="text-amber-400 text-sm font-bold tracking-widest uppercase mb-4 flex items-center justify-center gap-2">
               <span className="w-8 h-px bg-amber-400"></span>
-              Master Technicians
+              {t('masterTechnicians')}
               <span className="w-8 h-px bg-amber-400"></span>
             </div>
             <h2 className="text-5xl font-black mb-4 text-amber-100" style={{ textShadow: '0 0 40px #f59e0b80' }}>
-              Meet Our Experts
+              {t('meetOurExperts')}
             </h2>
             <p className="text-amber-200/80 text-lg max-w-2xl mx-auto">
-              Our certified technicians bring decades of combined experience and continuous training 
-              to ensure your vehicle receives the best possible care.
+              {t('techniciansDescription')}
             </p>
           </div>
           
@@ -246,18 +239,18 @@ const Legacy = () => {
         <div className="bg-gradient-to-br from-amber-900/20 to-orange-900/20 backdrop-blur-sm border-2 border-amber-500/30 rounded-3xl p-8 md:p-12 mb-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-black text-amber-100 mb-4">
-              Why Choose Ajal Garage?
+              {t('whyChooseAjalGarage')}
             </h2>
             <p className="text-amber-200/80 text-lg max-w-3xl mx-auto">
-              Experience the difference that 25+ years of automotive expertise makes
+              {t('experienceTheDifference')}
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: Cog, title: "Advanced Diagnostics", desc: "State-of-the-art equipment for precise problem identification" },
-              { icon: Award, title: "Certified Technicians", desc: "Continuously trained and manufacturer-certified experts" },
-              { icon: Car, title: "All Makes & Models", desc: "From daily drivers to luxury vehicles, we service them all" }
+              { icon: Cog, title: t('advancedDiagnostics'), desc: t('advancedDiagnosticsDesc') },
+              { icon: Award, title: t('certifiedTechnicians'), desc: t('certifiedTechniciansDesc') },
+              { icon: Car, title: t('allMakesModels'), desc: t('allMakesModelsDesc') }
             ].map((item, index) => (
               <div key={index} className="text-center group">
                 <div className="relative inline-block mb-4">
