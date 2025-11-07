@@ -1,94 +1,109 @@
 import { useState } from 'react';
-import { Car, Wrench, Settings, Zap, Search, Filter, X, Play, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Car, Wrench, Settings, Zap, Search, Filter, X, Play, ChevronLeft, ChevronRight ,Monitor } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import Banner from '../components/Banner';
+import premiumBrakeSystem from "../Assists/Gallery/premiumBrakeSystem.jpg"
+import luxuryVehicleService from "../Assists/Gallery/luxuryVehicleService.jpg"
+import computerDiagnostics from "../Assists/Gallery/computerDiagnostics.jpg"
+import transmissionService from "../Assists/Gallery/transmissionService.jpg"
+import electricalSystem from "../Assists/Gallery/electricalSystem.avif"
+import oilChangeService from "../Assists/Gallery/oilChangeService.avif"
+import performanceTuning from "../Assists/Gallery/performanceTuning.avif"
+import acSystemService from "../Assists/Gallery/acSystemService.webp"
+import engineOverhaulService from "../Assists/Gallery/engineOverhaulService.webp"
+import { useNavigate } from 'react-router-dom';
+
+
 
 const Gallery = () => {
+  const { t } = useTranslation();
+  const navigate = useNavigate()
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedImage, setSelectedImage] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const categories = [
-    { id: 'all', name: 'All Services', icon: Car, count: 28 },
-    { id: 'engine', name: 'Engine Repair', icon: Settings, count: 8 },
-    { id: 'brakes', name: 'Brake Service', icon: Zap, count: 6 },
-    { id: 'maintenance', name: 'Maintenance', icon: Wrench, count: 7 },
-    { id: 'diagnostics', name: 'Diagnostics', icon: Settings, count: 4 },
-    { id: 'custom', name: 'Custom Work', icon: Car, count: 3 }
+    { id: 'all', name: t('allServices'), icon: Car, count: 28 },
+    { id: 'engine', name: t('engineRepair'), icon: Settings, count: 8 },
+    { id: 'brakes', name: t('brakeService'), icon: Zap, count: 6 },
+    { id: 'maintenance', name: t('maintenance'), icon: Wrench, count: 7 },
+    { id: 'diagnostics', name: t('diagnostics'), icon: Settings, count: 4 },
+    { id: 'custom', name: t('customWork'), icon: Car, count: 3 }
   ];
 
   const galleryItems = [
     {
       id: 1,
-      title: 'Engine Overhaul Service',
+      title: t('engineOverhaulService'),
       category: 'engine',
-      image: 'https://images.unsplash.com/photo-1603712610494-49c64460ad6b?w=600&h=400&fit=crop',
-      description: 'Complete engine rebuild and performance optimization',
-      tags: ['Engine', 'Performance', 'Repair']
+      image: engineOverhaulService,
+      description: t('completeEngineRebuild'),
+      tags: [t('engine'), t('performance'), t('repair')]
     },
     {
       id: 2,
-      title: 'Premium Brake System',
+      title: t('premiumBrakeSystem'),
       category: 'brakes',
-      image: 'https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=600&h=400&fit=crop',
-      description: 'High-performance brake pad and rotor replacement',
-      tags: ['Brakes', 'Safety', 'Performance']
+      image: premiumBrakeSystem,
+      description: t('highPerformanceBrake'),
+      tags: [t('brakes'), t('safety'), t('performance')]
     },
     {
       id: 3,
-      title: 'Oil Change Service',
+      title: t('oilChangeService'),
       category: 'maintenance',
-      image: 'https://images.unsplash.com/photo-1603712610494-49c64460ad6b?w=600&h=400&fit=crop',
-      description: 'Full synthetic oil change with filter replacement',
-      tags: ['Maintenance', 'Oil', 'Service']
+      image: oilChangeService,
+      description: t('fullSyntheticOil'),
+      tags: [t('maintenance'), t('oil'), t('service')]
     },
     {
       id: 4,
-      title: 'Computer Diagnostics',
+      title: t('computerDiagnostics'),
       category: 'diagnostics',
-      image: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&h=400&fit=crop',
-      description: 'Advanced computer system analysis and troubleshooting',
-      tags: ['Diagnostics', 'Technology', 'Repair']
+      image: computerDiagnostics,
+      description: t('advancedComputerAnalysis'),
+      tags: [t('diagnostics'), t('technology'), t('repair')]
     },
     {
       id: 5,
-      title: 'Luxury Vehicle Service',
+      title: t('luxuryVehicleService'),
       category: 'custom',
-      image: 'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=600&h=400&fit=crop',
-      description: 'Specialized care for premium and luxury vehicles',
-      tags: ['Luxury', 'Custom', 'Premium']
+      image: luxuryVehicleService,
+      description: t('specializedLuxuryCare'),
+      tags: [t('luxury'), t('custom'), t('premium')]
     },
     {
       id: 6,
-      title: 'Transmission Service',
+      title: t('transmissionService'),
       category: 'maintenance',
-      image: 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=600&h=400&fit=crop',
-      description: 'Automatic and manual transmission maintenance',
-      tags: ['Transmission', 'Maintenance', 'Service']
+      image: transmissionService,
+      description: t('transmissionMaintenance'),
+      tags: [t('transmission'), t('maintenance'), t('service')]
     },
     {
       id: 7,
-      title: 'Electrical System Repair',
+      title: t('electricalSystem'),
       category: 'diagnostics',
-      image: 'https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=600&h=400&fit=crop',
-      description: 'Complete electrical system diagnostics and repair',
-      tags: ['Electrical', 'Diagnostics', 'Repair']
+      image: electricalSystem,
+      description: t('electricalSystemRepair'),
+      tags: [t('electrical'), t('diagnostics'), t('repair')]
     },
     {
       id: 8,
-      title: 'Performance Tuning',
+      title: t('performanceTuning'),
       category: 'custom',
-      image: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&h=400&fit=crop',
-      description: 'Engine performance optimization and tuning',
-      tags: ['Performance', 'Custom', 'Tuning']
+      image: performanceTuning,
+      description: t('performanceOptimization'),
+      tags: [t('performance'), t('custom'), t('tuning')]
     },
     {
       id: 9,
-      title: 'AC System Service',
+      title: t('acSystemService'),
       category: 'maintenance',
-      image: 'https://images.unsplash.com/photo-1603712610494-49c64460ad6b?w=600&h=400&fit=crop',
-      description: 'Air conditioning system maintenance and repair',
-      tags: ['AC', 'Maintenance', 'Comfort']
+      image: acSystemService,
+      description: t('acSystemMaintenance'),
+      tags: [t('AC'), t('maintenance'), t('comfort')]
     }
   ];
 
@@ -129,8 +144,8 @@ const Gallery = () => {
     <div className="min-h-screen bg-black text-white">
       {/* Hero Banner */}
       <Banner 
-        title="Our Service Gallery"
-        subtitle="Explore our premium automotive services through detailed photos of our work and facilities"
+        title={t('ourServiceGallery')}
+        subtitle={t('exploreOurPremiumServices')}
         iconOne={Car}
         iconTwo={Settings}
       />
@@ -144,7 +159,7 @@ const Gallery = () => {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-amber-400 h-5 w-5" />
               <input
                 type="text"
-                placeholder="Search services..."
+                placeholder={t('searchServices')}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-amber-900/20 border-2 border-amber-500/30 rounded-xl text-amber-100 placeholder-amber-200/50 backdrop-blur-xl focus:border-amber-400/50 focus:outline-none transition-all"
@@ -161,7 +176,7 @@ const Gallery = () => {
 
             {/* Results Count */}
             <div className="text-amber-200/80 font-semibold">
-              Showing {filteredItems.length} of {galleryItems.length} services
+              {t('showingResults', { count: filteredItems.length, total: galleryItems.length })}
             </div>
           </div>
 
@@ -221,7 +236,7 @@ const Gallery = () => {
                 {/* Hover Overlay */}
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <div className="bg-white/20 backdrop-blur-xl rounded-full p-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <Play className="h-8 w-8 text-white" fill="white" />
+                    <Monitor  className="h-8 w-8 text-white" fill="white" />
                   </div>
                 </div>
               </div>
@@ -256,9 +271,9 @@ const Gallery = () => {
           <div className="text-center py-16">
             <div className="backdrop-blur-xl bg-amber-900/20 border-2 border-amber-500/30 rounded-2xl p-12 max-w-2xl mx-auto">
               <Search className="h-16 w-16 text-amber-400 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-amber-100 mb-2">No Services Found</h3>
+              <h3 className="text-2xl font-bold text-amber-100 mb-2">{t('noServicesFound')}</h3>
               <p className="text-amber-200/80 mb-6">
-                We couldn't find any services matching your search criteria. Try adjusting your filters or search terms.
+                {t('noServicesDescription')}
               </p>
               <button
                 onClick={() => {
@@ -267,7 +282,7 @@ const Gallery = () => {
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-500 rounded-xl font-semibold hover:scale-105 transition-all"
               >
-                Reset Filters
+                {t('resetFilters')}
               </button>
             </div>
           </div>
@@ -276,17 +291,17 @@ const Gallery = () => {
         {/* CTA Section */}
         <div className="bg-gradient-to-br from-amber-900/20 to-orange-900/20 backdrop-blur-sm border-2 border-amber-500/30 rounded-3xl p-12 text-center">
           <h2 className="text-4xl md:text-5xl font-black text-amber-100 mb-4">
-            Ready to Service Your Vehicle?
+            {t('readyToService')}
           </h2>
           <p className="text-amber-200/80 text-lg mb-8 max-w-2xl mx-auto">
-            See something you like? Schedule your service appointment today and experience the Ajal Garage difference.
+            {t('galleryDescription')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 rounded-xl font-bold text-lg hover:scale-105 transition-all">
-              Schedule Service
+            <button className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 rounded-xl font-bold text-lg hover:scale-105 transition-all" onClick={()=>navigate("/contact")}>
+              {t('scheduleService')}
             </button>
-            <button className="px-8 py-4 bg-amber-900/20 border-2 border-amber-500/30 rounded-xl font-bold text-lg text-amber-100 hover:bg-amber-900/30 hover:border-amber-400/50 transition-all">
-              View All Services
+            <button className="px-8 py-4 bg-amber-900/20 border-2 border-amber-500/30 rounded-xl font-bold text-lg text-amber-100 hover:bg-amber-900/30 hover:border-amber-400/50 transition-all" onClick={()=>navigate("/service")}>
+              {t('viewAllServices')}
             </button>
           </div>
         </div>
@@ -344,9 +359,9 @@ const Gallery = () => {
                     </span>
                   ))}
                 </div>
-                <button className="w-full py-3 bg-gradient-to-r from-amber-500 to-orange-500 rounded-xl font-semibold hover:scale-105 transition-all">
-                  Book This Service
-                </button>
+                {/* <button className="w-full py-3 bg-gradient-to-r from-amber-500 to-orange-500 rounded-xl font-semibold hover:scale-105 transition-all">
+                  {t('bookThisService')}
+                </button> */}
               </div>
             </div>
           </div>
