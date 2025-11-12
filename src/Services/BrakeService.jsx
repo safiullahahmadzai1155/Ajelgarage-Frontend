@@ -1,6 +1,7 @@
 import { Car, Wrench, Settings, Zap, Shield, Clock, Users, Award, Sparkles, Cog, Gauge, Fuel, Cpu, Heart, RotateCcw, AlertTriangle } from 'lucide-react';
 import Banner from '../components/Banner';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 // Animation variants
 const containerVariants = {
@@ -95,122 +96,144 @@ const AnimatedSection = ({ children, className = "" }) => {
 };
 
 const BrakeService = () => {
+    const { t } = useTranslation();
+
     const brakeServices = [
         {
             icon: Settings,
-            title: 'Brake Pad Replacement',
-            description: 'Professional brake pad replacement using premium quality pads for optimal stopping power and safety.',
-            features: ['Premium Brake Pads', 'Rotor Inspection', 'Caliper Service', 'Noise Elimination'],
+            title: t('brakePadReplacement'),
+            description: t('brakePadReplacementDesc'),
+            features: [
+                t('premiumBrakePads'),
+                t('rotorInspection'),
+                t('caliperService'),
+                t('noiseElimination')
+            ],
             price: '25 OMR',
-            duration: '2-3 hours',
-            warranty: '12 Months'
+            duration: `2-3 ${t('hours')}`,
+            warranty: `12 ${t('months')}`
         },
         {
             icon: RotateCcw,
-            title: 'Brake Disc Resurfacing',
-            description: 'Precision machining of brake rotors to eliminate warping, vibration and ensure smooth braking performance.',
-            features: ['Rotor Machining', 'Surface Smoothing', 'Vibration Control', 'Extended Rotor Life'],
+            title: t('brakeDiscResurfacing'),
+            description: t('brakeDiscResurfacingDesc'),
+            features: [
+                t('rotorMachining'),
+                t('surfaceSmoothing'),
+                t('vibrationControl'),
+                t('extendedRotorLife')
+            ],
             price: '35 OMR',
-            duration: '3-4 hours',
-            warranty: '6 Months'
+            duration: `3-4 ${t('hours')}`,
+            warranty: `6 ${t('months')}`
         },
         {
             icon: Zap,
-            title: 'ABS System Repair',
-            description: 'Expert diagnosis and repair of Anti-lock Braking System issues for maximum safety and control.',
-            features: ['ABS Sensor Replacement', 'Module Diagnostics', 'Wheel Speed Sensors', 'System Calibration'],
+            title: t('absSystemRepair'),
+            description: t('absSystemRepairDesc'),
+            features: [
+                t('absSensorReplacement'),
+                t('moduleDiagnostics'),
+                t('wheelSpeedSensors'),
+                t('systemCalibration')
+            ],
             price: '45 OMR',
-            duration: '4-5 hours',
-            warranty: '12 Months'
+            duration: `4-5 ${t('hours')}`,
+            warranty: `12 ${t('months')}`
         },
         {
             icon: Wrench,
-            title: 'Complete Brake Overhaul',
-            description: 'Comprehensive brake system service including all components for complete safety and reliability.',
-            features: ['Full System Flush', 'Caliper Rebuild', 'Hardware Replacement', 'Performance Testing'],
+            title: t('completeBrakeOverhaul'),
+            description: t('completeBrakeOverhaulDesc'),
+            features: [
+                t('fullSystemFlush'),
+                t('caliperRebuild'),
+                t('hardwareReplacement'),
+                t('performanceTesting')
+            ],
             price: '60 OMR',
-            duration: '5-6 hours',
-            warranty: '12 Months'
+            duration: `5-6 ${t('hours')}`,
+            warranty: `12 ${t('months')}`
         }
     ];
 
     const benefits = [
         {
             icon: Shield,
-            title: 'Enhanced Safety',
-            description: 'Restore factory-level braking performance for maximum road safety and peace of mind.'
+            title: t('enhancedSafety'),
+            description: t('enhancedSafetyDesc')
         },
         {
             icon: Clock,
-            title: 'Quick Service',
-            description: 'Most brake services completed within 2-3 hours with minimal downtime for your convenience.'
+            title: t('quickService'),
+            description: t('quickServiceDesc')
         },
         {
             icon: Award,
-            title: 'Quality Parts',
-            description: 'We use only OEM or premium aftermarket parts for lasting performance and reliability.'
+            title: t('qualityParts'),
+            description: t('qualityPartsDesc')
         },
         {
             icon: Users,
-            title: 'Expert Technicians',
-            description: 'Certified brake specialists with years of experience in brake system diagnostics and repair.'
+            title: t('expertTechnicians'),
+            description: t('expertTechniciansDesc')
         }
     ];
 
     const brakeStats = [
-        { number: '50%', label: 'Shorter Stopping Distance', description: 'Improved braking performance' },
-        { number: '12K+', label: 'Brake Jobs Completed', description: 'Trusted by thousands' },
-        { number: '100%', label: 'Safety Certified', description: 'Quality guaranteed' },
-        { number: '24H', label: 'Emergency Service', description: 'Always available' }
+        { number: '50%', label: t('shorterStoppingDistance'), description: t('improvedBrakingPerformance') },
+        { number: '12K+', label: t('brakeJobsCompleted'), description: t('trustedByThousands') },
+        { number: '100%', label: t('safetyCertified'), description: t('qualityGuaranteed') },
+        { number: '24H', label: t('emergencyService'), description: t('alwaysAvailable') }
     ];
 
     const brakeProcess = [
         {
             step: '01',
-            title: 'Comprehensive Inspection',
-            description: 'Thorough assessment of brake pads, rotors, calipers, and fluid levels'
+            title: t('comprehensiveInspection'),
+            description: t('comprehensiveInspectionDesc')
         },
         {
             step: '02',
-            title: 'Advanced Diagnostics',
-            description: 'Computerized testing of brake performance and ABS systems'
+            title: t('advancedDiagnostics'),
+            description: t('advancedDiagnosticsDesc')
         },
         {
             step: '03',
-            title: 'Precision Repair',
-            description: 'Expert service using specialized tools and genuine parts'
+            title: t('precisionRepair'),
+            description: t('precisionRepairDesc')
         },
         {
             step: '04',
-            title: 'Quality Testing',
-            description: 'Rigorous testing under various conditions to ensure optimal performance'
+            title: t('qualityTesting'),
+            description: t('qualityTestingDesc')
         }
     ];
 
     const warningSigns = [
         {
             icon: AlertTriangle,
-            title: 'Squeaking or Grinding',
-            description: 'High-pitched noises indicate worn brake pads needing immediate attention',
-            urgency: 'High'
+            title: t('squeakingOrGrinding'),
+            description: t('squeakingOrGrindingDesc'),
+            urgency: t('high')
         },
         {
             icon: Car,
-            title: 'Vibration in Pedal',
-            description: 'Pulsation or vibration when braking often means warped rotors',
-            urgency: 'Medium'
+            title: t('vibrationInPedal'),
+            description: t('vibrationInPedalDesc'),
+            urgency: t('medium')
         },
         {
             icon: Zap,
-            title: 'ABS Light On',
-            description: 'Dashboard warning lights signal potential issues with anti-lock braking system',
-            urgency: 'High'
+            title: t('absLightOn'),
+            description: t('absLightOnDesc'),
+            urgency: t('high')
         },
         {
             icon: Gauge,
-            title: 'Longer Stopping Distance',
-            description: 'Vehicle takes longer to stop, indicating reduced braking efficiency',
-            urgency: 'High'
+            title: t('longerStoppingDistance'),
+            description: t('longerStoppingDistanceDesc'),
+            urgency: t('high')
         }
     ];
 
@@ -218,8 +241,8 @@ const BrakeService = () => {
         <div className="min-h-screen bg-black text-white">
             {/* Brake Service Focused Banner */}
             <Banner
-                title="Professional Brake Services"
-                subtitle="Ensure your safety with our expert brake inspection, repair, and replacement services in Oman. Trust our certified technicians for reliable stopping power."
+                title={t('professionalBrakeServices')}
+                subtitle={t('brakeServicesSubtitle')}
                 iconOne={Settings}
                 iconTwo={Shield}
             />
@@ -253,12 +276,12 @@ const BrakeService = () => {
                         <div className="inline-flex items-center justify-center w-full mb-6">
                             <div className="flex-1 h-0.5 bg-amber-500/20"></div>
                             <h2 className="text-3xl md:text-4xl font-bold text-amber-100 mx-6">
-                                Our Brake Services
+                                {t('ourBrakeServices')}
                             </h2>
                             <div className="flex-1 h-0.5 bg-amber-500/20"></div>
                         </div>
                         <p className="text-amber-100/70 text-lg max-w-3xl mx-auto">
-                            Complete brake system solutions using premium parts and advanced diagnostic equipment for maximum safety
+                            {t('brakeServicesDescription')}
                         </p>
                     </motion.div>
 
@@ -327,7 +350,7 @@ const BrakeService = () => {
                                                 </div>
                                                 <div className="flex items-center gap-2">
                                                     <Shield className="h-4 w-4" />
-                                                    <span>{service.warranty} Warranty</span>
+                                                    <span>{service.warranty} {t('warranty')}</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -356,12 +379,12 @@ const BrakeService = () => {
                                 <div className="p-2 bg-red-500/20 rounded-lg">
                                     <AlertTriangle className="h-6 w-6 text-red-400" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-amber-100">Brake Warning Signs</h3>
+                                <h3 className="text-2xl font-bold text-amber-100">{t('brakeWarningSigns')}</h3>
                             </div>
                             <div className="space-y-4">
                                 {warningSigns.map((sign, index) => {
                                     const Icon = sign.icon;
-                                    const urgencyColor = sign.urgency === 'High' ? 'bg-red-500/20 text-red-400' : 'bg-amber-500/20 text-amber-400';
+                                    const urgencyColor = sign.urgency === t('high') ? 'bg-red-500/20 text-red-400' : 'bg-amber-500/20 text-amber-400';
                                     return (
                                         <motion.div
                                             key={index}
@@ -374,8 +397,8 @@ const BrakeService = () => {
                                             <div className="flex-1">
                                                 <div className="flex items-center gap-3 mb-1">
                                                     <h4 className="font-semibold text-amber-100 text-sm">{sign.title}</h4>
-                                                    <span className={`text-xs px-2 py-1 rounded-full ${sign.urgency === 'High' ? 'bg-red-500/20 text-red-400' : 'bg-amber-500/20 text-amber-400'}`}>
-                                                        {sign.urgency} Priority
+                                                    <span className={`text-xs px-2 py-1 rounded-full ${sign.urgency === t('high') ? 'bg-red-500/20 text-red-400' : 'bg-amber-500/20 text-amber-400'}`}>
+                                                        {sign.urgency} {t('priority')}
                                                     </span>
                                                 </div>
                                                 <p className="text-amber-200/70 text-xs leading-relaxed">{sign.description}</p>
@@ -395,7 +418,7 @@ const BrakeService = () => {
                             <div className="p-2 bg-amber-500/20 rounded-lg">
                                 <Award className="h-6 w-6 text-amber-400" />
                             </div>
-                            <h3 className="text-2xl font-bold text-amber-100">Why Choose Us</h3>
+                            <h3 className="text-2xl font-bold text-amber-100">{t('whyChooseUs')}</h3>
                         </div>
                         <div className="space-y-0">
                             {benefits.map((benefit, index) => {
@@ -430,7 +453,7 @@ const BrakeService = () => {
                     <motion.div variants={fadeInUp} className="text-center mb-12">
                         <div className="inline-flex items-center justify-center w-full mb-6">
                             <div className="flex-1 h-0.5 bg-amber-500/20"></div>
-                            <h2 className="text-3xl font-bold text-amber-100 mx-6">Our Service Process</h2>
+                            <h2 className="text-3xl font-bold text-amber-100 mx-6">{t('ourServiceProcess')}</h2>
                             <div className="flex-1 h-0.5 bg-amber-500/20"></div>
                         </div>
                     </motion.div>
@@ -479,7 +502,7 @@ const BrakeService = () => {
                             transition={{ duration: 0.7, delay: 0.2 }}
                         >
                             <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-                                Safety First, Always
+                                {t('safetyFirstAlways')}
                             </span>
                         </motion.h2>
                         <motion.p
@@ -488,7 +511,7 @@ const BrakeService = () => {
                             whileInView={{ opacity: 1 }}
                             transition={{ delay: 0.4 }}
                         >
-                            Don't compromise on your safety. Visit our garage for professional brake inspection and service you can trust.
+                            {t('safetyDescription')}
                         </motion.p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                             <motion.button
@@ -496,14 +519,14 @@ const BrakeService = () => {
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                Visit Our Garage
+                                {t('visitOurGarage')}
                             </motion.button>
                             <motion.button
                                 className="px-8 py-4 font-semibold rounded-xl transition-all duration-300 border-2 border-amber-400/50 text-amber-100 hover:border-amber-400 hover:bg-amber-400/10"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                Call for Consultation
+                                {t('callForConsultation')}
                             </motion.button>
                         </div>
                     </div>

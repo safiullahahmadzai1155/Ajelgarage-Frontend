@@ -1,7 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { I18nextProvider } from 'react-i18next';
-import i18n from './i18n'; // Import i18n configuration
+import i18n from './i18n';
 import App from '../src/App'; 
 import './index.css';
 
