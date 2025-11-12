@@ -23,11 +23,9 @@ import Testimonials from './components/Testimonials';
 import Privacy from './Rule/Privacy';
 import Terms from './Rule/Terms';
 import Cookies from './Rule/cookies';
-import './i18n'; // Import i18n config
 
 function App() {
   return (
-    <I18nextProvider i18n={i18n}>
       <Router>
         <div className="min-h-screen flex flex-col">
           <Navbar />
@@ -59,7 +57,6 @@ function App() {
           </div>
         </div>
       </Router>
-    </I18nextProvider>
   );
 }
 
