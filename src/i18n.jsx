@@ -8,6 +8,9 @@ i18n
         resources: {
             en: {
                 translation: {
+                    // Add to your i18n.js file
+                    myCurrentLocation: "My Current Location",
+                    location: "Location",
                     // Navbar
                     home: "Home",
                     premiumServices: "Premium Services",
@@ -383,7 +386,98 @@ i18n
                     electrical: "Electrical",
                     tuning: "Tuning",
                     AC: "AC",
-                    comfort: "Comfort"
+                    comfort: "Comfort",
+                    bannerTitle: "Schedule Your Vehicle Service",
+                    bannerSubtitle: "Expert automotive care in Oman. Book your appointment today for premium vehicle maintenance and repair services.",
+
+                    // Form Section
+                    formHeading: "Book Your Service Appointment",
+                    formSubheading: "Fill out the form and we'll contact you within 2 hours to schedule your service",
+
+                    // Form Fields
+                    fullName: "Full Name",
+                    email: "Email Address",
+                    phoneNumber: "Phone Number",
+                    location: "Your Location (Google Maps Link)",
+                    locationPlaceholder: "https://maps.google.com/?q=...",
+                    locationHelper: "Click the button to automatically add your Google Maps location link",
+                    getLocation: "Get Location",
+                    detecting: "Detecting",
+                    vehicleType: "Vehicle Type",
+                    selectVehicleType: "Select Vehicle Type",
+                    serviceRequired: "Service Required",
+                    selectService: "Select a service",
+                    carTroubleNotes: "Car Trouble Notes",
+                    carTroublePlaceholder: "Car Trouble Notes: Describe your vehicle issues, symptoms, or specific service requirements. For example: Looking for premium detailing and ceramic coating for my black SUV. Need pickup and drop-off service.",
+                    required: "*",
+
+                    // Vehicle Types
+                    sedan: "Sedan",
+                    suv: "SUV",
+                    truck: "Truck",
+                    luxury: "Luxury Vehicle",
+                    european: "European",
+                    japanese: "Japanese",
+                    american: "American",
+
+                    // Services
+                    oilChange: "Oil Change & Filter",
+                    brakeService: "Brake Service",
+                    engineRepair: "Engine Diagnostics & Repair",
+                    transmission: "Transmission Service",
+                    acService: "AC Service & Repair",
+                    electrical: "Electrical Systems",
+                    suspension: "Suspension & Steering",
+                    fullService: "Full Vehicle Service",
+                    emergency: "Emergency Repair",
+                    fullBodyDetailing: "Full Body Detailing",
+
+                    // Buttons
+                    submitButton: "Schedule Service Now",
+                    submitting: "Scheduling Service...",
+
+                    // Status Messages
+                    locationSuccess: "Location detected successfully! Google Maps link added.",
+                    geolocationNotSupported: "Geolocation is not supported by this browser.",
+                    locationPermissionDenied: "Please allow location access or enter manually.",
+                    locationUnavailable: "Location information unavailable.",
+                    locationTimeout: "Location request timed out.",
+                    locationUnknownError: "An unknown error occurred.",
+                    fillAllFields: "Please fill in all required fields:",
+                    schedulingService: "Scheduling your service...",
+                    successMessage: "Thank you! Your service request has been received. We will contact you within 2 hours to schedule your appointment.",
+                    errorMessage: "Something went wrong. Please call us directly at +968 XX XXX XXX to schedule your service.",
+                    requiredFieldsMissing: "Please make sure all fields are filled out correctly. Required fields are missing.",
+
+                    // Contact Info Cards
+                    visitGarage: "Visit Our Garage",
+                    garageAddress: "10138Z , 7749 way , Industrial area 9, Al Maabilah Seeb, muscat , Oman",
+
+                    callUsToday: "Call Us Today",
+                    phone1: "+968 7926 5646",
+                    phone2: "+968 7926 5646",
+                    emergencyPhone: "Emergency: +968 7926 5646",
+
+                    emailUs: "Email Us",
+                    email1: "info@ajalgarage.com",
+                    email2: "service@ajalgarage.com",
+                    email3: "support@ajalgarage.com",
+
+                    serviceHours: "Service Hours",
+                    sunThu: "Sunday - Thursday: 8AM - 8PM",
+                    friday: "Friday: 9AM - 12PM",
+                    saturday: "Saturday: 9AM - 6PM",
+
+                    // Emergency Card
+                    emergencyService: "24/7 Emergency Service",
+                    emergencyDescription: "Vehicle breakdown? We offer emergency roadside assistance and quick recovery services.",
+                    emergencyCallNow: "Emergency Call Now",
+
+                    // CTA Section
+                    ctaHeading: "Ready for Premium Automotive Care?",
+                    ctaSubheading: "Join thousands of satisfied customers who trust Ajal Garage for their vehicle maintenance and repair needs",
+                    callNowForService: "Call Now for Service",
+                    viewOurServices: "View Our Services"
 
 
                 }
@@ -764,7 +858,98 @@ i18n
                     electrical: "كهربائي",
                     tuning: "الضبط",
                     AC: "التكييف",
-                    comfort: "الراحة"
+                    comfort: "الراحة",
+                    bannerTitle: "جدولة خدمة مركبتك",
+                    bannerSubtitle: "رعاية سيارات خبيرة في عمان. احجز موعدك اليوم للصيانة المميزة للمركبات وخدمات الإصلاح.",
+
+                    // Form Section
+                    formHeading: "احجز موعد الخدمة الخاص بك",
+                    formSubheading: "املأ النموذج وسنتصل بك في غضون ساعتين لجدولة خدمتك",
+
+                    // Form Fields
+                    fullName: "الاسم الكامل",
+                    email: "عنوان البريد الإلكتروني",
+                    phoneNumber: "رقم الهاتف",
+                    location: "موقعك (رابط خرائط جوجل)",
+                    locationPlaceholder: "https://maps.google.com/?q=...",
+                    locationHelper: "انقر فوق الزر لإضافة رابط موقع خرائط Google تلقائيًا",
+                    getLocation: "الحصول على الموقع",
+                    detecting: "الكشف",
+                    vehicleType: "نوع المركبة",
+                    selectVehicleType: "حدد نوع المركبة",
+                    serviceRequired: "الخدمة المطلوبة",
+                    selectService: "حدد خدمة",
+                    carTroubleNotes: "ملاحظات مشكلة السيارة",
+                    carTroublePlaceholder: "ملاحظات مشكلة السيارة: صف مشاكل مركبتك أو الأعراض أو متطلبات الخدمة المحددة. على سبيل المثال: أبحث عن تفاصيل مميزة وطلاء سيراميك لسيارتي الدفع الرباعي السوداء. بحاجة إلى خدمة الاستلام والتسليم.",
+                    required: "*",
+
+                    // Vehicle Types
+                    sedan: "سيدان",
+                    suv: "سيارة دفع رباعي",
+                    truck: "شاحنة",
+                    luxury: "مركبة فاخرة",
+                    european: "أوروبي",
+                    japanese: "ياباني",
+                    american: "أمريكي",
+
+                    // Services
+                    oilChange: "تغيير الزيت والفلتر",
+                    brakeService: "خدمة الفرامل",
+                    engineRepair: "تشخيص وإصلاح المحرك",
+                    transmission: "خدمة ناقل الحركة",
+                    acService: "خدمة وإصلاح التكييف",
+                    electrical: "الأنظمة الكهربائية",
+                    suspension: "التعليق والتوجيه",
+                    fullService: "خدمة المركبة الكاملة",
+                    emergency: "إصلاح طارئ",
+                    fullBodyDetailing: "تفصيل كامل للجسم",
+
+                    // Buttons
+                    submitButton: "جدولة الخدمة الآن",
+                    submitting: "جدولة الخدمة...",
+
+                    // Status Messages
+                    locationSuccess: "تم اكتشاف الموقع بنجاح! تمت إضافة رابط خرائط Google.",
+                    geolocationNotSupported: "تحديد الموقع الجغرافي غير مدعوم من قبل هذا المتصفح.",
+                    locationPermissionDenied: "يرجى السماح بالوصول إلى الموقع أو الإدخال يدويًا.",
+                    locationUnavailable: "معلومات الموقع غير متوفرة.",
+                    locationTimeout: "انتهت مهلة طلب الموقع.",
+                    locationUnknownError: "حدث خطأ غير معروف.",
+                    fillAllFields: "يرجى ملء جميع الحقول المطلوبة:",
+                    schedulingService: "جدولة خدمتك...",
+                    successMessage: "شكرا لك! تم استلام طلب الخدمة الخاص بك. سنتصل بك في غضون ساعتين لجدولة موعدك.",
+                    errorMessage: "حدث خطأ ما. يرجى الاتصال بنا مباشرة على +968 XX XXX XXX لجدولة خدمتك.",
+                    requiredFieldsMissing: "يرجى التأكد من ملء جميع الحقول بشكل صحيح. الحقول المطلوبة مفقودة.",
+
+                    // Contact Info Cards
+                    visitGarage: "قم بزيارة مرآبنا",
+                    garageAddress: "10138Z، 7749 واي، المنطقة الصناعية 9، المعبيلة سيب، مسقط، عمان",
+
+                    callUsToday: "اتصل بنا اليوم",
+                    phone1: "+968 7926 5646",
+                    phone2: "+968 7926 5646",
+                    emergencyPhone: "طوارئ: +968 7926 5646",
+
+                    emailUs: "راسلنا عبر البريد الإلكتروني",
+                    email1: "info@ajalgarage.com",
+                    email2: "service@ajalgarage.com",
+                    email3: "support@ajalgarage.com",
+
+                    serviceHours: "ساعات الخدمة",
+                    sunThu: "الأحد - الخميس: 8 صباحًا - 8 مساءً",
+                    friday: "الجمعة: 9 صباحًا - 12 ظهرًا",
+                    saturday: "السبت: 9 صباحًا - 6 مساءً",
+
+                    // Emergency Card
+                    emergencyService: "خدمة طوارئ 24/7",
+                    emergencyDescription: "تعطل المركبة؟ نحن نقدم المساعدة على الطريق في حالات الطوارئ وخدمات الاسترداد السريع.",
+                    emergencyCallNow: "اتصل الآن في حالة الطوارئ",
+
+                    // CTA Section
+                    ctaHeading: "هل أنت مستعد للعناية بالسيارات المميزة؟",
+                    ctaSubheading: "انضم إلى آلاف العملاء الراضين الذين يثقون في Ajal Garage لتلبية احتياجات صيانة وإصلاح مركباتهم",
+                    callNowForService: "اتصل الآن للخدمة",
+                    viewOurServices: "عرض خدماتنا"
 
                 }
             },
@@ -1144,7 +1329,100 @@ i18n
                     electrical: "الیکٹریکل",
                     tuning: "ٹیوننگ",
                     AC: "AC",
-                    comfort: "آرام"
+                    comfort: "آرام",
+
+                    // Banner
+                    bannerTitle: "اپنی گاڑی کی سروس شیڈول کریں",
+                    bannerSubtitle: "عمان میں ماہر آٹوموٹو کیئر۔ پریمیم گاڑی کی بحالی اور مرمت کی خدمات کے لیے آج ہی اپنی اپائنٹمنٹ بک کریں۔",
+
+                    // Form Section
+                    formHeading: "اپنی سروس اپائنٹمنٹ بک کریں",
+                    formSubheading: "فارم بھریں اور ہم 2 گھنٹوں کے اندر آپ سے آپ کی سروس شیڈول کرنے کے لیے رابطہ کریں گے",
+
+                    // Form Fields
+                    fullName: "مکمل نام",
+                    email: "ای میل ایڈریس",
+                    phoneNumber: "فون نمبر",
+                    location: "آپ کا مقام (گوگل میپس لنک)",
+                    locationPlaceholder: "https://maps.google.com/?q=...",
+                    locationHelper: "اپنے گوگل میپس لوکیشن لنک کو خودکار طریقے سے شامل کرنے کے لیے بٹن پر کلک کریں",
+                    getLocation: "لوکیشن حاصل کریں",
+                    detecting: "پتہ لگا رہے ہیں",
+                    vehicleType: "گاڑی کی قسم",
+                    selectVehicleType: "گاڑی کی قسم منتخب کریں",
+                    serviceRequired: "مطلوبہ سروس",
+                    selectService: "ایک سروس منتخب کریں",
+                    carTroubleNotes: "کار ٹربل نوٹس",
+                    carTroublePlaceholder: "کار ٹربل نوٹس: اپنی گاڑی کے مسائل، علامات، یا مخصوص سروس کی ضروریات بیان کریں۔ مثال کے طور پر: اپنی سیاہ SUV کے لیے پریمیم ڈیٹیلنگ اور سیرامک کوٹنگ کی تلاش میں ہوں۔ پک اپ اور ڈراپ آف سروس کی ضرورت ہے۔",
+                    required: "*",
+
+                    // Vehicle Types
+                    sedan: "سیڈان",
+                    suv: "SUV",
+                    truck: "ٹرک",
+                    luxury: "لگژری گاڑی",
+                    european: "یورپی",
+                    japanese: "جاپانی",
+                    american: "امریکی",
+
+                    // Services
+                    oilChange: "آئل چینج اور فلٹر",
+                    brakeService: "بریک سروس",
+                    engineRepair: "انجن ڈائیگناسٹکس اور مرمت",
+                    transmission: "ٹرانسمیشن سروس",
+                    acService: "AC سروس اور مرمت",
+                    electrical: "الیکٹریکل سسٹمز",
+                    suspension: "سسپنشن اور سٹیئرنگ",
+                    fullService: "مکمل گاڑی کی سروس",
+                    emergency: "ایمرجنسی مرمت",
+                    fullBodyDetailing: "مکمل باڈی ڈیٹیلنگ",
+
+                    // Buttons
+                    submitButton: "ابھی سروس شیڈول کریں",
+                    submitting: "سروس شیڈول ہو رہی ہے...",
+
+                    // Status Messages
+                    locationSuccess: "لوکیشن کامیابی سے دریافت ہو گئی! گوگل میپس لنک شامل کیا گیا۔",
+                    geolocationNotSupported: "جیولوکیشن اس براؤزر کی طرف سے سپورٹ نہیں ہے۔",
+                    locationPermissionDenied: "براہ کرم لوکیشن تک رسائی کی اجازت دیں یا دستی طور پر درج کریں۔",
+                    locationUnavailable: "لوکیشن کی معلومات دستیاب نہیں ہیں۔",
+                    locationTimeout: "لوکیشن کی درخواست ٹائم آؤٹ ہو گئی۔",
+                    locationUnknownError: "ایک نامعلوم خرابی واقع ہوئی۔",
+                    fillAllFields: "براہ کرم تمام مطلوبہ فیلڈز بھریں:",
+                    schedulingService: "آپ کی سروس شیڈول ہو رہی ہے...",
+                    successMessage: "شکریہ! آپ کی سروس کی درخواست موصول ہو گئی ہے۔ ہم آپ کی اپائنٹمنٹ شیڈول کرنے کے لیے 2 گھنٹوں کے اندر آپ سے رابطہ کریں گے۔",
+                    errorMessage: "کچھ غلط ہو گیا۔ براہ کرم اپنی سروس شیڈول کرنے کے لیے براہ راست ہمیں +968 XX XXX XXX پر کال کریں۔",
+                    requiredFieldsMissing: "براہ کرم یقینی بنائیں کہ تمام فیلڈز صحیح طریقے سے بھرے گئے ہیں۔ مطلوبہ فیلڈز غائب ہیں۔",
+
+                    // Contact Info Cards
+                    visitGarage: "ہماری گیراج ملاحظہ کریں",
+                    garageAddress: "10138Z، 7749 وے، صنعتی علاقہ 9، المعبیلہ سیب، مسقط، عمان",
+
+                    callUsToday: "آج ہمیں کال کریں",
+                    phone1: "+968 7926 5646",
+                    phone2: "+968 7926 5646",
+                    emergencyPhone: "ایمرجنسی: +968 7926 5646",
+
+                    emailUs: "ہمیں ای میل کریں",
+                    email1: "info@ajalgarage.com",
+                    email2: "service@ajalgarage.com",
+                    email3: "support@ajalgarage.com",
+
+                    serviceHours: "سروس کے اوقات",
+                    sunThu: "اتوار - جمعرات: 8AM - 8PM",
+                    friday: "جمعہ: 9AM - 12PM",
+                    saturday: "ہفتہ: 9AM - 6PM",
+
+                    // Emergency Card
+                    emergencyService: "24/7 ایمرجنسی سروس",
+                    emergencyDescription: "گاڑی خراب ہو گئی؟ ہم ایمرجنسی روڈ سائیڈ اسسٹنس اور فوری ریکوری سروسز پیش کرتے ہیں۔",
+                    emergencyCallNow: "ابھی ایمرجنسی کال کریں",
+
+                    // CTA Section
+                    ctaHeading: "پریمیم آٹوموٹو کیئر کے لیے تیار ہیں؟",
+                    ctaSubheading: "ہزاروں مطمئن گاہکوں میں شامل ہوں جو اپنی گاڑی کی بحالی اور مرمت کی ضروریات کے لیے آجل گیراج پر بھروسہ کرتے ہیں",
+                    callNowForService: "سروس کے لیے ابھی کال کریں",
+                    viewOurServices: "ہماری سروسز دیکھیں"
 
                 }
             }
