@@ -1,6 +1,7 @@
 import { Car, Wrench, Settings, Zap, Shield, Clock, Users, Award, Sparkles, Cog, Gauge, Fuel, Cpu, Heart, RotateCcw, AlertTriangle, Scan, Cpu as DiagnosticIcon, Activity, Search, BugPlay, FileText, CheckCircle } from 'lucide-react';
 import Banner from '../components/Banner';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 // Animation variants
 const containerVariants = {
@@ -74,117 +75,139 @@ const AnimatedSection = ({ children, className = "" }) => {
 };
 
 const Diagnostics = () => {
+    const { t } = useTranslation();
+
     const diagnosticServices = [
         {
             icon: Scan,
-            title: 'Computer Diagnostics',
-            description: 'Advanced computer scanning to identify engine, transmission, and electronic system issues with precision.',
-            features: ['ECU Scanning', 'Fault Code Reading', 'System Analysis', 'Performance Monitoring'],
+            title: t('computerDiagnostics'),
+            description: t('computerDiagnosticsDescription'),
+            features: [
+                t('ecuScanning'),
+                t('faultCodeReading'),
+                t('systemAnalysis'),
+                t('performanceMonitoring')
+            ],
             price: '20 OMR',
             duration: '30-60 mins',
-            badge: 'Most Popular'
+            badge: t('mostPopular')
         },
         {
             icon: DiagnosticIcon,
-            title: 'Engine Diagnostics',
-            description: 'Comprehensive engine performance analysis and troubleshooting for optimal operation.',
-            features: ['Compression Test', 'Ignition Analysis', 'Fuel System Check', 'Emission Testing'],
+            title: t('engineDiagnostics'),
+            description: t('engineDiagnosticsDescription'),
+            features: [
+                t('compressionTest'),
+                t('ignitionAnalysis'),
+                t('fuelSystemCheck'),
+                t('emissionTesting')
+            ],
             price: '35 OMR',
             duration: '1-2 hours',
-            badge: 'Advanced'
+            badge: t('advanced')
         },
         {
             icon: Activity,
-            title: 'Electrical System Scan',
-            description: 'Complete electrical system diagnostics including battery, alternator, and wiring checks.',
-            features: ['Battery Health', 'Alternator Output', 'Wiring Inspection', 'Circuit Testing'],
+            title: t('electricalSystemScan'),
+            description: t('electricalSystemDescription'),
+            features: [
+                t('batteryHealth'),
+                t('alternatorOutput'),
+                t('wiringInspection'),
+                t('circuitTesting')
+            ],
             price: '25 OMR',
             duration: '45-90 mins',
-            badge: 'Comprehensive'
+            badge: t('comprehensive')
         },
         {
             icon: Search,
-            title: 'Pre-Purchase Inspection',
-            description: 'Thorough vehicle inspection before purchase to identify potential issues and hidden problems.',
-            features: ['Comprehensive Check', 'Vehicle History', 'Mechanical Assessment', 'Safety Evaluation'],
+            title: t('prePurchaseInspection'),
+            description: t('prePurchaseDescription'),
+            features: [
+                t('comprehensiveCheck'),
+                t('vehicleHistory'),
+                t('mechanicalAssessment'),
+                t('safetyEvaluation')
+            ],
             price: '40 OMR',
             duration: '2-3 hours',
-            badge: 'Detailed Report'
+            badge: t('detailedReport')
         }
     ];
 
     const benefits = [
         {
             icon: Shield,
-            title: '99% Accuracy',
-            description: 'Precise problem identification using advanced diagnostic equipment'
+            title: t('accuracy'),
+            description: t('accuracyDescription')
         },
         {
             icon: Clock,
-            title: 'Quick Results',
-            description: 'Get comprehensive diagnostics report within hours, not days'
+            title: t('quickResults'),
+            description: t('quickResultsDescription')
         },
         {
             icon: Award,
-            title: 'Certified Experts',
-            description: 'ASE certified technicians with specialized diagnostic training'
+            title: t('certifiedExperts'),
+            description: t('certifiedExpertsDescription')
         },
         {
             icon: Zap,
-            title: 'Save Money',
-            description: 'Early detection prevents major breakdowns and expensive repairs'
+            title: t('saveMoney'),
+            description: t('saveMoneyDescription')
         }
     ];
 
     const diagnosticStats = [
-        { number: '10,000+', label: 'Vehicles Diagnosed', description: 'Across Oman' },
-        { number: '99.8%', label: 'Accuracy Rate', description: 'Problem Detection' },
-        { number: '30min', label: 'Average Scan', description: 'Quick Service' },
-        { number: '24/7', label: 'Support', description: 'Emergency Services' }
+        { number: '10,000+', label: t('vehiclesDiagnosed'), description: t('acrossOman') },
+        { number: '99.8%', label: t('accuracyRate'), description: t('problemDetection') },
+        { number: '30min', label: t('averageScan'), description: t('quickService') },
+        { number: '24/7', label: t('support'), description: t('emergencyServices') }
     ];
 
     const diagnosticProcess = [
         {
             icon: Search,
-            title: 'Connect & Scan',
-            description: 'Advanced diagnostic tools connected to your vehicle systems'
+            title: t('connectScan'),
+            description: t('connectScanDescription')
         },
         {
             icon: BugPlay,
-            title: 'Analyze Codes',
-            description: 'Comprehensive analysis of fault codes and system data'
+            title: t('analyzeCodes'),
+            description: t('analyzeCodesDescription')
         },
         {
             icon: FileText,
-            title: 'Generate Report',
-            description: 'Detailed diagnostic report with findings and recommendations'
+            title: t('generateReport'),
+            description: t('generateReportDescription')
         },
         {
             icon: CheckCircle,
-            title: 'Solution Plan',
-            description: 'Customized repair plan with transparent pricing'
+            title: t('solutionPlan'),
+            description: t('solutionPlanDescription')
         }
     ];
 
     const technologyFeatures = [
         {
-            title: 'OBD-II Scanning',
-            description: 'Latest diagnostic tools for all vehicle models',
+            title: t('obdScanning'),
+            description: t('obdScanningDescription'),
             icon: Scan
         },
         {
-            title: 'Live Data Streaming',
-            description: 'Real-time monitoring of vehicle systems',
+            title: t('liveDataStreaming'),
+            description: t('liveDataDescription'),
             icon: Activity
         },
         {
-            title: 'Component Testing',
-            description: 'Individual component performance analysis',
+            title: t('componentTesting'),
+            description: t('componentTestingDescription'),
             icon: Cog
         },
         {
-            title: 'Software Updates',
-            description: 'Regular updates for latest vehicle systems',
+            title: t('softwareUpdates'),
+            description: t('softwareUpdatesDescription'),
             icon: Zap
         }
     ];
@@ -193,8 +216,8 @@ const Diagnostics = () => {
         <div className="min-h-screen bg-black text-white">
             {/* Enhanced Banner */}
             <Banner
-                title="Advanced Vehicle Diagnostics"
-                subtitle="Pinpoint vehicle issues with precision using our state-of-the-art diagnostic equipment. Ajal Garage provides accurate diagnostics for all vehicle makes and models in Oman."
+                title={t('advancedVehicleDiagnostics')}
+                subtitle={t('diagnosticsSubtitle')}
                 iconOne={Scan}
                 iconTwo={DiagnosticIcon}
             />
@@ -236,12 +259,12 @@ const Diagnostics = () => {
                         <div className="inline-flex items-center justify-center gap-4 mb-6">
                             <div className="w-12 h-0.5 bg-amber-500/30 rounded-full"></div>
                             <h2 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-amber-300 to-orange-300 bg-clip-text text-transparent">
-                                Diagnostic Services
+                                {t('diagnosticServices')}
                             </h2>
                             <div className="w-12 h-0.5 bg-amber-500/30 rounded-full"></div>
                         </div>
                         <p className="text-amber-100/70 text-xl max-w-3xl mx-auto leading-relaxed">
-                            Advanced diagnostic solutions using cutting-edge technology to accurately identify and resolve vehicle issues
+                            {t('diagnosticDescription')}
                         </p>
                     </motion.div>
 
@@ -319,7 +342,7 @@ const Diagnostics = () => {
                                                     whileTap={{ scale: 0.95 }}
                                                     className="px-6 py-3 bg-amber-500/20 hover:bg-amber-500/30 border border-amber-400/30 rounded-xl text-amber-100 font-semibold transition-all duration-300 hover:border-amber-400/50"
                                                 >
-                                                    Learn More
+                                                    {t('learnMore')}
                                                 </motion.button>
                                             </div>
                                         </div>
@@ -339,9 +362,9 @@ const Diagnostics = () => {
                             className="space-y-8"
                         >
                             <div>
-                                <h3 className="text-3xl font-bold text-amber-100 mb-6">Advanced Technology</h3>
+                                <h3 className="text-3xl font-bold text-amber-100 mb-6">{t('advancedTechnology')}</h3>
                                 <p className="text-amber-200/70 text-lg leading-relaxed mb-8">
-                                    We use the latest diagnostic equipment and software to ensure accurate and efficient vehicle analysis.
+                                    {t('technologyDescription')}
                                 </p>
                             </div>
                             
@@ -373,9 +396,9 @@ const Diagnostics = () => {
                             className="space-y-8"
                         >
                             <div>
-                                <h3 className="text-3xl font-bold text-amber-100 mb-6">Why Choose Our Diagnostics</h3>
+                                <h3 className="text-3xl font-bold text-amber-100 mb-6">{t('whyChooseOurDiagnostics')}</h3>
                                 <p className="text-amber-200/70 text-lg leading-relaxed mb-8">
-                                    Professional diagnostics save time, money, and prevent future breakdowns with accurate problem identification.
+                                    {t('benefitsDescription')}
                                 </p>
                             </div>
                             
@@ -407,10 +430,10 @@ const Diagnostics = () => {
                 <AnimatedSection className="mb-20">
                     <motion.div variants={fadeInUp} className="text-center mb-16">
                         <h2 className="text-4xl font-black bg-gradient-to-r from-amber-300 to-orange-300 bg-clip-text text-transparent mb-6">
-                            Our Diagnostic Process
+                            {t('ourDiagnosticProcess')}
                         </h2>
                         <p className="text-amber-100/70 text-lg max-w-2xl mx-auto">
-                            Simple, efficient, and transparent process to get your vehicle back on the road
+                            {t('processDescription')}
                         </p>
                     </motion.div>
 
@@ -467,7 +490,7 @@ const Diagnostics = () => {
                                 transition={{ duration: 0.8, delay: 0.2 }}
                             >
                                 <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-                                    Ready for Diagnosis?
+                                    {t('readyForDiagnosis')}
                                 </span>
                             </motion.h2>
                             <motion.p
@@ -476,7 +499,7 @@ const Diagnostics = () => {
                                 whileInView={{ opacity: 1 }}
                                 transition={{ delay: 0.4 }}
                             >
-                                Let Ajal Garage accurately diagnose your vehicle issues with advanced equipment and expert technicians.
+                                {t('ctaDescription')}
                             </motion.p>
                             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                                 <motion.button
@@ -484,14 +507,14 @@ const Diagnostics = () => {
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
-                                    Schedule Diagnostics
+                                    {t('scheduleDiagnostics')}
                                 </motion.button>
                                 <motion.button
                                     className="px-12 py-5 font-semibold text-lg rounded-2xl transition-all duration-300 border-2 border-amber-400/50 text-amber-100 hover:border-amber-400 hover:bg-amber-400/10 hover:scale-105"
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
-                                    Free Check Engine Scan
+                                    {t('freeCheckEngineScan')}
                                 </motion.button>
                             </div>
                         </div>
