@@ -1,6 +1,7 @@
 import { Car, Wrench, Settings, Zap, Shield, Clock, Users, Award, Sparkles, Cog, Gauge, Fuel, Cpu, Heart, RotateCcw, AlertTriangle, Droplets, Filter, RefreshCw, CheckCircle } from 'lucide-react';
 import Banner from '../components/Banner';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 // Animation variants
 const containerVariants = {
@@ -83,39 +84,61 @@ const AnimatedSection = ({ children, className = "" }) => {
 };
 
 const OilChange = () => {
+    const { t } = useTranslation();
+
     const oilServices = [
         {
             icon: Droplets,
-            title: 'Standard Oil Change',
-            description: 'Complete oil and filter replacement using high-quality synthetic blend oil.',
-            features: ['Synthetic Blend Oil', 'Oil Filter Replacement', 'Fluid Level Check', 'Basic Inspection'],
+            title: t('standardOilChange'),
+            description: t('standardOilDescription'),
+            features: [
+                t('syntheticBlendOil'),
+                t('oilFilterReplacement'),
+                t('fluidLevelCheck'),
+                t('basicInspection')
+            ],
             price: '15 OMR',
             duration: '30-45 mins',
             popular: false
         },
         {
             icon: Zap,
-            title: 'Full Synthetic Oil Change',
-            description: 'Premium full synthetic oil change for enhanced engine protection and performance.',
-            features: ['Full Synthetic Oil', 'Premium Oil Filter', 'Multi-point Inspection', 'Fluid Top-up'],
+            title: t('fullSyntheticOilChange'),
+            description: t('fullSyntheticDescription'),
+            features: [
+                t('fullSyntheticOil'),
+                t('premiumOilFilter'),
+                t('multiPointInspection'),
+                t('fluidTopUp')
+            ],
             price: '25 OMR',
             duration: '30-45 mins',
             popular: true
         },
         {
             icon: Shield,
-            title: 'Complete Lube Service',
-            description: 'Comprehensive lubrication service including oil change and chassis lubrication.',
-            features: ['Oil & Filter Change', 'Chassis Lubrication', 'Tire Rotation', 'Brake Inspection'],
+            title: t('completeLubeService'),
+            description: t('completeLubeDescription'),
+            features: [
+                t('oilFilterChange'),
+                t('chassisLubrication'),
+                t('tireRotation'),
+                t('brakeInspection')
+            ],
             price: '35 OMR',
             duration: '1 hour',
             popular: false
         },
         {
             icon: RefreshCw,
-            title: 'Oil Flush Service',
-            description: 'Advanced engine flush to remove sludge and restore engine performance.',
-            features: ['Engine Flush', 'Full Synthetic Oil', 'Premium Filter', 'System Cleaning'],
+            title: t('oilFlushService'),
+            description: t('oilFlushDescription'),
+            features: [
+                t('engineFlush'),
+                t('fullSyntheticOil'),
+                t('premiumOilFilter'),
+                t('systemCleaning')
+            ],
             price: '45 OMR',
             duration: '1-2 hours',
             popular: false
@@ -125,53 +148,53 @@ const OilChange = () => {
     const benefits = [
         {
             icon: Gauge,
-            title: 'Better Performance',
-            description: 'Fresh oil improves engine efficiency and horsepower output'
+            title: t('betterPerformance'),
+            description: t('betterPerformanceDescription')
         },
         {
             icon: Fuel,
-            title: 'Improved Mileage',
-            description: 'Clean oil reduces engine friction for better fuel economy'
+            title: t('improvedMileage'),
+            description: t('improvedMileageDescription')
         },
         {
             icon: Shield,
-            title: 'Engine Protection',
-            description: 'Prevents wear and tear, extending your engine life'
+            title: t('engineProtection'),
+            description: t('engineProtectionDescription')
         },
         {
             icon: Clock,
-            title: 'Quick Service',
-            description: 'Most oil changes completed within 30-45 minutes'
+            title: t('quickService'),
+            description: t('quickServiceDescription')
         }
     ];
 
     const oilStats = [
-        { number: '5000+', label: 'Monthly Services', icon: Droplets },
-        { number: '99%', label: 'Satisfaction Rate', icon: Award },
-        { number: '15min', label: 'Average Wait', icon: Clock },
-        { number: '12M', label: 'Service Warranty', icon: Shield }
+        { number: '5000+', label: t('monthlyServices'), icon: Droplets },
+        { number: '99%', label: t('satisfactionRate'), icon: Award },
+        { number: '15min', label: t('averageWait'), icon: Clock },
+        { number: '12M', label: t('serviceWarranty'), icon: Shield }
     ];
 
     const oilProcess = [
         {
             step: '01',
-            title: 'Oil Assessment',
-            description: 'Check current oil quality and level'
+            title: t('oilAssessment'),
+            description: t('oilAssessmentDescription')
         },
         {
             step: '02',
-            title: 'Drain Old Oil',
-            description: 'Safely remove used oil and filter'
+            title: t('drainOldOil'),
+            description: t('drainOldOilDescription')
         },
         {
             step: '03',
-            title: 'Replace Filter',
-            description: 'Install new premium oil filter'
+            title: t('replaceFilter'),
+            description: t('replaceFilterDescription')
         },
         {
             step: '04',
-            title: 'Add New Oil',
-            description: 'Fill with quality synthetic oil'
+            title: t('addNewOil'),
+            description: t('addNewOilDescription')
         }
     ];
 
@@ -179,8 +202,8 @@ const OilChange = () => {
         <div className="min-h-screen bg-black text-white">
             {/* Oil Change Banner */}
             <Banner
-                title="Professional Oil Change Services"
-                subtitle="Keep your engine running smoothly with our expert oil change services in Oman. Quality service with genuine parts."
+                title={t('professionalOilChangeServices')}
+                subtitle={t('oilChangeSubtitle')}
                 iconOne={Droplets}
                 iconTwo={Shield}
             />
@@ -221,10 +244,10 @@ const OilChange = () => {
                 <AnimatedSection className="mb-20">
                     <motion.div variants={fadeInUp} className="text-center mb-16">
                         <h2 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-amber-300 to-orange-300 bg-clip-text text-transparent mb-6">
-                            Oil Change Services
+                            {t('oilChangeServices')}
                         </h2>
                         <p className="text-amber-100/70 text-lg max-w-3xl mx-auto">
-                            Choose from our range of professional oil change services designed to keep your engine running at its best
+                            {t('oilChangeDescription')}
                         </p>
                     </motion.div>
 
@@ -243,7 +266,7 @@ const OilChange = () => {
                                 >
                                     {service.popular && (
                                         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold px-4 py-1 rounded-full shadow-lg z-20">
-                                            Most Popular
+                                            {t('mostPopular')}
                                         </div>
                                     )}
                                     
@@ -316,10 +339,9 @@ const OilChange = () => {
                             className="space-y-8"
                         >
                             <div>
-                                <h3 className="text-3xl font-bold text-amber-100 mb-6">Why Regular Oil Changes Matter</h3>
+                                <h3 className="text-3xl font-bold text-amber-100 mb-6">{t('whyRegularOilChangesMatter')}</h3>
                                 <p className="text-amber-200/70 text-lg leading-relaxed mb-8">
-                                    Regular oil changes are essential for maintaining your vehicle's performance, 
-                                    fuel efficiency, and overall engine health.
+                                    {t('regularOilImportance')}
                                 </p>
                             </div>
                             
@@ -350,7 +372,7 @@ const OilChange = () => {
                             variants={itemVariants}
                             className="bg-gradient-to-br from-amber-900/20 to-orange-900/10 backdrop-blur-lg border border-amber-500/20 rounded-2xl p-8"
                         >
-                            <h3 className="text-2xl font-bold text-amber-100 mb-8 text-center">Our Process</h3>
+                            <h3 className="text-2xl font-bold text-amber-100 mb-8 text-center">{t('ourProcess')}</h3>
                             <div className="space-y-6">
                                 {oilProcess.map((step, index) => (
                                     <motion.div
@@ -400,7 +422,7 @@ const OilChange = () => {
                                 transition={{ duration: 0.7, delay: 0.2 }}
                             >
                                 <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-                                    Ready for Service?
+                                    {t('readyForService')}
                                 </span>
                             </motion.h2>
                             <motion.p
@@ -409,7 +431,7 @@ const OilChange = () => {
                                 whileInView={{ opacity: 1 }}
                                 transition={{ delay: 0.4 }}
                             >
-                                Visit Ajal Garage today for professional oil change services that keep your engine running smoothly.
+                                {t('ctaDescription')}
                             </motion.p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                                 <motion.button
@@ -417,14 +439,14 @@ const OilChange = () => {
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
-                                    Get Oil Change
+                                    {t('getOilChange')}
                                 </motion.button>
                                 <motion.button
                                     className="px-8 py-4 font-semibold rounded-xl transition-all duration-300 border-2 border-amber-400/50 text-amber-100 hover:border-amber-400 hover:bg-amber-400/10"
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
-                                    Contact Us
+                                    {t('contactUs')}
                                 </motion.button>
                             </div>
                         </div>
