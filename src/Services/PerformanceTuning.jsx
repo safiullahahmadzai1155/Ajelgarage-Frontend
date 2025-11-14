@@ -1,6 +1,7 @@
 import { Car, Wrench, Settings, Zap, Shield, Clock, Users, Award, Sparkles, Cog, Gauge, Fuel, Cpu, Heart, RotateCcw, AlertTriangle } from 'lucide-react';
 import Banner from '../components/Banner';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 // Animation variants
 const containerVariants = {
@@ -95,106 +96,128 @@ const AnimatedSection = ({ children, className = "" }) => {
 };
 
 const PerformanceTuning = () => {
+    const { t } = useTranslation();
+
     const brakeServices = [
         {
             icon: Settings,
-            title: 'Brake Pad Replacement',
-            description: 'Professional brake pad replacement using premium quality pads for optimal stopping power and longevity.',
-            features: ['Premium Brake Pads', 'Rotor Inspection', 'Caliper Service', 'Noise Elimination']
+            title: t('brakePadReplacement'),
+            description: t('brakePadDescription'),
+            features: [
+                t('premiumBrakePads'),
+                t('rotorInspection'),
+                t('caliperService'),
+                t('noiseElimination')
+            ]
         },
         {
             icon: RotateCcw,
-            title: 'Brake Disc Resurfacing',
-            description: 'Precision machining of brake rotors to eliminate warping, vibration and ensure smooth braking.',
-            features: ['Rotor Machining', 'Surface Smoothing', 'Vibration Control', 'Extended Rotor Life']
+            title: t('brakeDiscResurfacing'),
+            description: t('brakeDiscDescription'),
+            features: [
+                t('rotorMachining'),
+                t('surfaceSmoothing'),
+                t('vibrationControl'),
+                t('extendedRotorLife')
+            ]
         },
         {
             icon: Zap,
-            title: 'ABS System Repair',
-            description: 'Expert diagnosis and repair of Anti-lock Braking System issues for maximum safety.',
-            features: ['ABS Sensor Replacement', 'Module Diagnostics', 'Wheel Speed Sensors', 'System Calibration']
+            title: t('absSystemRepair'),
+            description: t('absSystemDescription'),
+            features: [
+                t('absSensorReplacement'),
+                t('moduleDiagnostics'),
+                t('wheelSpeedSensors'),
+                t('systemCalibration')
+            ]
         },
         {
             icon: Wrench,
-            title: 'Complete Brake Overhaul',
-            description: 'Comprehensive brake system service including all components for complete peace of mind.',
-            features: ['Full System Flush', 'Caliper Rebuild', 'Hardware Replacement', 'Performance Testing']
+            title: t('completeBrakeOverhaul'),
+            description: t('completeBrakeDescription'),
+            features: [
+                t('fullSystemFlush'),
+                t('caliperRebuild'),
+                t('hardwareReplacement'),
+                t('performanceTesting')
+            ]
         }
     ];
 
     const benefits = [
         {
             icon: Shield,
-            title: 'Enhanced Safety',
-            description: 'Restore factory-level braking performance for maximum safety on the road.'
+            title: t('enhancedSafety'),
+            description: t('safetyDescription')
         },
         {
             icon: Clock,
-            title: 'Quick Service',
-            description: 'Most brake services completed within 2-3 hours with minimal downtime.'
+            title: t('quickService'),
+            description: t('quickServiceDescription')
         },
         {
             icon: Award,
-            title: 'Quality Parts',
-            description: 'We use only OEM or premium aftermarket parts for lasting performance.'
+            title: t('qualityParts'),
+            description: t('qualityPartsDescription')
         },
         {
             icon: Users,
-            title: 'Expert Technicians',
-            description: 'Certified brake specialists with years of experience in brake system repair.'
+            title: t('expertTechnicians'),
+            description: t('techniciansDescription')
         }
     ];
 
     const brakeStats = [
-        { number: '50%', label: 'Shorter Stopping Distance' },
-        { number: '12K+', label: 'Brake Jobs Completed' },
-        { number: '100%', label: 'Safety Certified' },
-        { number: '24H', label: 'Emergency Service' }
+        { number: '50%', label: t('shorterStoppingDistance') },
+        { number: '12K+', label: t('brakeJobsCompleted') },
+        { number: '100%', label: t('safetyCertified') },
+        { number: '24H', label: t('emergencyService') }
     ];
 
     const brakeProcess = [
         {
             step: '01',
-            title: 'Brake Inspection',
-            description: 'Comprehensive assessment of all brake components including pads, rotors, and fluid'
+            title: t('brakeInspection'),
+            description: t('inspectionDescription')
         },
         {
             step: '02',
-            title: 'Diagnostic Testing',
-            description: 'Advanced testing of brake performance, ABS system, and electronic components'
+            title: t('diagnosticTesting'),
+            description: t('diagnosticDescription')
         },
         {
             step: '03',
-            title: 'Precision Repair',
-            description: 'Expert replacement and servicing using specialized tools and equipment'
+            title: t('precisionRepair'),
+            description: t('repairDescription')
         },
         {
             step: '04',
-            title: 'Road Testing',
-            description: 'Thorough testing under various conditions to ensure optimal braking performance'
+            title: t('roadTesting'),
+            description: t('roadTestingDescription')
         }
     ];
 
     const warningSigns = [
         {
             icon: AlertTriangle,
-            title: 'Squeaking or Grinding',
-            description: 'High-pitched noises indicate worn brake pads needing immediate attention'
+            title: t('squeakingOrGrinding'),
+            description: t('squeakingDescription')
         },
         {
             icon: Car,
-            title: 'Vibration in Pedal',
-            description: 'Pulsation or vibration when braking often means warped rotors'
+            title: t('vibrationInPedal'),
+            description: t('vibrationDescription')
         },
         {
             icon: Zap,
-            title: 'ABS Light On',
-            description: 'Dashboard warning lights signal potential issues with anti-lock braking system'
+            title: t('absLightOn'),
+            description: t('absLightDescription')
         },
         {
             icon: Gauge,
-            title: 'Longer Stopping Distance',
-            description: 'Vehicle takes longer to stop, indicating reduced braking efficiency'
+            title: t('longerStoppingDistance'),
+            description: t('stoppingDistanceDescription')
         }
     ];
 
@@ -202,8 +225,8 @@ const PerformanceTuning = () => {
         <div className="min-h-screen bg-black text-white">
             {/* Brake Service Focused Banner */}
             <Banner
-                title="Professional Brake Services"
-                subtitle="Ensure your safety with our expert brake inspection, repair, and replacement services in Oman. Trust our certified technicians for reliable stopping power."
+                title={t('professionalBrakeServices')}
+                subtitle={t('brakeServicesSubtitle')}
                 iconOne={Settings}
                 iconTwo={Shield}
             />
@@ -215,12 +238,12 @@ const PerformanceTuning = () => {
                         <div className="inline-flex items-center gap-3 mb-4">
                             <div className="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></div>
                             <h2 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-amber-300 to-orange-300 bg-clip-text text-transparent">
-                                Brake Services
+                                {t('brakeServices')}
                             </h2>
                             <div className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
                         </div>
                         <p className="text-amber-100/80 text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
-                            Your safety is our priority. We provide comprehensive brake system services using premium parts and advanced diagnostic equipment to ensure optimal stopping performance.
+                            {t('brakeServicesDescription')}
                         </p>
                     </motion.div>
 
@@ -302,7 +325,7 @@ const PerformanceTuning = () => {
                                             {/* Hover Action Indicator */}
                                             <div className="pt-3 mt-auto">
                                                 <div className="inline-flex items-center gap-1 text-amber-400/60 group-hover:text-amber-300 transition-colors duration-300">
-                                                    <span className="text-xs font-semibold tracking-widest uppercase">Learn More</span>
+                                                    <span className="text-xs font-semibold tracking-widest uppercase">{t('learnMore')}</span>
                                                     <motion.div
                                                         animate={{ x: [0, 3, 0] }}
                                                         transition={{ duration: 1.5, repeat: Infinity }}
@@ -326,9 +349,9 @@ const PerformanceTuning = () => {
                 {/* Warning Signs Section */}
                 <AnimatedSection className="mb-20">
                     <motion.div variants={fadeInUp} className="text-center mb-12">
-                        <h2 className="text-4xl font-bold text-amber-100 mb-4">Brake Warning Signs</h2>
+                        <h2 className="text-4xl font-bold text-amber-100 mb-4">{t('brakeWarningSigns')}</h2>
                         <p className="text-amber-200/70 text-lg max-w-3xl mx-auto">
-                            Don't ignore these critical signs that your brakes need immediate attention.
+                            {t('warningSignsDescription')}
                         </p>
                     </motion.div>
 
@@ -363,9 +386,9 @@ const PerformanceTuning = () => {
                 {/* Benefits Section */}
                 <AnimatedSection className="mb-20">
                     <motion.div variants={fadeInUp} className="text-center mb-12">
-                        <h2 className="text-4xl font-bold text-amber-100 mb-4">Why Choose Our Brake Services?</h2>
+                        <h2 className="text-4xl font-bold text-amber-100 mb-4">{t('whyChooseOurBrakeServices')}</h2>
                         <p className="text-amber-200/70 text-lg max-w-3xl mx-auto">
-                            Experience the difference with our commitment to safety, quality, and customer satisfaction.
+                            {t('benefitsDescription')}
                         </p>
                     </motion.div>
 
@@ -404,9 +427,9 @@ const PerformanceTuning = () => {
                         className="bg-gradient-to-br from-amber-900/20 to-orange-900/20 backdrop-blur-sm border border-amber-500/20 rounded-xl shadow-xl p-12"
                     >
                         <motion.div variants={fadeInUp} className="text-center mb-12">
-                            <h2 className="text-4xl font-bold text-amber-100 mb-4">Trusted Brake Services</h2>
+                            <h2 className="text-4xl font-bold text-amber-100 mb-4">{t('trustedBrakeServices')}</h2>
                             <p className="text-amber-200/70 text-lg max-w-2xl mx-auto">
-                                Proven track record of safety and reliability in brake system services across Oman.
+                                {t('trustedDescription')}
                             </p>
                         </motion.div>
 
@@ -444,9 +467,9 @@ const PerformanceTuning = () => {
                 {/* Brake Service Process */}
                 <AnimatedSection className="mb-20">
                     <motion.div variants={fadeInUp} className="text-center mb-12">
-                        <h2 className="text-4xl font-bold text-amber-100 mb-4">Our Brake Service Process</h2>
+                        <h2 className="text-4xl font-bold text-amber-100 mb-4">{t('ourBrakeServiceProcess')}</h2>
                         <p className="text-amber-200/70 text-lg max-w-3xl mx-auto">
-                            A systematic approach to ensure your brakes are in perfect condition for maximum safety.
+                            {t('processDescription')}
                         </p>
                     </motion.div>
 
@@ -500,7 +523,7 @@ const PerformanceTuning = () => {
                                 viewport={{ once: true }}
                             >
                                 <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-                                    Your Safety First
+                                    {t('yourSafetyFirst')}
                                 </span>
                             </motion.h2>
                             <motion.p
@@ -510,14 +533,14 @@ const PerformanceTuning = () => {
                                 transition={{ delay: 0.4 }}
                                 viewport={{ once: true }}
                             >
-                                Don't compromise on safety. Schedule your brake inspection today and drive with confidence.
+                                {t('ctaDescription')}
                             </motion.p>
                             <motion.button
                                 className="px-10 py-5 font-black rounded-full text-xl transition-all hover:scale-110 relative overflow-hidden group bg-gradient-to-r from-amber-400 to-orange-500 text-black"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                <span className="relative z-10">Schedule Brake Inspection</span>
+                                <span className="relative z-10">{t('scheduleBrakeInspection')}</span>
                                 <div className="absolute inset-0 bg-white/30 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
                             </motion.button>
                         </motion.div>
