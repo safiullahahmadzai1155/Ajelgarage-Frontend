@@ -94,7 +94,7 @@ const AnimatedSection = ({ children, className = "" }) => {
     );
 };
 
-const BrakeService = () => {
+const PerformanceTuning = () => {
     const brakeServices = [
         {
             icon: Settings,
@@ -528,4 +528,4 @@ const BrakeService = () => {
     );
 };
 
-export default BrakeService;
+export default PerformanceTuning;
