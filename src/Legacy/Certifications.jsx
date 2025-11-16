@@ -2,112 +2,114 @@ import { useState } from 'react';
 import { Target, Eye, Award, Users, Lightbulb, Heart, Wrench, Car, Cog, Calendar, MapPin, Phone, Star, Shield, Zap } from 'lucide-react';
 import Banner from '../components/Banner';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const Certifications = () => {
   const [activeTab, setActiveTab] = useState('technicians');
   const [selectedTech, setSelectedTech] = useState(null);
+  const {t} = useTranslation()
   
   const masterTechnicians = [
     {
       name: "Ahmed Al-Harthy",
-      role: "Master Technician & Founder",
-      specialization: "European & Japanese Vehicles",
-      experience: "25+ Years",
-      certifications: ["ASE Master Technician", "BMW Certified", "Toyota Specialist"],
-      bio: "With over 25 years of hands-on experience, Ahmed specializes in complex engine diagnostics and transmission systems. His expertise spans across German engineering and Japanese reliability.",
+      role: t("masterTechnicianFounder"),
+      specialization: t("europeanJapaneseVehicles"),
+      experience: "25+ " + t("years"),
+      certifications: [t("aseMasterTechnician"), t("bmwCertified"), t("toyotaSpecialist")],
+      bio: t("ahmedBio"),
       image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop",
-      skills: ["Engine Diagnostics", "Transmission Repair", "Electrical Systems", "Performance Tuning"],
-      achievements: ["Founder of Ajal Garage", "Trained 50+ Technicians", "Industry Speaker"]
+      skills: [t("engineDiagnostics"), t("transmissionRepair"), t("electricalSystemsSkill"), t("performanceTuningSkill")],
+      achievements: [t("founderAjalGarage"), t("trainedTechnicians"), t("industrySpeaker")]
     },
     {
       name: "Mohammed Al-Balushi",
-      role: "Senior Diagnostic Specialist",
-      specialization: "Electrical & Computer Systems",
-      experience: "15+ Years",
-      certifications: ["Advanced Diagnostics", "ECU Programming", "Hybrid Systems"],
-      bio: "Mohammed is our go-to expert for complex electrical issues and computer system diagnostics. He stays updated with the latest automotive technology and diagnostic equipment.",
+      role: t("seniorDiagnosticSpecialist"),
+      specialization: t("electricalComputerSystems"),
+      experience: "15+ " + t("years"),
+      certifications: [t("advancedDiagnostics"), t("ecuProgramming"), t("hybridSystems")],
+      bio: t("mohammedBio"),
       image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=400&fit=crop",
-      skills: ["Computer Diagnostics", "Wiring Systems", "ECU Programming", "Sensor Technology"],
-      achievements: ["Hybrid Systems Expert", "Diagnostic Equipment Trainer"]
+      skills: [t("computerDiagnostics"), t("wiringSystemsSkill"), t("ecuProgrammingSkill"), t("sensorTechnology")],
+      achievements: [t("hybridSystemsExpert"), t("diagnosticEquipmentTrainer")]
     },
     {
       name: "Salem Al-Rashdi",
-      role: "Performance & Tuning Expert",
-      specialization: "Performance Upgrades",
-      experience: "12+ Years",
-      certifications: ["Performance Tuning", "Turbo Systems", "Engine Management"],
-      bio: "Salem combines technical expertise with a passion for automotive performance. He specializes in engine tuning, turbo systems, and performance optimization for enhanced driving experience.",
+      role: t("performanceTuningExpert"),
+      specialization: t("performanceUpgrades"),
+      experience: "12+ " + t("years"),
+      certifications: [t("performanceTuning"), t("turboSystems"), t("engineManagement")],
+      bio: t("salemBio"),
       image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop",
-      skills: ["ECU Remapping", "Turbo Systems", "Exhaust Tuning", "Performance Optimization"],
-      achievements: ["Performance Award Winner", "Racing Team Consultant"]
+      skills: [t("ecuRemapping"), t("turboSystems"), t("exhaustTuning"), t("performanceOptimization")],
+      achievements: [t("performanceAwardWinner"), t("racingTeamConsultant")]
     },
     {
       name: "Khalid Al-Mamari",
-      role: "Transmission Specialist",
-      specialization: "Automatic & Manual Transmissions",
-      experience: "18+ Years",
-      certifications: ["Transmission Master", "CVT Specialist", "Dual-Clutch Systems"],
-      bio: "Khalid is our transmission guru with extensive experience in both automatic and manual gearboxes. He handles everything from routine maintenance to complete transmission overhauls.",
+      role: t("transmissionSpecialist"),
+      specialization: t("automaticManualTransmissions"),
+      experience: "18+ " + t("years"),
+      certifications: [t("transmissionMaster"), t("cvtSpecialist"), t("dualClutchSystems")],
+      bio: t("khalidBio"),
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-      skills: ["Automatic Transmissions", "Manual Gearboxes", "CVT Systems", "Clutch Systems"],
-      achievements: ["Transmission Innovation Award", "Manufacturer Trainer"]
+      skills: [t("automaticTransmissions"), t("manualGearboxes"), t("cvtSystems"), t("clutchSystems")],
+      achievements: [t("transmissionInnovationAward"), t("manufacturerTrainer")]
     }
   ];
 
   const specialties = [
     {
       icon: Cog,
-      title: "Advanced Diagnostics",
-      description: "State-of-the-art computer diagnostics for precise problem identification",
-      features: ["Computer System Scanning", "Fault Code Analysis", "Live Data Monitoring", "Performance Testing"],
+      title: t("advancedDiagnostics"),
+      description: t("diagnosticsDescription"),
+      features: [t("computerSystemScanning"), t("faultCodeAnalysis"), t("liveDataMonitoring"), t("performanceTesting")],
       color: "amber"
     },
     {
       icon: Zap,
-      title: "Engine Performance",
-      description: "Comprehensive engine services from maintenance to performance tuning",
-      features: ["Engine Overhaul", "Performance Tuning", "Fuel System Service", "Turbo Charging"],
+      title: t("enginePerformance"),
+      description: t("engineDescription"),
+      features: [t("engineOverhaul"), t("performanceTuning"), t("fuelSystemService"), t("turboCharging")],
       color: "orange"
     },
     {
       icon: Wrench,
-      title: "Transmission Expertise",
-      description: "Specialized transmission services for all vehicle types",
-      features: ["Automatic Transmissions", "Manual Gearboxes", "CVT Systems", "Dual-Clutch"],
+      title: t("transmissionExpertise"),
+      description: t("transmissionDescription"),
+      features: [t("automaticTransmissions"), t("manualGearboxes"), t("cvtSystems"), t("dualClutch")],
       color: "amber"
     },
     {
       icon: Shield,
-      title: "Electrical Systems",
-      description: "Expert electrical diagnostics and repair services",
-      features: ["Wiring Systems", "ECU Programming", "Sensor Diagnostics", "Hybrid Systems"],
+      title: t("electricalSystems"),
+      description: t("electricalDescription"),
+      features: [t("wiringSystems"), t("ecuProgramming"), t("sensorDiagnostics"), t("hybridSystems")],
       color: "orange"
     }
   ];
 
   const certifications = [
     { 
-      name: "ASE Certified Master Technician", 
+      name: t("aseCertifiedMasterTechnician"), 
       count: 4,
-      description: "Highest level of professional automotive certification",
+      description: t("aseDescription"),
       icon: Award
     },
     { 
-      name: "Manufacturer Certified Specialists", 
+      name: t("manufacturerCertifiedSpecialists"), 
       count: 8,
-      description: "Factory-trained experts for specific brands",
+      description: t("manufacturerDescription"),
       icon: Users
     },
     { 
-      name: "Advanced Diagnostic Systems", 
+      name: t("advancedDiagnosticSystems"), 
       count: 12,
-      description: "Certified on latest diagnostic equipment",
+      description: t("advancedDiagnosticDescription"),
       icon: Cog
     },
     { 
-      name: "Hybrid & Electric Vehicle Certified", 
+      name: t("hybridElectricVehicleCertified"), 
       count: 3,
-      description: "Specialized training for modern vehicle technologies",
+      description: t("hybridDescription"),
       icon: Zap
     }
   ];
@@ -116,21 +118,21 @@ const Certifications = () => {
     <div className="min-h-screen bg-black text-white">
       {/* Hero Banner */}
       <Banner 
-        title="Certified Excellence"
-        subtitle="Ajal Garage's team of master technicians brings decades of expertise and industry-leading certifications to ensure your vehicle receives the best care possible."
+        title={t("certifiedExcellence")}
+        subtitle={t("ajalGarageTeamDescription")}
         iconOne={Award}
         iconTwo={Shield}
-        badgeText="ASE Certified"
+        badgeText={t("aseCertified")}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Header Stats dengan design yang lebih baik */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {[
-            { number: "70+", label: "Years Combined Experience", icon: Calendar },
-            { number: "15+", label: "Professional Certifications", icon: Award },
-            { number: "50K+", label: "Vehicles Serviced", icon: Car },
-            { number: "99%", label: "Customer Satisfaction", icon: Star }
+            { number: "70+", label: t("yearsCombinedExperience"), icon: Calendar },
+            { number: "15+", label: t("professionalCertifications"), icon: Award },
+            { number: "50K+", label: t("vehiclesServiced"), icon: Car },
+            { number: "99%", label: t("customerSatisfaction"), icon: Star }
           ].map((stat, index) => {
             const Icon = stat.icon;
             return (
@@ -155,9 +157,9 @@ const Certifications = () => {
         <div className="flex justify-center mb-12">
           <div className="bg-stone-900 border border-amber-800 rounded-xl p-1 flex space-x-1">
             {[
-              { id: 'technicians', label: 'Our Technicians', icon: Users },
-              { id: 'specialties', label: 'Specialties', icon: Cog },
-              { id: 'certifications', label: 'Certifications', icon: Award }
+              { id: 'technicians', label: t("ourTechnicians"), icon: Users },
+              { id: 'specialties', label: t("specialties"), icon: Cog },
+              { id: 'certifications', label: t("certifications"), icon: Award }
             ].map((tab) => {
               const Icon = tab.icon;
               return (
@@ -187,9 +189,9 @@ const Certifications = () => {
             className="space-y-12"
           >
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-amber-50 mb-4">Meet Our Master Technicians</h2>
+              <h2 className="text-4xl font-bold text-amber-50 mb-4">{t("meetOurMasterTechnicians")}</h2>
               <p className="text-amber-300 text-lg max-w-2xl mx-auto">
-                Highly skilled professionals with specialized expertise in various automotive systems
+                {t("techniciansDescription")}
               </p>
             </div>
 
@@ -233,7 +235,7 @@ const Certifications = () => {
                     <div className="mb-4">
                       <div className="text-amber-50 font-semibold text-sm mb-2 flex items-center gap-2">
                         <Award className="h-4 w-4" />
-                        Certifications:
+                        {t("certificationsLabel")}
                       </div>
                       <div className="flex flex-wrap gap-2">
                         {tech.certifications.map((cert, idx) => (
@@ -250,7 +252,7 @@ const Certifications = () => {
                     <div>
                       <div className="text-amber-50 font-semibold text-sm mb-2 flex items-center gap-2">
                         <Zap className="h-4 w-4" />
-                        Specialized Skills:
+                        {t("specializedSkills")}
                       </div>
                       <div className="flex flex-wrap gap-2">
                         {tech.skills.map((skill, idx) => (
@@ -279,9 +281,9 @@ const Certifications = () => {
             className="space-y-12"
           >
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-amber-50 mb-4">Our Specialized Services</h2>
+              <h2 className="text-4xl font-bold text-amber-50 mb-4">{t("ourSpecializedServices")}</h2>
               <p className="text-amber-300 text-lg max-w-2xl mx-auto">
-                Advanced automotive services backed by expert knowledge and cutting-edge technology
+                {t("specialtiesDescription")}
               </p>
             </div>
 
@@ -340,9 +342,9 @@ const Certifications = () => {
             className="space-y-12"
           >
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-amber-50 mb-4">Our Certifications</h2>
+              <h2 className="text-4xl font-bold text-amber-50 mb-4">{t("ourCertifications")}</h2>
               <p className="text-amber-300 text-lg max-w-2xl mx-auto">
-                Industry-recognized certifications that demonstrate our commitment to excellence
+                {t("certificationsDescription")}
               </p>
             </div>
 
@@ -381,22 +383,22 @@ const Certifications = () => {
                 <div className="bg-amber-500/20 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Lightbulb className="h-8 w-8 text-amber-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-amber-50 mb-4">Continuous Training Program</h3>
+                <h3 className="text-2xl font-bold text-amber-50 mb-4">{t("continuousTrainingProgram")}</h3>
                 <p className="text-amber-200 mb-6 max-w-2xl mx-auto">
-                  Our technicians undergo regular training to stay current with the latest automotive technologies and repair techniques. We invest in ongoing education to ensure we provide the most advanced solutions for your vehicle.
+                  {t("trainingDescription")}
                 </p>
                 <div className="flex justify-center gap-6 text-sm text-amber-300">
                   <span className="flex items-center gap-2">
                     <Calendar className="h-4 w-4" />
-                    Annual Training Updates
+                    {t("annualTrainingUpdates")}
                   </span>
                   <span className="flex items-center gap-2">
                     <Users className="h-4 w-4" />
-                    Manufacturer Programs
+                    {t("manufacturerPrograms")}
                   </span>
                   <span className="flex items-center gap-2">
                     <Zap className="h-4 w-4" />
-                    Technology Workshops
+                    {t("technologyWorkshops")}
                   </span>
                 </div>
               </div>
@@ -407,29 +409,29 @@ const Certifications = () => {
         {/* Why Choose Our Technicians Section */}
         <div className="mt-20 bg-stone-900 border border-amber-800 rounded-2xl p-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-amber-50 mb-4">Why Trust Ajal Garage Technicians?</h2>
-            <p className="text-amber-300 text-lg">Expertise you can rely on for your vehicle's care</p>
+            <h2 className="text-3xl font-bold text-amber-50 mb-4">{t("whyTrustAjalGarage")}</h2>
+            <p className="text-amber-300 text-lg">{t("whyTrustDescription")}</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { 
-                title: "Proven Experience", 
-                description: "Decades of hands-on experience with all vehicle types from Japanese compacts to European luxury cars",
+                title: t("provenExperience"), 
+                description: t("provenExperienceDescription"),
                 icon: Users,
-                stat: "25+ Years Avg. Experience"
+                stat: t("yearsAvgExperience")
               },
               { 
-                title: "Advanced Training", 
-                description: "Continuous education on latest automotive technologies and manufacturer-specific procedures",
+                title: t("advancedTraining"), 
+                description: t("advancedTrainingDescription"),
                 icon: Lightbulb,
-                stat: "Annual Training Updates"
+                stat: t("annualTrainingUpdatesStat")
               },
               { 
-                title: "Quality Guarantee", 
-                description: "All work backed by our comprehensive service warranty and 100% customer satisfaction commitment",
+                title: t("qualityGuarantee"), 
+                description: t("qualityGuaranteeDescription"),
                 icon: Shield,
-                stat: "12-Month Warranty"
+                stat: t("monthWarranty")
               }
             ].map((item, index) => {
               const Icon = item.icon;
@@ -457,13 +459,13 @@ const Certifications = () => {
 
         {/* CTA Section */}
         <div className="mt-16 text-center">
-        <div className="mt-20 bg-gradient-to-br from-amber-900/20 to-orange-900/10 border border-amber-500/20 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Ready to Experience Expert Automotive Care?</h3>
+          <div className="mt-20 bg-gradient-to-br from-amber-900/20 to-orange-900/10 border border-amber-500/20 rounded-2xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-4">{t("readyToExperience")}</h3>
             <p className="text-amber-100 mb-6">
-              Schedule your service with our certified technicians today
+              {t("scheduleService")}
             </p>
             <button className="bg-black text-amber-400 px-8 py-3 rounded-lg font-semibold hover:bg-stone-900 transition-colors duration-300 border border-amber-500/30">
-              Book Your Appointment
+              {t("bookYourAppointment")}
             </button>
           </div>
         </div>
