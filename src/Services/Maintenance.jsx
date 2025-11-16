@@ -1,6 +1,7 @@
 import { Car, Wrench, Settings, Zap, Shield, Clock, Users, Award, Sparkles, Cog, Gauge, Fuel, Cpu, Heart, RotateCcw, AlertTriangle, Calendar, CheckCircle, FileCheck, Car as CarIcon, Star, TrendingUp } from 'lucide-react';
 import Banner from '../components/Banner';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 // Animation variants
 const containerVariants = {
@@ -73,83 +74,100 @@ const AnimatedSection = ({ children, className = "" }) => {
 };
 
 const Maintenance = () => {
+    const { t } = useTranslation();
+    
     const maintenanceServices = [
         {
             icon: Calendar,
-            title: 'Scheduled Maintenance',
-            description: 'Regular maintenance service to keep your vehicle running smoothly and prevent unexpected breakdowns.',
-            features: ['Oil & Filter Change', 'Fluid Level Checks', 'Brake Inspection', 'Tire Rotation'],
+            title: t('scheduledMaintenance'),
+            description: t('scheduledMaintenanceDesc'),
+            features: [
+                t('oilFilterChange'),
+                t('fluidLevelChecks'),
+                t('brakeInspection'),
+                t('tireRotation')
+            ],
             price: '45 OMR',
-            duration: '2-3 hours'
+            duration: t('hours2-3')
         },
         {
             icon: Wrench,
-            title: 'Comprehensive Service',
-            description: 'Complete vehicle service including all major systems inspection and maintenance.',
-            features: ['Full System Check', 'Battery Testing', 'AC Service', 'Suspension Check'],
+            title: t('comprehensiveService'),
+            description: t('comprehensiveServiceDesc'),
+            features: [
+                t('fullSystemCheck'),
+                t('batteryTesting'),
+                t('acService'),
+                t('suspensionCheck')
+            ],
             price: '65 OMR',
-            duration: '3-4 hours'
+            duration: t('hours3-4')
         },
         {
             icon: CarIcon,
-            title: 'Major Service',
-            description: 'Extensive maintenance package for high-mileage vehicles or annual comprehensive service.',
-            features: ['Spark Plugs', 'Fuel System', 'Transmission', 'Cooling System'],
+            title: t('majorService'),
+            description: t('majorServiceDesc'),
+            features: [
+                t('sparkPlugs'),
+                t('fuelSystem'),
+                t('transmission'),
+                t('coolingSystem')
+            ],
             price: '95 OMR',
-            duration: '4-5 hours'
+            duration: t('hours4-5')
         }
     ];
 
     const benefits = [
         {
             icon: Shield,
-            title: 'Extended Vehicle Life',
-            description: 'Regular maintenance significantly extends your vehicle lifespan and maintains optimal performance.'
+            title: t('extendedVehicleLife'),
+            description: t('extendedVehicleLifeDesc')
         },
         {
             icon: Zap,
-            title: 'Better Performance',
-            description: 'Optimal engine performance, improved fuel efficiency, and smoother driving experience.'
+            title: t('betterPerformance'),
+            description: t('betterPerformanceDesc')
         },
         {
             icon: TrendingUp,
-            title: 'Higher Resale Value',
-            description: 'Well-maintained vehicles command better resale prices and attract more buyers.'
+            title: t('higherResaleValue'),
+            description: t('higherResaleValueDesc')
         },
         {
             icon: Clock,
-            title: 'Prevent Breakdowns',
-            description: 'Identify and fix potential issues before they become major and expensive problems.'
+            title: t('preventBreakdowns'),
+            description: t('preventBreakdownsDesc')
         }
     ];
 
     const maintenanceStats = [
-        { number: '15,000+', label: 'Vehicles Serviced', description: 'Happy Customers' },
-        { number: '98%', label: 'Satisfaction Rate', description: 'Quality Service' },
-        { number: '24/7', label: 'Customer Support', description: 'Always Available' },
-        { number: '12 Months', label: 'Service Warranty', description: 'Peace of Mind' }
+        { number: '15,000+', label: t('vehiclesServiced'), description: t('happyCustomers') },
+        { number: '98%', label: t('satisfactionRate'), description: t('qualityService') },
+        { number: '24/7', label: t('customerSupport'), description: t('alwaysAvailable') },
+        { number: t('months12'), label: t('serviceWarranty'), description: t('peaceOfMind') }
     ];
 
     const maintenanceProcess = [
         {
             icon: FileCheck,
-            title: 'Vehicle Assessment',
-            description: 'Comprehensive inspection and service history review'
+            title: t('vehicleAssessment'),
+            description: t('vehicleAssessmentDesc')
         },
         {
             icon: Wrench,
-            title: 'Service Execution',
-            description: 'Professional maintenance using genuine parts'
+            title: t('serviceExecution'),
+            description: t('serviceExecutionDesc')
         },
         {
             icon: CheckCircle,
-            title: 'Quality Check',
-            description: 'Rigorous testing and quality assurance'
+            title: t('qualityCheck'),
+            description: t('qualityCheckDesc')
         },
         {
             icon: CarIcon,
-            title: 'Final Testing',
-            description: 'Road test and performance verification'
+            title: t('finalTesting'),
+            description: t('finalTestingDesc')
         }
     ];
 
@@ -157,8 +175,8 @@ const Maintenance = () => {
         <div className="min-h-screen bg-black text-white">
             {/* Maintenance Banner */}
             <Banner
-                title="Professional Vehicle Maintenance"
-                subtitle="Keep your vehicle in peak condition with Ajal Garage's comprehensive maintenance services. Regular care ensures reliability, safety, and optimal performance for your vehicle in Oman."
+                title={t('maintenanceTitle')}
+                subtitle={t('maintenanceSubtitle')}
                 iconOne={Wrench}
                 iconTwo={Shield}
             />
@@ -193,12 +211,12 @@ const Maintenance = () => {
                         <div className="inline-flex items-center justify-center gap-4 mb-6">
                             <div className="w-12 h-0.5 bg-amber-500/30 rounded-full"></div>
                             <h2 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-amber-300 to-orange-300 bg-clip-text text-transparent">
-                                Maintenance Services
+                                {t('maintenanceServices')}
                             </h2>
                             <div className="w-12 h-0.5 bg-amber-500/30 rounded-full"></div>
                         </div>
                         <p className="text-amber-100/70 text-xl max-w-3xl mx-auto leading-relaxed">
-                            Comprehensive maintenance solutions to keep your vehicle running smoothly and extend its lifespan
+                            {t('servicesSubtitle')}
                         </p>
                     </motion.div>
 
@@ -268,10 +286,10 @@ const Maintenance = () => {
                 <AnimatedSection className="mb-20">
                     <motion.div variants={fadeInUp} className="text-center mb-16">
                         <h2 className="text-4xl font-black bg-gradient-to-r from-amber-300 to-orange-300 bg-clip-text text-transparent mb-6">
-                            Benefits of Regular Maintenance
+                            {t('benefitsTitle')}
                         </h2>
                         <p className="text-amber-100/70 text-lg max-w-2xl mx-auto">
-                            Invest in your vehicle's longevity and performance with professional maintenance
+                            {t('benefitsSubtitle')}
                         </p>
                     </motion.div>
 
@@ -303,10 +321,10 @@ const Maintenance = () => {
                 <AnimatedSection className="mb-20">
                     <motion.div variants={fadeInUp} className="text-center mb-16">
                         <h2 className="text-4xl font-black bg-gradient-to-r from-amber-300 to-orange-300 bg-clip-text text-transparent mb-6">
-                            Our Maintenance Process
+                            {t('processTitle')}
                         </h2>
                         <p className="text-amber-100/70 text-lg max-w-2xl mx-auto">
-                            Systematic approach to ensure thorough service and quality assurance
+                            {t('processSubtitle')}
                         </p>
                     </motion.div>
 
@@ -357,7 +375,7 @@ const Maintenance = () => {
                                 transition={{ duration: 0.8, delay: 0.2 }}
                             >
                                 <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-                                    Professional Maintenance
+                                    {t('professionalMaintenance')}
                                 </span>
                             </motion.h2>
                             <motion.p
@@ -366,10 +384,10 @@ const Maintenance = () => {
                                 whileInView={{ opacity: 1 }}
                                 transition={{ delay: 0.4 }}
                             >
-                                Trust Ajal Garage for comprehensive vehicle maintenance that ensures reliability, safety, and optimal performance for your vehicle.
+                                {t('ctaDescription')}
                             </motion.p>
                             <div className="text-amber-200/60 text-lg">
-                                Visit our garage in Oman for expert service
+                                {t('visitGarage')}
                             </div>
                         </div>
                     </div>
