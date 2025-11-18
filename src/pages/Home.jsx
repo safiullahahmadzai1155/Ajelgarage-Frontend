@@ -102,7 +102,7 @@ const Home = () => {
     {
       icon: Target,
       title: t("excellence"),
-      description: t("excellenceDesc"),
+      description: t("qualityExcellenceDesc"),
       color: "#f97316"
     },
     {
