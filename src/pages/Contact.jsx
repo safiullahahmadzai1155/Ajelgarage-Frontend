@@ -526,6 +526,7 @@ const Contact = () => {
                         className="w-full px-4 py-3 bg-amber-900/20 border-2 border-amber-500/30 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent disabled:bg-amber-900/10 disabled:cursor-not-allowed text-amber-100 backdrop-blur-xl transition-all"
                       >
                         <option value="">{t('selectService')}</option>
+                        <option value="car-for-rent" className="bg-amber-900">{t('car-for-rent')}</option>
                         <option value="oil-change" className="bg-amber-900">{t('oilChange')}</option>
                         <option value="brake-service" className="bg-amber-900">{t('brakeService')}</option>
                         <option value="engine-repair" className="bg-amber-900">{t('engineRepair')}</option>
