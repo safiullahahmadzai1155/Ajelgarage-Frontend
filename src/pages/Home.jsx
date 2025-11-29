@@ -18,7 +18,6 @@ import {
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import HeaderSlider from '../components/HeaderSlider';
 
 const Home = () => {
     const { t, i18n } = useTranslation();
@@ -390,7 +389,7 @@ const Home = () => {
         background: "radial-gradient(circle, rgba(0, 0, 0, 1) 63%, rgba(0, 0, 0, 1) 94%)"
       }}
     >
-      <HeaderSlider />
+      <Imageslider />
       
       {/* About Section */}
       <section id="about" className="py-20 relative overflow-hidden">
