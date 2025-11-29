@@ -1,5 +1,10 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Vedio from "../Assists/SliderVedio/1.mp4"
+import Vedio1 from "../Assists/SliderVedio/2.mp4"
+import Vedio2 from "../Assists/SliderVedio/3.mp4"
+import Vedio3 from "../Assists/SliderVedio/4.mp4"
+
 
 const HeaderSlider = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -12,7 +17,7 @@ const HeaderSlider = () => {
             description: 'Professional car repair and maintenance services with cutting-edge diagnostic technology',
             color: '#cd7110',
             accentColor: '#ff8c00',
-            url: "https://assets.mixkit.co/videos/35544/35544-720.mp4",
+            url: Vedio,
         },
         {
             title: 'Ajel Garage',
@@ -20,7 +25,7 @@ const HeaderSlider = () => {
             description: 'Comprehensive automotive solutions from engine repair to electrical systems maintenance',
             color: '#cd7110',
             accentColor: '#ff8c00',
-            url: "https://assets.mixkit.co/videos/35540/35540-720.mp4",
+            url: Vedio1,
         },
         {
             title: 'Ajel Garage',
@@ -28,7 +33,7 @@ const HeaderSlider = () => {
             description: 'Your reliable partner for all vehicle servicing needs with certified technicians',
             color: '#cd7110',
             accentColor: '#ff8c00',
-            url: "https://assets.mixkit.co/videos/2675/2675-720.mp4",
+            url: Vedio2,
         },
         {
             title: 'Ajel Garage',
@@ -36,7 +41,7 @@ const HeaderSlider = () => {
             description: 'Complete automotive care packages to keep your vehicle running smoothly and safely',
             color: '#cd7110',
             accentColor: '#ff8c00',
-            url: "https://assets.mixkit.co/videos/35215/35215-720.mp4",
+            url: Vedio3
         }
     ];
 

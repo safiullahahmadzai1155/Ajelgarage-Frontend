@@ -121,9 +121,9 @@ const Navbar = () => {
   ];
 
   const languages = [
-    { code: 'en', name: 'English', flag: '🇺🇸' },
-    { code: 'ar', name: 'العربية', flag: '🇸🇦' },
-    { code: 'ur', name: 'اردو', flag: '🇵🇰' }
+    { code: 'en', name: 'English' },
+    { code: 'ar', name: 'العربية'},
+    { code: 'ur', name: 'اردو' }
   ];
 
   const handleNavigation = (path) => {
@@ -322,7 +322,7 @@ const Navbar = () => {
                 />
                 
                 <Globe className="relative z-10 h-4 w-4 text-amber-400" />
-                <span className="relative z-10 text-sm lg:text-base">{getCurrentLanguage().flag}</span>
+                {/* <span className="relative z-10 text-sm lg:text-base">{getCurrentLanguage().flag}</span> */}
                 <ChevronDown className={`relative z-10 h-3 w-3 md:h-4 md:w-4 transition-transform duration-500 ${isLanguageOpen ? 'rotate-180' : ''}`} />
               </button>
 
