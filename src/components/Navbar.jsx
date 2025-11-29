@@ -38,60 +38,84 @@ const Navbar = () => {
     {
       label: t('premiumServices'),
       path: '/service',
+      // submenu: [
+      //   { 
+      //     path: '/Services/EngineRepair', 
+      //     label: t('eliteEngineRepair'), 
+      //     icon: Settings,
+      //     description: t('advancedDiagnostics'),
+      //     badge: 'Premium'
+      //   },
+      //   { 
+      //     path: '/Services/PerformanceTuning', 
+      //     label: t('performanceTuning'), 
+      //     icon: Zap,
+      //     description: t('maximizeVehicle'),
+      //     badge: 'Elite'
+      //   },
+      //   { 
+      //     path: '/Services/BrakeService',
+      //     label: t('ceramicBrakeService'), 
+      //     icon: Car,
+      //     description: t('highPerformanceBraking'),
+      //     badge: 'Luxury'
+      //   },
+      //   { 
+      //     path: '/Services/OilChange', 
+      //     label: t('syntheticOilChange'), 
+      //     icon: Wrench,
+      //     description: t('premiumSynthetic'),
+      //     badge: 'Premium'
+      //   },
+      //   { 
+      //     path: '/Services/Diagnostics', 
+      //     label: t('aiDiagnostics'), 
+      //     icon: TrendingUp,
+      //     description: t('aiAnalysis'),
+      //     badge: 'Tech'
+      //   },
+      //   { 
+      //     path: '/Services/Maintenance', 
+      //     label: t('conciergeMaintenance'), 
+      //     icon: Clock,
+      //     description: t('scheduledLuxury'),
+      //     badge: 'VIP'
+      //   },
+      // ],
       submenu: [
         { 
-          path: '/Services/EngineRepair', 
-          label: t('eliteEngineRepair'), 
+          // path: '/Services/EngineRepair', 
+          label: "Vip Service", 
           icon: Settings,
           description: t('advancedDiagnostics'),
-          badge: 'Premium'
+          // badge: 'Premium'
         },
         { 
-          path: '/Services/PerformanceTuning', 
-          label: t('performanceTuning'), 
+          // path: '/Services/PerformanceTuning', 
+          label: "Standard Services", 
           icon: Zap,
           description: t('maximizeVehicle'),
-          badge: 'Elite'
+          // badge: 'Elite'
         },
-        { 
-          path: '/Services/BrakeService',
-          label: t('ceramicBrakeService'), 
-          icon: Car,
-          description: t('highPerformanceBraking'),
-          badge: 'Luxury'
+         { 
+          // path: '/Services/PerformanceTuning', 
+          label: "Customized Services", 
+          icon: Zap,
+          description: t('maximizeVehicle'),
+          // badge: 'Elite'
         },
-        { 
-          path: '/Services/OilChange', 
-          label: t('syntheticOilChange'), 
-          icon: Wrench,
-          description: t('premiumSynthetic'),
-          badge: 'Premium'
-        },
-        { 
-          path: '/Services/Diagnostics', 
-          label: t('aiDiagnostics'), 
-          icon: TrendingUp,
-          description: t('aiAnalysis'),
-          badge: 'Tech'
-        },
-        { 
-          path: '/Services/Maintenance', 
-          label: t('conciergeMaintenance'), 
-          icon: Clock,
-          description: t('scheduledLuxury'),
-          badge: 'VIP'
-        },
+
       ],
     },
-    { 
-      path: '/Legacy', 
-      label: t('ourLegacy'),
-      submenu: [
-        { path: '/Legacy/Heritage', label: t('yearsExcellence'), icon: Award },
-        { path: '/Legacy/MasterTechnicians', label: t('masterTechnicians'), icon: Users },
-        { path: '/Legacy/Certifications', label: t('certifications'), icon: Shield },
-      ]
-    },
+    // { 
+    //   path: '/Legacy', 
+    //   label: t('ourLegacy'),
+    //   submenu: [
+    //     { path: '/Legacy/Heritage', label: t('yearsExcellence'), icon: Award },
+    //     { path: '/Legacy/MasterTechnicians', label: t('masterTechnicians'), icon: Users },
+    //     { path: '/Legacy/Certifications', label: t('certifications'), icon: Shield },
+    //   ]
+    // },
     { path: '/gallery', label: t('gallery') },
     { path: '/contact', label: t('contact') },
   ];

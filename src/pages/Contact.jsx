@@ -307,7 +307,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: t('callUsToday'),
-      details: [t('phone1'), t('phone2'), t('emergencyPhone')],
+      details: [ t('emergencyPhone')],
       color: '#ea580c'
     },
     {
@@ -319,7 +319,7 @@ const Contact = () => {
     {
       icon: Clock,
       title: t('serviceHours'),
-      details: [t('sunThu'), t('friday'), t('saturday')],
+      details: [t('sunThu'), t('friday')],
       color: '#dc2626'
     }
   ];
