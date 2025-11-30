@@ -389,7 +389,7 @@ const Home = () => {
         background: "radial-gradient(circle, rgba(0, 0, 0, 1) 63%, rgba(0, 0, 0, 1) 94%)"
       }}
     >
-      <HeaderSlider />
+      <Imageslider />
       
       {/* About Section */}
       <section id="about" className="py-20 relative overflow-hidden">
