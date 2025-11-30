@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { Code2, Mail, MapPin, Facebook, Twitter, Linkedin, Github, ArrowRight, Shield, FileText, Cookie } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import AG from "../Assists/Logo/AG.png"
+
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -34,7 +36,7 @@ const Footer = () => {
   const handleNavigation = (route) => {
     console.log('Navigate to:', route);
     setActiveSection(route);
-    
+
     // Add visual feedback
     const sectionElement = document.getElementById('main-content');
     if (sectionElement) {
@@ -77,29 +79,27 @@ const Footer = () => {
 
   const getButtonStyles = (route) => {
     const isActive = activeSection === route;
-    return `transition-all duration-300 text-sm flex items-center group w-full text-left hover:translate-x-1 ${
-      isActive 
-        ? 'text-orange-400 font-semibold scale-105' 
+    return `transition-all duration-300 text-sm flex items-center group w-full text-left hover:translate-x-1 ${isActive
+        ? 'text-orange-400 font-semibold scale-105'
         : 'text-amber-100/80 hover:text-orange-400'
-    }`;
+      }`;
   };
 
   const getDotStyles = (route) => {
     const isActive = activeSection === route;
-    return `w-2 h-2 rounded-full mr-3 transition-all duration-300 ${
-      isActive 
-        ? 'bg-orange-500 scale-150 shadow-lg shadow-orange-500/50' 
+    return `w-2 h-2 rounded-full mr-3 transition-all duration-300 ${isActive
+        ? 'bg-orange-500 scale-150 shadow-lg shadow-orange-500/50'
         : 'bg-amber-600 group-hover:scale-150 group-hover:bg-orange-400'
-    }`;
+      }`;
   };
 
   return (
     <footer className="bg-gradient-to-br from-stone-950 via-amber-950 to-black relative overflow-hidden border-t-4 border-orange-600/40 shadow-2xl shadow-orange-900/50">
       {/* Animated Grid Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{ 
-          backgroundImage: 'linear-gradient(to right, #d97706 1px, transparent 1px), linear-gradient(to bottom, #ea580c 1px, transparent 1px)', 
-          backgroundSize: '40px 40px' 
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'linear-gradient(to right, #d97706 1px, transparent 1px), linear-gradient(to bottom, #ea580c 1px, transparent 1px)',
+          backgroundSize: '40px 40px'
         }} />
       </div>
 
@@ -113,20 +113,15 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Company Info */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2" style={{marginTop:"-14%"}}>
             <div className="flex items-center space-x-3 mb-6 cursor-pointer" onClick={handleHomeNavigation}>
-              <div className={`bg-gradient-to-br from-orange-600 via-amber-700 to-orange-800 p-2.5 rounded-xl shadow-xl shadow-orange-900/50 transform transition-transform duration-300 border-2 border-orange-500/30 ${
-                activeSection === 'home' ? 'scale-110 rotate-12' : 'hover:scale-105'
-              }`}>
-                <Code2 className="h-8 w-8 text-amber-100" />
-              </div>
-              <span className={`text-3xl font-bold text-amber-50 tracking-tight transition-all duration-300 ${
-                activeSection === 'home' ? 'text-orange-400' : ''
-              }`}>
+              <img src={AG} alt='Ajel Garage' style={{ width: "40%", height: "auto", marginTop: "5px" }} />
+              <span style={{marginLeft:"-1%"}} className={`text-3xl font-bold text-amber-50 tracking-tight transition-all duration-300 ${activeSection === 'home' ? 'text-orange-400' : ''
+                }`}>
                 {t('ajelGarage')}
               </span>
             </div>
-            <p className="text-amber-100/70 mb-8 leading-relaxed text-base">
+            <p style={{marginTop:"-7%"}} className="text-amber-100/70 mb-8 leading-relaxed text-base">
               {t('footerDescription')}
             </p>
             <div className="flex space-x-3">
@@ -136,7 +131,7 @@ const Footer = () => {
                 { icon: Linkedin, href: "https://linkedin.com/company/ajalgarage", color: "hover:bg-orange-600 hover:border-orange-400" },
                 { icon: Github, href: "https://github.com/ajalgarage", color: "hover:bg-stone-800 hover:border-stone-600" }
               ].map((social, index) => (
-                <button 
+                <button
                   key={index}
                   onClick={() => handleExternalNavigation(social.href)}
                   className={`bg-stone-900/60 p-3 rounded-xl ${social.color} hover:shadow-lg hover:shadow-orange-900/50 transition-all duration-300 group transform hover:-translate-y-1 border-2 border-orange-800/30`}
@@ -158,7 +153,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {services.map((service, index) => (
                 <li key={index}>
-                  <button 
+                  <button
                     onClick={() => navigate(service.route)}
                     className={getButtonStyles(service.route)}
                   >
@@ -184,7 +179,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {companyLinks.map((link, index) => (
                 <li key={index}>
-                  <button 
+                  <button
                     onClick={() => navigate(link.route)}
                     className={getButtonStyles(link.route)}
                   >
@@ -209,9 +204,8 @@ const Footer = () => {
             </h3>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3 group">
-                <div className={`bg-stone-900/60 p-2 rounded-lg transition-colors border-2 border-orange-800/30 ${
-                  activeSection === 'contact' ? 'bg-orange-900/40 scale-110 border-orange-600' : 'group-hover:bg-orange-900/30'
-                }`}>
+                <div className={`bg-stone-900/60 p-2 rounded-lg transition-colors border-2 border-orange-800/30 ${activeSection === 'contact' ? 'bg-orange-900/40 scale-110 border-orange-600' : 'group-hover:bg-orange-900/30'
+                  }`}>
                   <MapPin className="h-5 w-5 text-orange-400 flex-shrink-0" />
                 </div>
                 <div>
@@ -220,25 +214,22 @@ const Footer = () => {
                 </div>
               </li>
               <li className="flex items-start space-x-3 group">
-                <div className={`bg-stone-900/60 p-2 rounded-lg transition-colors border-2 border-orange-800/30 ${
-                  activeSection === 'contact' ? 'bg-orange-900/40 scale-110 border-orange-600' : 'group-hover:bg-orange-900/30'
-                }`}>
+                <div className={`bg-stone-900/60 p-2 rounded-lg transition-colors border-2 border-orange-800/30 ${activeSection === 'contact' ? 'bg-orange-900/40 scale-110 border-orange-600' : 'group-hover:bg-orange-900/30'
+                  }`}>
                   <Mail className="h-5 w-5 text-orange-400 flex-shrink-0" />
                 </div>
                 <div>
-                  <button 
+                  <button
                     onClick={() => handleEmailNavigation('contact')}
-                    className={`text-sm transition-colors block font-medium ${
-                      activeSection === 'contact' ? 'text-orange-400' : 'text-amber-100 hover:text-orange-400'
-                    }`}
+                    className={`text-sm transition-colors block font-medium ${activeSection === 'contact' ? 'text-orange-400' : 'text-amber-100 hover:text-orange-400'
+                      }`}
                   >
                     {t('contactEmail')}
                   </button>
-                  <button 
+                  <button
                     onClick={() => handleEmailNavigation('support')}
-                    className={`text-sm transition-colors block ${
-                      activeSection === 'support' ? 'text-orange-400' : 'text-amber-100/60 hover:text-orange-400'
-                    }`}
+                    className={`text-sm transition-colors block ${activeSection === 'support' ? 'text-orange-400' : 'text-amber-100/60 hover:text-orange-400'
+                      }`}
                   >
                     {t('supportEmail')}
                   </button>
@@ -249,12 +240,12 @@ const Footer = () => {
             {/* Newsletter Subscription */}
             <div className='mt-10'>
               <div className="flex">
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   placeholder={t('emailPlaceholder')}
                   className="flex-1 px-4 py-2.5 bg-stone-900/60 border-2 border-orange-800/30 rounded-l-xl text-sm focus:outline-none focus:border-orange-600 focus:ring-2 focus:ring-orange-500/50 transition-all text-amber-100 placeholder-amber-100/40"
                 />
-                <button 
+                <button
                   onClick={handleNewsletterSignup}
                   className="bg-gradient-to-r from-orange-600 to-amber-700 hover:from-orange-700 hover:to-amber-800 px-5 py-2.5 rounded-r-xl text-amber-50 text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-orange-600/50 border-2 border-orange-500/40"
                 >
@@ -278,10 +269,10 @@ const Footer = () => {
                 <span>{t('commercialRegistration')}</span>
               </div>
             </div>
-            
+
             <div className="flex flex-wrap justify-center gap-6">
               {legalLinks.map((link, index) => (
-                <button 
+                <button
                   key={index}
                   onClick={() => navigate(link.route)}
                   className="text-amber-100/80 hover:text-orange-400 transition-colors text-sm flex items-center group"

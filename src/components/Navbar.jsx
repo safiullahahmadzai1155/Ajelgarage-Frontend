@@ -4,25 +4,15 @@ import {
   Menu, 
   X, 
   ChevronDown, 
-  Wrench, 
   Phone, 
-  MapPin, 
-  Clock, 
-  Award, 
-  Star, 
   Settings, 
-  Car, 
   Zap,
-  Shield,
-  Users,
-  TrendingUp,
-  Calendar,
-  MessageCircle,
   Crown,
   Sparkles,
   Globe
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import AG from "../Assists/Logo/AG.png"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -206,16 +196,17 @@ const Navbar = () => {
             onClick={() => handleNavigation('/')}
           >
             {/* Logo Container */}
-            <div className="relative p-2 md:p-3 bg-gradient-to-br from-amber-500/20 to-orange-500/10 rounded-xl md:rounded-2xl border-2 border-amber-500/30 group-hover:border-amber-400/50 transition-all duration-500">
+            {/* <div className="relative p-2 md:p-3 bg-gradient-to-br from-amber-500/20 to-orange-500/10 rounded-xl md:rounded-2xl border-2 border-amber-500/30 group-hover:border-amber-400/50 transition-all duration-500">
               <Crown className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 text-amber-400 group-hover:scale-110 transition-transform duration-500" />
               <Sparkles 
                 className="absolute -top-1 -right-1 w-2 h-2 md:w-3 md:h-3 text-amber-300"
                 style={{ animation: 'sparkle 2s ease-in-out infinite' }}
               />
-            </div>
+            </div> */}
+            <img src={AG}  alt='Ajel Garage' style={{width:"20%",height:"auto",marginTop:"5px"}}/>
             
             {/* Logo Text */}
-            <div className="flex flex-col">
+            <div className="flex flex-col" style={{marginLeft:"-1%"}} >
               <span className="hidden sm:block text-lg md:text-xl lg:text-2xl font-black bg-gradient-to-r from-amber-300 to-orange-300 bg-clip-text text-transparent tracking-tight">
                 {t('ajelGarage')}
               </span>
