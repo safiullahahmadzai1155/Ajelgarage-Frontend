@@ -1,14 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import Vedio from "../Assists/SliderVedio/1.mp4"
 import Vedio1 from "../Assists/SliderVedio/2.mp4"
 import Vedio2 from "../Assists/SliderVedio/3.mp4"
 import Vedio3 from "../Assists/SliderVedio/4.mp4"
 
-
 const HeaderSlider = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
+    const videoRefs = useRef([]);
+    const navigate = useNavigate()
 
     const slides = [
         {
@@ -45,6 +47,27 @@ const HeaderSlider = () => {
         }
     ];
 
+    // Force video play function
+    const playVideo = (index) => {
+        if (videoRefs.current[index]) {
+            const video = videoRefs.current[index];
+            const playPromise = video.play();
+            
+            if (playPromise !== undefined) {
+                playPromise
+                    .then(() => {
+                        // Video started automatically
+                        console.log(`Video ${index} playing`);
+                    })
+                    .catch(error => {
+                        // Auto-play was prevented
+                        console.log(`Auto-play prevented for video ${index}:`, error);
+                        // Show play button or handle accordingly
+                    });
+            }
+        }
+    };
+
     const nextSlide = () => {
         setIsAnimating(true);
         setTimeout(() => {
@@ -62,23 +85,58 @@ const HeaderSlider = () => {
     };
 
     useEffect(() => {
+        // Play current video when slide changes
+        playVideo(currentSlide);
+    }, [currentSlide]);
+
+    useEffect(() => {
+        // Preload all videos
+        slides.forEach((slide, index) => {
+            const video = document.createElement('video');
+            video.src = slide.url;
+            video.preload = 'auto';
+            video.load();
+        });
+
         const timer = setInterval(nextSlide, 5000);
         return () => clearInterval(timer);
     }, []);
 
+    // Handle video ended to restart
+    const handleVideoEnd = (index) => {
+        if (videoRefs.current[index]) {
+            videoRefs.current[index].currentTime = 0;
+            playVideo(index);
+        }
+    };
+
     return (
         <div className="relative h-screen w-full overflow-hidden bg-black">
-            {/* Background Video with Enhanced Overlay */}
+            {/* Background Videos - All loaded but only current one visible */}
             <div className="absolute inset-0">
-                <video
-                    key={currentSlide}
-                    src={slides[currentSlide].url}
-                    className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ${isAnimating ? 'opacity-70 scale-110' : 'opacity-100 scale-100'}`}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                />
+                {slides.map((slide, index) => (
+                    <video
+                        key={index}
+                        ref={el => videoRefs.current[index] = el}
+                        src={slide.url}
+                        className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ${
+                            index === currentSlide 
+                                ? (isAnimating ? 'opacity-70 scale-110' : 'opacity-100 scale-100') 
+                                : 'opacity-0'
+                        }`}
+                        autoPlay
+                        muted
+                        playsInline
+                        loop
+                        onEnded={() => handleVideoEnd(index)}
+                        preload="auto"
+                        onLoadedData={() => {
+                            if (index === currentSlide) {
+                                playVideo(index);
+                            }
+                        }}
+                    />
+                ))}
                 <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/40 to-black/80"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,black_90%)]"></div>
             </div>
@@ -128,6 +186,7 @@ const HeaderSlider = () => {
                                 backgroundSize: '200% 100%',
                                 boxShadow: '0 20px 60px rgba(205, 113, 16, 0.4)'
                             }}
+                            onClick={()=>navigate("/contact")}
                         >
                             <span className="relative z-10 text-white flex items-center gap-3">
                                 Start Project
@@ -137,6 +196,8 @@ const HeaderSlider = () => {
                         </button>
 
                         <button
+                        onClick={()=>navigate("/service")}
+                        style={{cursor:"pointer"}}
                             className="group px-16 py-6 bg-transparent border-2 border-[#ff8c00]/80 text-white font-bold rounded-2xl text-lg transition-all duration-500 hover:bg-[#ff8c00] hover:text-black hover:scale-105 active:scale-95 relative overflow-hidden"
                         >
                             <span className="relative z-10 flex items-center gap-3">
@@ -201,7 +262,7 @@ const HeaderSlider = () => {
             </div>
 
             {/* Enhanced Bottom Gradient */}
-            <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black via-black/50 to-transparent z-10"></div>
+            {/* <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black via-black/50 to-transparent z-10"></div> */}
 
             {/* Top Gradient */}
             <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black via-black/50 to-transparent z-10"></div>
