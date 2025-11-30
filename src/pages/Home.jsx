@@ -18,7 +18,6 @@ import {
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import HeaderSlider from '../components/HeaderSlider';
 
 const Home = () => {
     const { t, i18n } = useTranslation();
