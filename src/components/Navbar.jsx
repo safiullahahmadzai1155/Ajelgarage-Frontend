@@ -80,6 +80,13 @@ const Navbar = () => {
           description: t('advancedDiagnostics'),
           // badge: 'Premium'
         },
+         { 
+          // path: '/Services/EngineRepair', 
+          label: "Premium Service", 
+          icon: Settings,
+          description: t('advancedDiagnostics'),
+          // badge: 'Premium'
+        },
         { 
           // path: '/Services/PerformanceTuning', 
           label: "Standard Services", 

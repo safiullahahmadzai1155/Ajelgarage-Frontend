@@ -16,6 +16,8 @@ const Contact = () => {
     Location: "",
     serviceInterestedIn: "",
     Issue: "",
+    RentCar: '',
+    ModelType: "",
     isLoading: false,
     status: { type: '', message: '' },
     isVisible: {},
@@ -229,6 +231,8 @@ const Contact = () => {
         serviceInterestedIn: state.serviceInterestedIn.trim(),
         Location: state.Location.trim(),
         Issue: state.Issue.trim(),
+        RentCar: state.RentCar.trim(),
+        ModelType: state.ModelType.trim(),
       };
 
       console.log('Sending payload:', payload);
@@ -245,6 +249,8 @@ const Contact = () => {
           VehicleType: '',
           serviceInterestedIn: '',
           Location: '',
+          RentCar: '',
+          ModelType: '',
           Issue: '',
           isLoading: false,
           status: {
@@ -307,7 +313,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: t('callUsToday'),
-      details: [ t('emergencyPhone')],
+      details: [t('emergencyPhone')],
       color: '#ea580c'
     },
     {
@@ -371,7 +377,7 @@ const Contact = () => {
     <div className="bg-black text-white overflow-hidden min-h-screen">
       {/* Hero Section */}
       <Banner
-        title={t('bannerTitle')}
+        title={"Need Help"}
         subtitle={t('bannerSubtitle')}
         iconOne={Car}
         iconTwo={Wrench}
@@ -493,11 +499,64 @@ const Contact = () => {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-amber-200 font-medium mb-2">
-                        {t('vehicleType')} {t('required')}
+                        Mark Type *
                       </label>
-                      <select
+
+                      <input
                         name="VehicleType"
                         value={state.VehicleType}
+                        onChange={handleChange}
+                        disabled={state.isLoading}
+                        className="w-full px-4 py-3 bg-amber-900/20 border-2 border-amber-500/30 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent disabled:bg-amber-900/10 disabled:cursor-not-allowed text-amber-100 placeholder-amber-200/50 backdrop-blur-xl transition-all pr-32"
+                        placeholder={t('Mark Type')}
+                      />
+
+                    </div>
+                    <div>
+                      <label className="block text-amber-200 font-medium mb-2">
+                        {t('serviceRequired')} {t('required')}
+                      </label>
+
+                      <input
+                        name="serviceInterestedIn"
+                        value={state.serviceInterestedIn}
+                        onChange={handleChange}
+                        disabled={state.isLoading}
+                        className="w-full px-4 py-3 bg-amber-900/20 border-2 border-amber-500/30 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent disabled:bg-amber-900/10 disabled:cursor-not-allowed text-amber-100 placeholder-amber-200/50 backdrop-blur-xl transition-all pr-32"
+                        placeholder={t('Service Required')}
+                      />
+
+                    </div>
+
+                    <div>
+                      <label className="block text-amber-200 font-medium mb-2">
+                        Need a Rent Car
+                      </label>
+
+                      <select
+                        name="RentCar"
+                        value={state.RentCar}
+                        onChange={handleChange}
+                        required
+                        disabled={state.isLoading}
+                        className="w-full px-4 py-3 bg-amber-900/20 border-2 border-amber-500/30 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent disabled:bg-amber-900/10 disabled:cursor-not-allowed text-amber-100 backdrop-blur-xl transition-all"
+                      >
+                        <option value="" className="bg-amber-900">Select option</option>
+                        <option value="yes" className="bg-amber-900">Yes</option>
+                        <option value="no" className="bg-amber-900">No</option>
+                      </select>
+
+
+                    </div>
+
+                    <div>
+                      <label className="block text-amber-200 font-medium mb-2">
+                        Model Type
+                      </label>
+
+                      <select
+                        name="ModelType"
+                        value={state.ModelType}
                         onChange={handleChange}
                         required
                         disabled={state.isLoading}
@@ -509,35 +568,8 @@ const Contact = () => {
                         <option value="truck" className="bg-amber-900">{t('truck')}</option>
                         <option value="luxury" className="bg-amber-900">{t('luxury')}</option>
                         <option value="european" className="bg-amber-900">{t('european')}</option>
-                        <option value="japanese" className="bg-amber-900">{t('japanese')}</option>
-                        <option value="american" className="bg-amber-900">{t('american')}</option>
                       </select>
-                    </div>
-                    <div>
-                      <label className="block text-amber-200 font-medium mb-2">
-                        {t('serviceRequired')} {t('required')}
-                      </label>
-                      <select
-                        name="serviceInterestedIn"
-                        value={state.serviceInterestedIn}
-                        onChange={handleChange}
-                        required
-                        disabled={state.isLoading}
-                        className="w-full px-4 py-3 bg-amber-900/20 border-2 border-amber-500/30 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent disabled:bg-amber-900/10 disabled:cursor-not-allowed text-amber-100 backdrop-blur-xl transition-all"
-                      >
-                        <option value="">{t('selectService')}</option>
-                        <option value="car-for-rent" className="bg-amber-900">{t('car-for-rent')}</option>
-                        <option value="oil-change" className="bg-amber-900">{t('oilChange')}</option>
-                        <option value="brake-service" className="bg-amber-900">{t('brakeService')}</option>
-                        <option value="engine-repair" className="bg-amber-900">{t('engineRepair')}</option>
-                        <option value="transmission" className="bg-amber-900">{t('transmission')}</option>
-                        <option value="ac-service" className="bg-amber-900">{t('acService')}</option>
-                        <option value="electrical" className="bg-amber-900">{t('electrical')}</option>
-                        <option value="suspension" className="bg-amber-900">{t('suspension')}</option>
-                        <option value="full-service" className="bg-amber-900">{t('fullService')}</option>
-                        <option value="emergency" className="bg-amber-900">{t('emergency')}</option>
-                        <option value="full-body-detailing" className="bg-amber-900">{t('fullBodyDetailing')}</option>
-                      </select>
+
                     </div>
                   </div>
 
@@ -570,7 +602,7 @@ const Contact = () => {
                         </>
                       ) : (
                         <>
-                          <span>{t('submitButton')}</span>
+                          <span>{"Infrom Us"}</span>
                           <Send className="h-5 w-5" />
                         </>
                       )}

@@ -162,7 +162,7 @@ const HeaderSlider = () => {
                         style={{
                             color: '#ff8c00',
                             textShadow: '0 0 100px #cd7110, 0 0 150px #cd7110, 0 2px 4px rgba(0,0,0,0.8)',
-                            fontFamily: 'system-ui, -apple-system, sans-serif'
+                            fontFamily: 'ui-monospace'
                         }}
                     >
                         {slides[currentSlide].title}
@@ -171,7 +171,7 @@ const HeaderSlider = () => {
                     {/* Sophisticated Description */}
                     <div className="relative mb-16">
                         <div className="absolute left-1/2 top-0 w-24 h-px bg-gradient-to-r from-transparent via-[#ff8c00] to-transparent transform -translate-x-1/2 -translate-y-4"></div>
-                        <p className="text-2xl md:text-3xl text-gray-300 font-light leading-relaxed max-w-3xl mx-auto">
+                        <p style={{ fontFamily: 'ui-monospace'}} className="text-2xl md:text-3xl text-gray-300 font-light leading-relaxed max-w-3xl mx-auto">
                             {slides[currentSlide].description}
                         </p>
                         <div className="absolute left-1/2 bottom-0 w-24 h-px bg-gradient-to-r from-transparent via-[#ff8c00] to-transparent transform -translate-x-1/2 translate-y-4"></div>
@@ -189,22 +189,10 @@ const HeaderSlider = () => {
                             onClick={()=>navigate("/contact")}
                         >
                             <span className="relative z-10 text-white flex items-center gap-3">
-                                Start Project
+                                Need Help
                                 <div className="w-2 h-2 bg-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </span>
                             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
-                        </button>
-
-                        <button
-                        onClick={()=>navigate("/service")}
-                        style={{cursor:"pointer"}}
-                            className="group px-16 py-6 bg-transparent border-2 border-[#ff8c00]/80 text-white font-bold rounded-2xl text-lg transition-all duration-500 hover:bg-[#ff8c00] hover:text-black hover:scale-105 active:scale-95 relative overflow-hidden"
-                        >
-                            <span className="relative z-10 flex items-center gap-3">
-                                Our Services
-                                <div className="w-2 h-2 bg-current rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            </span>
-                            <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
                         </button>
                     </div>
                 </div>
