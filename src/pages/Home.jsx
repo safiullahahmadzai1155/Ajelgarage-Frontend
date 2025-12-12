@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import Imageslider from "../components/HeaderSlider";
+import Imageslider from "../components/HeaderSlider";
 import { motion, AnimatePresence } from 'framer-motion'
 import { Globe, ChevronRight, Quote, ChevronLeft, ChevronRight as RightIcon, Star, ChevronDown, ArrowRight } from 'lucide-react'
 import { 
